@@ -1,0 +1,11 @@
+:py:mod:`nautobot_chatops.api`
+==============================
+
+.. py:module:: nautobot_chatops.api
+
+.. autoapi-nested-parse::
+
+   Example API.
+
+
+

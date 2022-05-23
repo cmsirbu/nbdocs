@@ -1,0 +1,11 @@
+:py:mod:`nautobot_ssot.api`
+===========================
+
+.. py:module:: nautobot_ssot.api
+
+.. autoapi-nested-parse::
+
+   Example API.
+
+
+

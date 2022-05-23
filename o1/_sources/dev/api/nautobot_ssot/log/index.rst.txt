@@ -1,0 +1,58 @@
+:py:mod:`nautobot_ssot.log`
+===========================
+
+.. py:module:: nautobot_ssot.log
+
+.. autoapi-nested-parse::
+
+   Logging utilities for Nautobot SSoT.
+
+   This module contains helpers and wrappers for making logging more consistent across applications.
+
+   How to use me:
+
+       >>> from nautobot_ssot.log import initialize_logging
+       >>> log = initialize_logging(level="debug")
+       2021-12-07T10:51:49-0700 [DEBUG] [log] [initialize_logging] cookiecutter_project: Logging initialized.
+       >>> log.info("NTC")
+       2021-12-07T10:51:49-0700 [INFO] [cli] [main] cookiecutter_project.cli: Entrypoint of the CLI app.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_ssot.log.initialize_logging
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_ssot.log.APP
+
+
+.. py:data:: APP
+   :annotation: = nautobot_ssot
+
+   
+
+.. py:function:: initialize_logging(config=None, level='INFO', filename=None)
+
+   Initialize logging using sensible defaults.
+
+   Args:
+       config (dict): User provided configuration dictionary.
+       level (str): The level of logging for STDOUT logging.
+       filename (str): Where to output debug logging to file.
+
+
+

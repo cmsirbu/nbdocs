@@ -1,0 +1,11 @@
+:py:mod:`nautobot_secrets_providers.api`
+========================================
+
+.. py:module:: nautobot_secrets_providers.api
+
+.. autoapi-nested-parse::
+
+   Example API.
+
+
+

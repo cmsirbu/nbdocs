@@ -1,0 +1,18 @@
+:py:mod:`nautobot_golden_configuration`
+=======================================
+
+.. py:module:: nautobot_golden_configuration
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   api/index.rst
+   cli/index.rst
+   config/index.rst
+   log/index.rst
+
+

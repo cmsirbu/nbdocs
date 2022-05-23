@@ -1,0 +1,42 @@
+:py:mod:`nautobot_ssot.cli`
+===========================
+
+.. py:module:: nautobot_ssot.cli
+
+.. autoapi-nested-parse::
+
+   Example cli using click.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_ssot.cli.main
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_ssot.cli.log
+
+
+.. py:data:: log
+   
+
+   
+
+.. py:function:: main(test, log_level, log_file)
+
+   Entrypoint into CLI app.
+
+

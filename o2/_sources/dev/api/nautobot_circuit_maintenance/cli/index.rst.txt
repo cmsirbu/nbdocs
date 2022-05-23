@@ -1,0 +1,42 @@
+:py:mod:`nautobot_circuit_maintenance.cli`
+==========================================
+
+.. py:module:: nautobot_circuit_maintenance.cli
+
+.. autoapi-nested-parse::
+
+   Example cli using click.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_circuit_maintenance.cli.main
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_circuit_maintenance.cli.log
+
+
+.. py:data:: log
+   
+
+   
+
+.. py:function:: main(test, log_level, log_file)
+
+   Entrypoint into CLI app.
+
+

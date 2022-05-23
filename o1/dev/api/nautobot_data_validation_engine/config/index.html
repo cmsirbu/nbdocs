@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nautobot_data_validation_engine.config &mdash; Nautobot App Docs  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="nautobot_data_validation_engine.log" href="../log/index.html" />
+    <link rel="prev" title="nautobot_data_validation_engine.cli" href="../cli/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html">
+            <img src="../../../../_static/nautobot_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-apps.html">Nautobot Ecosystem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-chatops/user/index.html">Nautobot ChatOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-circuit-maintenance/user/index.html">Nautobot Circuit Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-data-validation-engine/user/index.html">Nautobot Data Validation Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-device-lifecycle-mgmt/user/index.html">Nautobot Device Lifecycle Mgmt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-device-onboarding/user/index.html">Nautobot Device Onboarding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-golden-configuration/user/index.html">Nautobot Golden Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-secrets-providers/user/index.html">Nautobot Secrets Providers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-ssot/user/index.html">Nautobot SSoT</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Administrator Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-chatops/admin/index.html">Nautobot ChatOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-circuit-maintenance/admin/index.html">Nautobot Circuit Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-data-validation-engine/admin/index.html">Nautobot Data Validation Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-device-lifecycle-mgmt/admin/index.html">Nautobot Device Lifecycle Mgmt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-device-onboarding/admin/index.html">Nautobot Device Onboarding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-golden-configuration/admin/index.html">Nautobot Golden Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-secrets-providers/admin/index.html">Nautobot Secrets Providers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-ssot/admin/index.html">Nautobot SSoT</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-chatops/dev/index.html">Nautobot ChatOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-circuit-maintenance/dev/index.html">Nautobot Circuit Maintenance</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../nautobot-data-validation-engine/dev/index.html">Nautobot Data Validation Engine</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../nautobot-data-validation-engine/dev/dev_extending.html">Extending the App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../nautobot-data-validation-engine/dev/dev_contributing.html">Contributing to the App</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../nautobot-data-validation-engine/dev/index.html#api-reference">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Nautobot Data Validation Engine</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#submodules">Submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-device-lifecycle-mgmt/dev/index.html">Nautobot Device Lifecycle Mgmt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-device-onboarding/dev/index.html">Nautobot Device Onboarding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-golden-configuration/dev/index.html">Nautobot Golden Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-secrets-providers/dev/index.html">Nautobot Secrets Providers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-ssot/dev/index.html">Nautobot SSoT</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Nautobot App Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../../nautobot-data-validation-engine/dev/index.html">Nautobot Data Validation Engine</a> &raquo;</li>
+          <li><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_data_validation_engine</span></code></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_data_validation_engine.config</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/dev/api/nautobot_data_validation_engine/config/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-nautobot_data_validation_engine.config">
+<span id="nautobot-data-validation-engine-config"></span><h1><a class="reference internal" href="#module-nautobot_data_validation_engine.config" title="nautobot_data_validation_engine.config"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_data_validation_engine.config</span></code></a><a class="headerlink" href="#module-nautobot_data_validation_engine.config" title="Permalink to this headline"></a></h1>
+<p>Config module to load settings.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_data_validation_engine.config.Settings" title="nautobot_data_validation_engine.config.Settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Settings</span></code></a></p></td>
+<td><p>Main Settings Class for the project.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_data_validation_engine.config.load" title="nautobot_data_validation_engine.config.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>(config_file_name='pyproject.toml', config_data=None)</p></td>
+<td><p>Loads passed dynamic settings data using <cite>config data</cite> or from a TOML configuration file (pyproject.toml).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_data_validation_engine.config.load_or_exit" title="nautobot_data_validation_engine.config.load_or_exit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_or_exit</span></code></a>(config_file_name='pyproject.toml', config_data=None)</p></td>
+<td><p>Loads passed dynamic settings data using <cite>config data</cite> or from a TOML configuration file (pyproject.toml).</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_data_validation_engine.config.SETTINGS" title="nautobot_data_validation_engine.config.SETTINGS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SETTINGS</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_data_validation_engine.config.ENV_FILE_PATH" title="nautobot_data_validation_engine.config.ENV_FILE_PATH"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ENV_FILE_PATH</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.SETTINGS">
+<span class="sig-prename descclassname"><span class="pre">nautobot_data_validation_engine.config.</span></span><span class="sig-name descname"><span class="pre">SETTINGS</span></span><a class="headerlink" href="#nautobot_data_validation_engine.config.SETTINGS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.ENV_FILE_PATH">
+<span class="sig-prename descclassname"><span class="pre">nautobot_data_validation_engine.config.</span></span><span class="sig-name descname"><span class="pre">ENV_FILE_PATH</span></span><a class="headerlink" href="#nautobot_data_validation_engine.config.ENV_FILE_PATH" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.Settings">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_data_validation_engine.config.</span></span><span class="sig-name descname"><span class="pre">Settings</span></span><a class="headerlink" href="#nautobot_data_validation_engine.config.Settings" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">pydantic.BaseSettings</span></code></p>
+<p>Main Settings Class for the project.</p>
+<p>The type of each setting is defined using Python annotations and Pydantic field types
+and is validated when a config file is loaded with Pydantic.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.Settings.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#nautobot_data_validation_engine.config.Settings.Config" title="Permalink to this definition"></a></dt>
+<dd><p>Config class to be used for Settings.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.Settings.Config.env_prefix">
+<span class="sig-name descname"><span class="pre">env_prefix</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">NAUTOBOT_DATA_VALIDATION_ENGINE_</span></em><a class="headerlink" href="#nautobot_data_validation_engine.config.Settings.Config.env_prefix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.Settings.Config.env_file">
+<span class="sig-name descname"><span class="pre">env_file</span></span><a class="headerlink" href="#nautobot_data_validation_engine.config.Settings.Config.env_file" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.Settings.Config.env_file_encoding">
+<span class="sig-name descname"><span class="pre">env_file_encoding</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">utf-8</span></em><a class="headerlink" href="#nautobot_data_validation_engine.config.Settings.Config.env_file_encoding" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.Settings.string_required">
+<span class="sig-name descname"><span class="pre">string_required</span></span><em class="property"><span class="w"> </span><span class="pre">:str</span></em><a class="headerlink" href="#nautobot_data_validation_engine.config.Settings.string_required" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.Settings.secret_optional">
+<span class="sig-name descname"><span class="pre">secret_optional</span></span><em class="property"><span class="w"> </span><span class="pre">:Optional[pydantic.types.SecretStr]</span></em><a class="headerlink" href="#nautobot_data_validation_engine.config.Settings.secret_optional" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.Settings.array_default">
+<span class="sig-name descname"><span class="pre">array_default</span></span><em class="property"><span class="w"> </span><span class="pre">:List[str]</span> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nautobot_data_validation_engine.config.Settings.array_default" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.Settings.url_default">
+<span class="sig-name descname"><span class="pre">url_default</span></span><em class="property"><span class="w"> </span><span class="pre">:pydantic.networks.AnyHttpUrl</span> <span class="pre">=</span> <span class="pre">http://localhost</span></em><a class="headerlink" href="#nautobot_data_validation_engine.config.Settings.url_default" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.Settings.ip_address">
+<span class="sig-name descname"><span class="pre">ip_address</span></span><em class="property"><span class="w"> </span><span class="pre">:pydantic.networks.IPvAnyAddress</span> <span class="pre">=</span> <span class="pre">192.168.0.1</span></em><a class="headerlink" href="#nautobot_data_validation_engine.config.Settings.ip_address" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.Settings.ip_network">
+<span class="sig-name descname"><span class="pre">ip_network</span></span><em class="property"><span class="w"> </span><span class="pre">:pydantic.networks.IPvAnyNetwork</span> <span class="pre">=</span> <span class="pre">2001:db8:3c4d:15::/64</span></em><a class="headerlink" href="#nautobot_data_validation_engine.config.Settings.ip_network" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.Settings.file">
+<span class="sig-name descname"><span class="pre">file</span></span><em class="property"><span class="w"> </span><span class="pre">:pydantic.types.FilePath</span> <span class="pre">=</span> <span class="pre">some/path/file.txt</span></em><a class="headerlink" href="#nautobot_data_validation_engine.config.Settings.file" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.Settings.directory">
+<span class="sig-name descname"><span class="pre">directory</span></span><em class="property"><span class="w"> </span><span class="pre">:pydantic.types.DirectoryPath</span> <span class="pre">=</span> <span class="pre">tests/</span></em><a class="headerlink" href="#nautobot_data_validation_engine.config.Settings.directory" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.load">
+<span class="sig-prename descclassname"><span class="pre">nautobot_data_validation_engine.config.</span></span><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pyproject.toml'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_data_validation_engine.config.load" title="Permalink to this definition"></a></dt>
+<dd><p>Loads passed dynamic settings data using <cite>config data</cite> or from a TOML configuration file (pyproject.toml).</p>
+<p>When loaded from file, the settings for this app are expected to be in [tool.nautobot-data-validation-engine] in TOML
+if nothing is found in the config file or if the config file do not exist, the default values will be used.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>config_file_name (str, optional): Name of the configuration file to load. Defaults to “pyproject.toml”.
+config_data (dict, optional): dict to load as the config file instead of reading the file. Defaults to None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nautobot_data_validation_engine.config.load_or_exit">
+<span class="sig-prename descclassname"><span class="pre">nautobot_data_validation_engine.config.</span></span><span class="sig-name descname"><span class="pre">load_or_exit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pyproject.toml'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_data_validation_engine.config.load_or_exit" title="Permalink to this definition"></a></dt>
+<dd><p>Loads passed dynamic settings data using <cite>config data</cite> or from a TOML configuration file (pyproject.toml).</p>
+<p>If a validation error is found, it will print out the respective error and exit from the app.</p>
+<p>When loaded from file, the settings for this app are expected to be in [tool.nautobot_data_validation_engine] in TOML
+if nothing is found in the config file or if the config file do not exist, the default values will be used.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>config_file_name (str, optional): Name of the configuration file to load. Defaults to “pyproject.toml”.
+config_data (dict, optional): dict to load as the config file instead of reading the file. Defaults to None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../cli/index.html" class="btn btn-neutral float-left" title="nautobot_data_validation_engine.cli" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../log/index.html" class="btn btn-neutral float-right" title="nautobot_data_validation_engine.log" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, NTC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

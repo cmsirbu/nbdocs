@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uninstall the App from Nautobot &mdash; Nautobot App Docs  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Release Notes" href="admin_release_notes.html" />
+    <link rel="prev" title="Upgrading the App" href="admin_upgrade.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html">
+            <img src="../../_static/nautobot_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-apps.html">Nautobot Ecosystem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-chatops/user/index.html">Nautobot ChatOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-circuit-maintenance/user/index.html">Nautobot Circuit Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-data-validation-engine/user/index.html">Nautobot Data Validation Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-device-lifecycle-mgmt/user/index.html">Nautobot Device Lifecycle Mgmt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">Nautobot Device Onboarding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-golden-configuration/user/index.html">Nautobot Golden Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-secrets-providers/user/index.html">Nautobot Secrets Providers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-ssot/user/index.html">Nautobot SSoT</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Administrator Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-chatops/admin/index.html">Nautobot ChatOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-circuit-maintenance/admin/index.html">Nautobot Circuit Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-data-validation-engine/admin/index.html">Nautobot Data Validation Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-device-lifecycle-mgmt/admin/index.html">Nautobot Device Lifecycle Mgmt</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Nautobot Device Onboarding</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="admin_install.html">Install and Configure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin_upgrade.html">Upgrade</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Uninstall</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#uninstall-guide">Uninstall Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#database-cleanup">Database Cleanup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="admin_release_notes.html">Release Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-golden-configuration/admin/index.html">Nautobot Golden Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-secrets-providers/admin/index.html">Nautobot Secrets Providers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-ssot/admin/index.html">Nautobot SSoT</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-chatops/dev/index.html">Nautobot ChatOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-circuit-maintenance/dev/index.html">Nautobot Circuit Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-data-validation-engine/dev/index.html">Nautobot Data Validation Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-device-lifecycle-mgmt/dev/index.html">Nautobot Device Lifecycle Mgmt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/index.html">Nautobot Device Onboarding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-golden-configuration/dev/index.html">Nautobot Golden Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-secrets-providers/dev/index.html">Nautobot Secrets Providers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-ssot/dev/index.html">Nautobot SSoT</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Nautobot App Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Nautobot Device Onboarding</a> &raquo;</li>
+      <li>Uninstall the App from Nautobot</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nautobot-device-onboarding/admin/admin_uninstall.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="uninstall-the-app-from-nautobot">
+<h1>Uninstall the App from Nautobot<a class="headerlink" href="#uninstall-the-app-from-nautobot" title="Permalink to this headline"></a></h1>
+<section id="uninstall-guide">
+<h2>Uninstall Guide<a class="headerlink" href="#uninstall-guide" title="Permalink to this headline"></a></h2>
+<p>How the app is removed from Nautobot.</p>
+<blockquote>
+<div><p>TODO Glenn: Also would be good to assert a standard for documenting how to clean up after uninstalling the app (deleting tables, CFs, relationships, etc.) if it’s no longer desired.</p>
+</div></blockquote>
+</section>
+<section id="database-cleanup">
+<h2>Database Cleanup<a class="headerlink" href="#database-cleanup" title="Permalink to this headline"></a></h2>
+<p>Any cleanup operations to ensure the database is clean after the app is removed.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="admin_upgrade.html" class="btn btn-neutral float-left" title="Upgrading the App" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="admin_release_notes.html" class="btn btn-neutral float-right" title="Release Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, NTC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

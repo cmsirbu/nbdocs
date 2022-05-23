@@ -1,0 +1,42 @@
+:py:mod:`nautobot_device_onboarding.cli`
+========================================
+
+.. py:module:: nautobot_device_onboarding.cli
+
+.. autoapi-nested-parse::
+
+   Example cli using click.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.cli.main
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.cli.log
+
+
+.. py:data:: log
+   
+
+   
+
+.. py:function:: main(test, log_level, log_file)
+
+   Entrypoint into CLI app.
+
+

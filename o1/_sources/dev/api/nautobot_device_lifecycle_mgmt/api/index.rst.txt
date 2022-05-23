@@ -1,0 +1,11 @@
+:py:mod:`nautobot_device_lifecycle_mgmt.api`
+============================================
+
+.. py:module:: nautobot_device_lifecycle_mgmt.api
+
+.. autoapi-nested-parse::
+
+   Example API.
+
+
+

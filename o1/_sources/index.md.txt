@@ -1,0 +1,31 @@
+# Welcome to the Nautobot Apps documentation!
+
+```{toctree}
+:maxdepth: 2
+Nautobot Ecosystem <nautobot-apps>
+```
+
+## Overview
+
+Add an overview of your project.
+
+```{toctree}
+:maxdepth: 2
+:glob:
+:caption: User Guide
+*/user/index
+```
+
+```{toctree}
+:maxdepth: 2
+:glob:
+:caption: Administrator Guide
+*/admin/index
+```
+
+```{toctree}
+:maxdepth: 2
+:glob:
+:caption: Developer Guide
+*/dev/index
+```

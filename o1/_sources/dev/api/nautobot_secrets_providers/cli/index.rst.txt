@@ -1,0 +1,42 @@
+:py:mod:`nautobot_secrets_providers.cli`
+========================================
+
+.. py:module:: nautobot_secrets_providers.cli
+
+.. autoapi-nested-parse::
+
+   Example cli using click.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_secrets_providers.cli.main
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_secrets_providers.cli.log
+
+
+.. py:data:: log
+   
+
+   
+
+.. py:function:: main(test, log_level, log_file)
+
+   Entrypoint into CLI app.
+
+

@@ -1,0 +1,18 @@
+:py:mod:`nautobot_ssot`
+=======================
+
+.. py:module:: nautobot_ssot
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   api/index.rst
+   cli/index.rst
+   config/index.rst
+   log/index.rst
+
+

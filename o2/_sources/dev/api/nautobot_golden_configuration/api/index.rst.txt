@@ -1,0 +1,11 @@
+:py:mod:`nautobot_golden_configuration.api`
+===========================================
+
+.. py:module:: nautobot_golden_configuration.api
+
+.. autoapi-nested-parse::
+
+   Example API.
+
+
+

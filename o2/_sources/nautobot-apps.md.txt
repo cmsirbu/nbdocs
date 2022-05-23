@@ -1,0 +1,22 @@
+# The Nautobot App Ecosystem
+
+## Overview
+
+An introduction to Nautobot Apps (or Plugins).
+
+## Existing Apps
+
+Aid in discovering what's available - a short list with one-liner descriptions of what they do.
+
+### With documentation here
+
+Automatically generated.
+
+### Others
+
+Manually curated list of other apps that are:
+
+1. Not migrated yet to the new docs system.
+2. Built by others in the community.
+
+Should be reviewed periodically to ensure projects are not abandoned, links still work (this can be automated in CI) etc.
