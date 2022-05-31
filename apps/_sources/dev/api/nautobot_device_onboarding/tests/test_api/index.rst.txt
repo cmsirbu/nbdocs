@@ -1,0 +1,90 @@
+:py:mod:`nautobot_device_onboarding.tests.test_api`
+===================================================
+
+.. py:module:: nautobot_device_onboarding.tests.test_api
+
+.. autoapi-nested-parse::
+
+   Unit tests for nautobot_device_onboarding REST API.
+
+   (c) 2020-2021 Network To Code
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.tests.test_api.OnboardingTaskTestCase
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.tests.test_api.User
+
+
+.. py:data:: User
+   
+
+   
+
+.. py:class:: OnboardingTaskTestCase(methodName='runTest')
+
+   Bases: :py:obj:`django.test.TestCase`
+
+   Test the OnboardingTask API.
+
+   .. py:method:: setUp(self)
+
+      Create a superuser and token for API calls.
+
+
+   .. py:method:: test_list_onboarding_tasks(self)
+
+      Verify that OnboardingTasks can be listed.
+
+
+   .. py:method:: test_get_onboarding_task(self)
+
+      Verify that an Onboardingtask can be retrieved.
+
+
+   .. py:method:: test_create_task_missing_mandatory_parameters(self)
+
+      Verify that the only mandatory POST parameters are ip_address and site.
+
+
+   .. py:method:: test_create_task(self)
+
+      Verify that an OnboardingTask can be created.
+
+
+   .. py:method:: test_update_task_forbidden(self)
+
+      Verify that an OnboardingTask cannot be updated via this API.
+
+
+   .. py:method:: test_delete_task(self)
+
+      Verify that an OnboardingTask can be deleted.
+
+
+

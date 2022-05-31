@@ -1,0 +1,227 @@
+:py:mod:`nautobot_golden_config.api.serializers`
+================================================
+
+.. py:module:: nautobot_golden_config.api.serializers
+
+.. autoapi-nested-parse::
+
+   REST API serializer capabilities for graphql plugin.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.api.serializers.GraphQLSerializer
+   nautobot_golden_config.api.serializers.ComplianceFeatureSerializer
+   nautobot_golden_config.api.serializers.ComplianceRuleSerializer
+   nautobot_golden_config.api.serializers.ConfigComplianceSerializer
+   nautobot_golden_config.api.serializers.GoldenConfigSerializer
+   nautobot_golden_config.api.serializers.GoldenConfigSettingSerializer
+   nautobot_golden_config.api.serializers.ConfigRemoveSerializer
+   nautobot_golden_config.api.serializers.ConfigReplaceSerializer
+
+
+
+
+.. py:class:: GraphQLSerializer(instance=None, data=empty, **kwargs)
+
+   Bases: :py:obj:`rest_framework.serializers.Serializer`
+
+   Serializer for a GraphQL object.
+
+   .. py:attribute:: data
+      
+
+      
+
+
+.. py:class:: ComplianceFeatureSerializer(instance=None, data=empty, **kwargs)
+
+   Bases: :py:obj:`nautobot.extras.api.serializers.TaggedObjectSerializer`, :py:obj:`nautobot.extras.api.customfields.CustomFieldModelSerializer`
+
+   Serializer for ComplianceFeature object.
+
+   .. py:class:: Meta
+
+      Set Meta Data for ComplianceFeature, will serialize all fields.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = __all__
+
+         
+
+
+   .. py:attribute:: url
+      
+
+      
+
+
+.. py:class:: ComplianceRuleSerializer(instance=None, data=empty, **kwargs)
+
+   Bases: :py:obj:`nautobot.extras.api.serializers.TaggedObjectSerializer`, :py:obj:`nautobot.extras.api.customfields.CustomFieldModelSerializer`
+
+   Serializer for ComplianceRule object.
+
+   .. py:class:: Meta
+
+      Set Meta Data for ComplianceRule, will serialize all fields.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = __all__
+
+         
+
+
+   .. py:attribute:: url
+      
+
+      
+
+
+.. py:class:: ConfigComplianceSerializer(instance=None, data=empty, **kwargs)
+
+   Bases: :py:obj:`nautobot.extras.api.serializers.TaggedObjectSerializer`, :py:obj:`nautobot.extras.api.customfields.CustomFieldModelSerializer`
+
+   Serializer for ConfigCompliance object.
+
+   .. py:class:: Meta
+
+      Set Meta Data for ConfigCompliance, will serialize fields.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = __all__
+
+         
+
+
+
+.. py:class:: GoldenConfigSerializer(instance=None, data=empty, **kwargs)
+
+   Bases: :py:obj:`nautobot.extras.api.serializers.TaggedObjectSerializer`, :py:obj:`nautobot.extras.api.customfields.CustomFieldModelSerializer`
+
+   Serializer for GoldenConfig object.
+
+   .. py:class:: Meta
+
+      Set Meta Data for GoldenConfig, will serialize all fields.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = __all__
+
+         
+
+
+   .. py:attribute:: url
+      
+
+      
+
+
+.. py:class:: GoldenConfigSettingSerializer(instance=None, data=empty, **kwargs)
+
+   Bases: :py:obj:`nautobot.extras.api.serializers.TaggedObjectSerializer`, :py:obj:`nautobot.extras.api.customfields.CustomFieldModelSerializer`
+
+   Serializer for GoldenConfigSetting object.
+
+   .. py:class:: Meta
+
+      Set Meta Data for GoldenConfigSetting, will serialize all fields.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = __all__
+
+         
+
+
+   .. py:attribute:: url
+      
+
+      
+
+
+.. py:class:: ConfigRemoveSerializer(instance=None, data=empty, **kwargs)
+
+   Bases: :py:obj:`nautobot.extras.api.serializers.TaggedObjectSerializer`, :py:obj:`nautobot.extras.api.customfields.CustomFieldModelSerializer`
+
+   Serializer for ConfigRemove object.
+
+   .. py:class:: Meta
+
+      Set Meta Data for ConfigRemove, will serialize all fields.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = __all__
+
+         
+
+
+   .. py:attribute:: url
+      
+
+      
+
+
+.. py:class:: ConfigReplaceSerializer(instance=None, data=empty, **kwargs)
+
+   Bases: :py:obj:`nautobot.extras.api.serializers.TaggedObjectSerializer`, :py:obj:`nautobot.extras.api.customfields.CustomFieldModelSerializer`
+
+   Serializer for ConfigReplace object.
+
+   .. py:class:: Meta
+
+      Set Meta Data for ConfigReplace, will serialize all fields.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = __all__
+
+         
+
+
+   .. py:attribute:: url
+      
+
+      
+
+

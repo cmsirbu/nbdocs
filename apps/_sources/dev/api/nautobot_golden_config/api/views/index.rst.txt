@@ -1,0 +1,210 @@
+:py:mod:`nautobot_golden_config.api.views`
+==========================================
+
+.. py:module:: nautobot_golden_config.api.views
+
+.. autoapi-nested-parse::
+
+   View for Golden Config APIs.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.api.views.GoldenConfigRootView
+   nautobot_golden_config.api.views.SOTAggDeviceDetailView
+   nautobot_golden_config.api.views.ComplianceRuleViewSet
+   nautobot_golden_config.api.views.ComplianceFeatureViewSet
+   nautobot_golden_config.api.views.ConfigComplianceViewSet
+   nautobot_golden_config.api.views.GoldenConfigViewSet
+   nautobot_golden_config.api.views.GoldenConfigSettingViewSet
+   nautobot_golden_config.api.views.ConfigRemoveViewSet
+   nautobot_golden_config.api.views.ConfigReplaceViewSet
+
+
+
+
+.. py:class:: GoldenConfigRootView(**kwargs)
+
+   Bases: :py:obj:`rest_framework.routers.APIRootView`
+
+   Golden Config API root view.
+
+   .. py:method:: get_view_name(self)
+
+      Golden Config API root view boilerplate.
+
+
+
+.. py:class:: SOTAggDeviceDetailView(**kwargs)
+
+   Bases: :py:obj:`rest_framework.views.APIView`
+
+   Detail REST API view showing graphql, with a potential "transformer" of data on a specific device.
+
+   .. py:attribute:: permission_classes
+      
+
+      
+
+   .. py:method:: get(self, request, *args, **kwargs)
+
+      Get method serialize for a dictionary to json response.
+
+
+
+.. py:class:: ComplianceRuleViewSet(**kwargs)
+
+   Bases: :py:obj:`nautobot.extras.api.views.CustomFieldModelViewSet`
+
+   API viewset for interacting with ComplianceRule objects.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: serializer_class
+      
+
+      
+
+   .. py:attribute:: filterset_class
+      
+
+      
+
+
+.. py:class:: ComplianceFeatureViewSet(**kwargs)
+
+   Bases: :py:obj:`nautobot.extras.api.views.CustomFieldModelViewSet`
+
+   API viewset for interacting with ComplianceFeature objects.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: serializer_class
+      
+
+      
+
+   .. py:attribute:: filterset_class
+      
+
+      
+
+
+.. py:class:: ConfigComplianceViewSet(**kwargs)
+
+   Bases: :py:obj:`nautobot.extras.api.views.CustomFieldModelViewSet`
+
+   API viewset for interacting with ConfigCompliance objects.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: serializer_class
+      
+
+      
+
+   .. py:attribute:: filterset_class
+      
+
+      
+
+
+.. py:class:: GoldenConfigViewSet(**kwargs)
+
+   Bases: :py:obj:`nautobot.extras.api.views.CustomFieldModelViewSet`
+
+   API viewset for interacting with GoldenConfig objects.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: serializer_class
+      
+
+      
+
+   .. py:attribute:: filterset_class
+      
+
+      
+
+
+.. py:class:: GoldenConfigSettingViewSet(**kwargs)
+
+   Bases: :py:obj:`nautobot.extras.api.views.CustomFieldModelViewSet`
+
+   API viewset for interacting with GoldenConfigSetting objects.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: serializer_class
+      
+
+      
+
+
+.. py:class:: ConfigRemoveViewSet(**kwargs)
+
+   Bases: :py:obj:`nautobot.extras.api.views.CustomFieldModelViewSet`
+
+   API viewset for interacting with ConfigRemove objects.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: serializer_class
+      
+
+      
+
+   .. py:attribute:: filterset_class
+      
+
+      
+
+
+.. py:class:: ConfigReplaceViewSet(**kwargs)
+
+   Bases: :py:obj:`nautobot.extras.api.views.CustomFieldModelViewSet`
+
+   API viewset for interacting with ConfigReplace objects.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: serializer_class
+      
+
+      
+
+   .. py:attribute:: filterset_class
+      
+
+      
+
+

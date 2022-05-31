@@ -1,0 +1,34 @@
+# Welcome to the Nautobot Apps Documentation!
+
+```{admonition} Developer Note - Remove Me!
+This is the landing page for this docs website - add the most important messaging here!
+```
+
+## The Nautobot App Ecosystem
+
+Find out more about what documentation is available for the various Nautobot Apps, both on this site and externally, by visiting the [Nautobot App Ecosystem](nautobot-apps.md) page.
+
+You can also find links to the core Nautobot documentation and other Nautobot related packages over on the [Documentation Landing Page](https://nbdocs.pages.dev).
+
+```{toctree}
+:maxdepth: 2
+Nautobot App Ecosystem <nautobot-apps>
+```
+
+```{toctree}
+:maxdepth: 2
+:glob:
+:caption: Nautobot Device Onboarding
+User Guide <nautobot-plugin-device-onboarding/user/index>
+Administrator Guide <nautobot-plugin-device-onboarding/admin/index>
+Developer Guide <nautobot-plugin-device-onboarding/dev/index>
+```
+
+```{toctree}
+:maxdepth: 2
+:glob:
+:caption: Nautobot Golden Configuration
+User Guide <nautobot-plugin-golden-config/user/index>
+Administrator Guide <nautobot-plugin-golden-config/admin/index>
+Developer Guide <nautobot-plugin-golden-config/dev/index>
+```

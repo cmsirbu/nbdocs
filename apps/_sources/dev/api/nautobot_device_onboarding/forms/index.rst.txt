@@ -1,0 +1,235 @@
+:py:mod:`nautobot_device_onboarding.forms`
+==========================================
+
+.. py:module:: nautobot_device_onboarding.forms
+
+.. autoapi-nested-parse::
+
+   Forms for network device onboarding.
+
+   (c) 2020-2021 Network To Code
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.forms.OnboardingTaskForm
+   nautobot_device_onboarding.forms.OnboardingTaskFilterForm
+   nautobot_device_onboarding.forms.OnboardingTaskFeedCSVForm
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.forms.BLANK_CHOICE
+
+
+.. py:data:: BLANK_CHOICE
+   :annotation: = [['', '---------']]
+
+   
+
+.. py:class:: OnboardingTaskForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`django.forms.ModelForm`
+
+   Form for creating a new OnboardingTask instance.
+
+   .. py:class:: Meta
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['site', 'ip_address', 'port', 'timeout', 'username', 'password', 'secret', 'platform', 'role',...
+
+         
+
+
+   .. py:attribute:: ip_address
+      
+
+      
+
+   .. py:attribute:: site
+      
+
+      
+
+   .. py:attribute:: username
+      
+
+      
+
+   .. py:attribute:: password
+      
+
+      
+
+   .. py:attribute:: secret
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: role
+      
+
+      
+
+   .. py:attribute:: device_type
+      
+
+      
+
+   .. py:method:: save(self, commit=True, **kwargs)
+
+      Save the model, and add it and the associated credentials to the onboarding worker queue.
+
+
+
+.. py:class:: OnboardingTaskFilterForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`django.forms.ModelForm`
+
+   Form for filtering OnboardingTask instances.
+
+   .. py:class:: Meta
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['q', 'site', 'platform', 'status', 'failed_reason']
+
+         
+
+
+   .. py:attribute:: site
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: status
+      
+
+      
+
+   .. py:attribute:: failed_reason
+      
+
+      
+
+   .. py:attribute:: q
+      
+
+      
+
+
+.. py:class:: OnboardingTaskFeedCSVForm(*args, headers=None, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.CSVModelForm`
+
+   Form for entering CSV to bulk-import OnboardingTask entries.
+
+   .. py:class:: Meta
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['site', 'ip_address', 'port', 'timeout', 'platform', 'role']
+
+         
+
+
+   .. py:attribute:: site
+      
+
+      
+
+   .. py:attribute:: ip_address
+      
+
+      
+
+   .. py:attribute:: username
+      
+
+      
+
+   .. py:attribute:: password
+      
+
+      
+
+   .. py:attribute:: secret
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: port
+      
+
+      
+
+   .. py:attribute:: timeout
+      
+
+      
+
+   .. py:attribute:: role
+      
+
+      
+
+   .. py:attribute:: device_type
+      
+
+      
+
+   .. py:method:: save(self, commit=True, **kwargs)
+
+      Save the model, and add it and the associated credentials to the onboarding worker queue.
+
+
+

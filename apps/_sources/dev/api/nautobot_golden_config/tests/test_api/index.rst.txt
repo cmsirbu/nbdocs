@@ -1,0 +1,104 @@
+:py:mod:`nautobot_golden_config.tests.test_api`
+===============================================
+
+.. py:module:: nautobot_golden_config.tests.test_api
+
+.. autoapi-nested-parse::
+
+   Unit tests for nautobot_golden_config.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tests.test_api.GoldenConfigAPITest
+   nautobot_golden_config.tests.test_api.GoldenConfigSettingsAPITest
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tests.test_api.User
+
+
+.. py:data:: User
+   
+
+   
+
+.. py:class:: GoldenConfigAPITest(methodName='runTest')
+
+   Bases: :py:obj:`nautobot.utilities.testing.APITestCase`
+
+   Test the ConfigCompliance API.
+
+   .. py:method:: setUp(self)
+
+      Create a superuser and token for API calls.
+
+
+   .. py:method:: test_root(self)
+
+      Validate the root for Nautobot Chatops API.
+
+
+   .. py:method:: test_device_list(self)
+
+      Verify that devices can be listed.
+
+
+   .. py:method:: test_config_compliance_list_view(self)
+
+      Verify that config compliance objects can be listed.
+
+
+   .. py:method:: test_config_compliance_post_new_json_compliant(self)
+
+      Verify that config compliance detail view.
+
+
+   .. py:method:: test_config_compliance_post_new_json_not_compliant(self)
+
+      Verify that config compliance detail view.
+
+
+
+.. py:class:: GoldenConfigSettingsAPITest(methodName='runTest')
+
+   Bases: :py:obj:`nautobot.utilities.testing.APITestCase`
+
+   Verify that the combination of values in a GoldenConfigSettings object POST are valid.
+
+   .. py:method:: setUp(self)
+
+      Create a superuser and token for API calls.
+
+
+   .. py:method:: test_golden_config_settings_create_good(self)
+
+      Test a POST with good values.
+
+
+   .. py:method:: test_golden_config_settings_update_good(self)
+
+      Verify a PUT to the valid settings object, with valid but changed values.
+
+
+   .. py:method:: test_settings_api_clean_up(self)
+
+      Transactional custom model, unable to use `get_or_create`.
+
+      Delete all objects created of GitRepository type.
+
+
+

@@ -1,0 +1,111 @@
+:py:mod:`nautobot_golden_config.template_content`
+=================================================
+
+.. py:module:: nautobot_golden_config.template_content
+
+.. autoapi-nested-parse::
+
+   Added content to the device model view for config compliance.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.template_content.ConfigComplianceDeviceCheck
+   nautobot_golden_config.template_content.ConfigComplianceSiteCheck
+   nautobot_golden_config.template_content.ConfigDeviceDetails
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.template_content.extensions
+   nautobot_golden_config.template_content.template_extensions
+
+
+.. py:class:: ConfigComplianceDeviceCheck(context)
+
+   Bases: :py:obj:`nautobot.extras.plugins.PluginTemplateExtension`
+
+   Plugin extension class for config compliance.
+
+   .. py:attribute:: model
+      :annotation: = dcim.device
+
+      
+
+   .. py:method:: get_device(self)
+
+      Get device object.
+
+
+   .. py:method:: right_page(self)
+
+      Content to add to the configuration compliance.
+
+
+
+.. py:class:: ConfigComplianceSiteCheck(context)
+
+   Bases: :py:obj:`nautobot.extras.plugins.PluginTemplateExtension`
+
+   Plugin extension class for config compliance.
+
+   .. py:attribute:: model
+      :annotation: = dcim.site
+
+      
+
+   .. py:method:: get_site_slug(self)
+
+      Get site object.
+
+
+   .. py:method:: right_page(self)
+
+      Content to add to the configuration compliance.
+
+
+
+.. py:class:: ConfigDeviceDetails(context)
+
+   Bases: :py:obj:`nautobot.extras.plugins.PluginTemplateExtension`
+
+   Plugin extension class for config compliance.
+
+   .. py:attribute:: model
+      :annotation: = dcim.device
+
+      
+
+   .. py:method:: get_device(self)
+
+      Get device object.
+
+
+   .. py:method:: right_page(self)
+
+      Content to add to the configuration compliance.
+
+
+
+.. py:data:: extensions
+   
+
+   
+
+.. py:data:: template_extensions
+   
+
+   
+

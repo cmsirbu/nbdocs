@@ -1,0 +1,24 @@
+:py:mod:`nautobot_golden_config.urls`
+=====================================
+
+.. py:module:: nautobot_golden_config.urls
+
+.. autoapi-nested-parse::
+
+   Django urlpatterns declaration for config compliance plugin.
+
+
+
+Module Contents
+---------------
+
+.. py:data:: app_name
+   :annotation: = nautobot_golden_config
+
+   
+
+.. py:data:: urlpatterns
+   
+
+   
+

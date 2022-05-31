@@ -1,0 +1,113 @@
+:py:mod:`nautobot_device_onboarding.onboard`
+============================================
+
+.. py:module:: nautobot_device_onboarding.onboard
+
+.. autoapi-nested-parse::
+
+   Onboard.
+
+   (c) 2020-2021 Network To Code
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.onboard.OnboardingTaskManager
+   nautobot_device_onboarding.onboard.OnboardingManager
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.onboard.PLUGIN_SETTINGS
+
+
+.. py:data:: PLUGIN_SETTINGS
+   
+
+   
+
+.. py:class:: OnboardingTaskManager(ot)
+
+   Onboarding Task Manager.
+
+   .. py:method:: napalm_driver(self)
+      :property:
+
+      Return napalm driver name.
+
+
+   .. py:method:: optional_args(self)
+      :property:
+
+      Return platform optional args.
+
+
+   .. py:method:: ip_address(self)
+      :property:
+
+      Return ot's ip address.
+
+
+   .. py:method:: port(self)
+      :property:
+
+      Return ot's port.
+
+
+   .. py:method:: timeout(self)
+      :property:
+
+      Return ot's timeout.
+
+
+   .. py:method:: site(self)
+      :property:
+
+      Return ot's site.
+
+
+   .. py:method:: device_type(self)
+      :property:
+
+      Return ot's device type.
+
+
+   .. py:method:: role(self)
+      :property:
+
+      Return it's device role.
+
+
+   .. py:method:: platform(self)
+      :property:
+
+      Return ot's device platform.
+
+
+
+.. py:class:: OnboardingManager(ot, username, password, secret)
+
+   Onboarding Manager.
+
+

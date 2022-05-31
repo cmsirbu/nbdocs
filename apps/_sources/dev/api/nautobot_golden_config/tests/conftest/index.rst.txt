@@ -1,0 +1,76 @@
+:py:mod:`nautobot_golden_config.tests.conftest`
+===============================================
+
+.. py:module:: nautobot_golden_config.tests.conftest
+
+.. autoapi-nested-parse::
+
+   Params for testing.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tests.conftest.create_device_data
+   nautobot_golden_config.tests.conftest.create_device
+   nautobot_golden_config.tests.conftest.create_orphan_device
+   nautobot_golden_config.tests.conftest.create_feature_rule_json
+   nautobot_golden_config.tests.conftest.create_config_compliance
+   nautobot_golden_config.tests.conftest.create_git_repos
+   nautobot_golden_config.tests.conftest.create_helper_repo
+   nautobot_golden_config.tests.conftest.create_saved_queries
+
+
+
+.. py:function:: create_device_data()
+
+   Creates a Device and associated data.
+
+
+.. py:function:: create_device(name='foobaz')
+
+   Creates a Device to be used with tests.
+
+
+.. py:function:: create_orphan_device(name='orphan')
+
+   Creates a Device to be used with tests.
+
+
+.. py:function:: create_feature_rule_json(device, feature='foo', rule='json')
+
+   Creates a Feature/Rule Mapping and Returns the rule.
+
+
+.. py:function:: create_config_compliance(device, compliance_rule=None, actual=None, intended=None)
+
+   Creates a ConfigCompliance to be used with tests.
+
+
+.. py:function:: create_git_repos() -> None
+
+   Create five instances of Git Repos.
+
+   Two GitRepository objects provide Backups.
+   Two GitRepository objects provide Intended.
+   One GitRepository objects provide Jinja Templates.
+   The provided content is matched through a loop, in order to prevent any errors if object ID's change.
+
+
+.. py:function:: create_helper_repo(name='foobaz', provides=None)
+
+   Create a backup and/or intended repo to test helper functions.
+
+
+.. py:function:: create_saved_queries() -> None
+
+   Create saved GraphQL queries.
+
+

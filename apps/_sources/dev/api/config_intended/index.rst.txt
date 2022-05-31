@@ -1,0 +1,78 @@
+:py:mod:`config_intended`
+=========================
+
+.. py:module:: config_intended
+
+.. autoapi-nested-parse::
+
+   Nornir job for generating the intended config.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   config_intended.run_template
+   config_intended.config_intended
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   config_intended.LOGGER
+   config_intended.jinja_settings
+   config_intended.jinja_env
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:data:: jinja_settings
+   
+
+   
+
+.. py:data:: jinja_env
+   
+
+   
+
+.. py:function:: run_template(task: nornir.core.task.Task, logger, device_to_settings_map, nautobot_job) -> nornir.core.task.Result
+
+   Render Jinja Template.
+
+   Only one template is supported, so the expectation is that that template includes all other templates.
+
+   Args:
+       task (Task): Nornir task individual object
+       logger (NornirLogger): Logger to log messages to.
+       global_settings (GoldenConfigSetting): The settings for GoldenConfigPlugin.
+       nautobot_job (Result): The the output from the Nautobot Job instance being run.
+
+   Returns:
+       result (Result): Result from Nornir task
+
+
+.. py:function:: config_intended(nautobot_job, data)
+
+   Nornir play to generate configurations.
+
+   Args:
+       nautobot_job (Result): The Nautobot Job instance being run.
+       data (dict): Form data from Nautobot Job.
+
+   Returns:
+       None: Intended configuration files are written to filesystem.
+
+

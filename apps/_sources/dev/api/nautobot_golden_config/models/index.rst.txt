@@ -1,0 +1,694 @@
+:py:mod:`nautobot_golden_config.models`
+=======================================
+
+.. py:module:: nautobot_golden_config.models
+
+.. autoapi-nested-parse::
+
+   Django Models for tracking the configuration compliance per feature and device.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.models.ComplianceFeature
+   nautobot_golden_config.models.ComplianceRule
+   nautobot_golden_config.models.ConfigCompliance
+   nautobot_golden_config.models.GoldenConfig
+   nautobot_golden_config.models.GoldenConfigSetting
+   nautobot_golden_config.models.ConfigRemove
+   nautobot_golden_config.models.ConfigReplace
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.models._is_jsonable
+   nautobot_golden_config.models._null_to_empty
+   nautobot_golden_config.models._get_cli_compliance
+   nautobot_golden_config.models._get_json_compliance
+   nautobot_golden_config.models._verify_get_custom_compliance_data
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.models.LOGGER
+   nautobot_golden_config.models.GRAPHQL_STR_START
+   nautobot_golden_config.models.ERROR_MSG
+   nautobot_golden_config.models.MISSING_MSG
+   nautobot_golden_config.models.VALIDATION_MSG
+   nautobot_golden_config.models.FUNC_MAPPER
+   nautobot_golden_config.models.msg
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:data:: GRAPHQL_STR_START
+   :annotation: = query ($device_id: ID!)
+
+   
+
+.. py:data:: ERROR_MSG
+   :annotation: = There was an issue with the data that was returned by your get_custom_compliance function. This...
+
+   
+
+.. py:data:: MISSING_MSG
+   
+
+   
+
+.. py:data:: VALIDATION_MSG
+   
+
+   
+
+.. py:function:: _is_jsonable(val)
+
+   Check is value can be converted to json.
+
+
+.. py:function:: _null_to_empty(val)
+
+   Convert to empty string if the value is currently null.
+
+
+.. py:function:: _get_cli_compliance(obj)
+
+   This function performs the actual compliance for cli configuration.
+
+
+.. py:function:: _get_json_compliance(obj)
+
+   This function performs the actual compliance for json serializable data.
+
+
+.. py:function:: _verify_get_custom_compliance_data(compliance_details)
+
+   This function verifies the data is as expected when a custom function is used.
+
+
+.. py:data:: FUNC_MAPPER
+   
+
+   
+
+.. py:data:: msg
+   
+
+   
+
+.. py:class:: ComplianceFeature(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.core.models.generics.PrimaryModel`
+
+   ComplianceFeature details.
+
+   .. py:class:: Meta
+
+      Meta information for ComplianceFeature model.
+
+      .. py:attribute:: ordering
+         :annotation: = ['slug']
+
+         
+
+
+   .. py:attribute:: name
+      
+
+      
+
+   .. py:attribute:: slug
+      
+
+      
+
+   .. py:attribute:: description
+      
+
+      
+
+   .. py:attribute:: csv_headers
+      :annotation: = ['name', 'slug', 'description']
+
+      
+
+   .. py:method:: to_csv(self)
+
+      Indicates model fields to return as csv.
+
+
+   .. py:method:: __str__(self)
+
+      Return a sane string representation of the instance.
+
+
+   .. py:method:: get_absolute_url(self)
+
+      Absolute url for the ComplianceFeature instance.
+
+
+
+.. py:class:: ComplianceRule(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.core.models.generics.PrimaryModel`
+
+   ComplianceRule details.
+
+   .. py:class:: Meta
+
+      Meta information for ComplianceRule model.
+
+      .. py:attribute:: ordering
+         :annotation: = ['platform', 'feature__name']
+
+         
+
+      .. py:attribute:: unique_together
+         :annotation: = ['feature', 'platform']
+
+         
+
+
+   .. py:attribute:: feature
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: description
+      
+
+      
+
+   .. py:attribute:: config_ordered
+      
+
+      
+
+   .. py:attribute:: match_config
+      
+
+      
+
+   .. py:attribute:: config_type
+      
+
+      
+
+   .. py:attribute:: csv_headers
+      :annotation: = ['platform', 'feature', 'description', 'config_ordered', 'match_config', 'config_type']
+
+      
+
+   .. py:method:: to_csv(self)
+
+      Indicates model fields to return as csv.
+
+
+   .. py:method:: __str__(self)
+
+      Return a sane string representation of the instance.
+
+
+   .. py:method:: get_absolute_url(self)
+
+      Absolute url for the ComplianceRule instance.
+
+
+   .. py:method:: clean(self)
+
+      Verify that if cli, then match_config is set.
+
+
+
+.. py:class:: ConfigCompliance(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.core.models.generics.PrimaryModel`
+
+   Configuration compliance details.
+
+   .. py:class:: Meta
+
+      Set unique together fields for model.
+
+      .. py:attribute:: ordering
+         :annotation: = ['device']
+
+         
+
+      .. py:attribute:: unique_together
+         :annotation: = ['device', 'rule']
+
+         
+
+
+   .. py:attribute:: device
+      
+
+      
+
+   .. py:attribute:: rule
+      
+
+      
+
+   .. py:attribute:: compliance
+      
+
+      
+
+   .. py:attribute:: actual
+      
+
+      
+
+   .. py:attribute:: intended
+      
+
+      
+
+   .. py:attribute:: missing
+      
+
+      
+
+   .. py:attribute:: extra
+      
+
+      
+
+   .. py:attribute:: ordered
+      
+
+      
+
+   .. py:attribute:: compliance_int
+      
+
+      
+
+   .. py:attribute:: csv_headers
+      :annotation: = ['Device Name', 'Feature', 'Compliance']
+
+      
+
+   .. py:method:: get_absolute_url(self)
+
+      Return absolute URL for instance.
+
+
+   .. py:method:: to_csv(self)
+
+      Indicates model fields to return as csv.
+
+
+   .. py:method:: to_objectchange(self, action)
+
+      Remove actual and intended configuration from changelog.
+
+
+   .. py:method:: __str__(self)
+
+      String representation of a the compliance.
+
+
+   .. py:method:: save(self, *args, **kwargs)
+
+      The actual configuration compliance happens here, but the details for actual compliance job would be found in FUNC_MAPPER.
+
+
+
+.. py:class:: GoldenConfig(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.core.models.generics.PrimaryModel`
+
+   Configuration Management Model.
+
+   .. py:class:: Meta
+
+      Set unique together fields for model.
+
+      .. py:attribute:: ordering
+         :annotation: = ['device']
+
+         
+
+
+   .. py:attribute:: device
+      
+
+      
+
+   .. py:attribute:: backup_config
+      
+
+      
+
+   .. py:attribute:: backup_last_attempt_date
+      
+
+      
+
+   .. py:attribute:: backup_last_success_date
+      
+
+      
+
+   .. py:attribute:: intended_config
+      
+
+      
+
+   .. py:attribute:: intended_last_attempt_date
+      
+
+      
+
+   .. py:attribute:: intended_last_success_date
+      
+
+      
+
+   .. py:attribute:: compliance_config
+      
+
+      
+
+   .. py:attribute:: compliance_last_attempt_date
+      
+
+      
+
+   .. py:attribute:: compliance_last_success_date
+      
+
+      
+
+   .. py:attribute:: csv_headers
+      :annotation: = ['Device Name', 'backup attempt', 'backup successful', 'intended attempt', 'intended...
+
+      
+
+   .. py:method:: to_csv(self)
+
+      Indicates model fields to return as csv.
+
+
+   .. py:method:: to_objectchange(self, action)
+
+      Remove actual and intended configuration from changelog.
+
+
+   .. py:method:: __str__(self)
+
+      String representation of a the compliance.
+
+
+
+.. py:class:: GoldenConfigSetting(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.core.models.generics.PrimaryModel`
+
+   GoldenConfigSetting Model defintion. This provides global configs instead of via configs.py.
+
+   .. py:class:: Meta
+
+      Set unique fields for model.
+
+      Provide ordering used in tables and get_device_to_settings_map.
+      Sorting on weight is performed from the highest weight value to the lowest weight value.
+      This is to ensure only one plugin settings could be applied per single device based on priority and name.
+
+      .. py:attribute:: verbose_name
+         :annotation: = Golden Config Setting
+
+         
+
+      .. py:attribute:: ordering
+         :annotation: = ['-weight', 'name']
+
+         
+
+
+   .. py:attribute:: name
+      
+
+      
+
+   .. py:attribute:: slug
+      
+
+      
+
+   .. py:attribute:: weight
+      
+
+      
+
+   .. py:attribute:: description
+      
+
+      
+
+   .. py:attribute:: backup_repository
+      
+
+      
+
+   .. py:attribute:: backup_path_template
+      
+
+      
+
+   .. py:attribute:: intended_repository
+      
+
+      
+
+   .. py:attribute:: intended_path_template
+      
+
+      
+
+   .. py:attribute:: jinja_repository
+      
+
+      
+
+   .. py:attribute:: jinja_path_template
+      
+
+      
+
+   .. py:attribute:: backup_test_connectivity
+      
+
+      
+
+   .. py:attribute:: scope
+      
+
+      
+
+   .. py:attribute:: sot_agg_query
+      
+
+      
+
+   .. py:method:: get_absolute_url(self)
+
+      Return absolute URL for instance.
+
+
+   .. py:method:: __str__(self)
+
+      Return a simple string if model is called.
+
+
+   .. py:method:: clean(self)
+
+      Validate the scope and GraphQL query.
+
+
+   .. py:method:: get_queryset(self)
+
+      Generate a Device QuerySet from the filter.
+
+
+   .. py:method:: device_count(self)
+
+      Return the number of devices in the group.
+
+
+   .. py:method:: get_filter_as_string(self)
+
+      Get filter as string.
+
+
+   .. py:method:: get_url_to_filtered_device_list(self)
+
+      Get url to all devices that are matching the filter.
+
+
+
+.. py:class:: ConfigRemove(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.core.models.generics.PrimaryModel`
+
+   ConfigRemove for Regex Line Removals from Backup Configuration Model defintion.
+
+   .. py:class:: Meta
+
+      Meta information for ConfigRemove model.
+
+      .. py:attribute:: ordering
+         :annotation: = ['platform', 'name']
+
+         
+
+      .. py:attribute:: unique_together
+         :annotation: = ['name', 'platform']
+
+         
+
+
+   .. py:attribute:: name
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: description
+      
+
+      
+
+   .. py:attribute:: regex
+      
+
+      
+
+   .. py:attribute:: clone_fields
+      :annotation: = ['platform', 'description', 'regex']
+
+      
+
+   .. py:attribute:: csv_headers
+      :annotation: = ['name', 'platform', 'description', 'regex']
+
+      
+
+   .. py:method:: to_csv(self)
+
+      Indicates model fields to return as csv.
+
+
+   .. py:method:: __str__(self)
+
+      Return a simple string if model is called.
+
+
+   .. py:method:: get_absolute_url(self)
+
+      Return absolute URL for instance.
+
+
+
+.. py:class:: ConfigReplace(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.core.models.generics.PrimaryModel`
+
+   ConfigReplace for Regex Line Replacements from Backup Configuration Model defintion.
+
+   .. py:class:: Meta
+
+      Meta information for ConfigReplace model.
+
+      .. py:attribute:: ordering
+         :annotation: = ['platform', 'name']
+
+         
+
+      .. py:attribute:: unique_together
+         :annotation: = ['name', 'platform']
+
+         
+
+
+   .. py:attribute:: name
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: description
+      
+
+      
+
+   .. py:attribute:: regex
+      
+
+      
+
+   .. py:attribute:: replace
+      
+
+      
+
+   .. py:attribute:: clone_fields
+      :annotation: = ['platform', 'description', 'regex', 'replace']
+
+      
+
+   .. py:attribute:: csv_headers
+      :annotation: = ['name', 'platform', 'description', 'regex', 'replace']
+
+      
+
+   .. py:method:: to_csv(self)
+
+      Indicates model fields to return as csv.
+
+
+   .. py:method:: get_absolute_url(self)
+
+      Return absolute URL for instance.
+
+
+   .. py:method:: __str__(self)
+
+      Return a simple string if model is called.
+
+
+

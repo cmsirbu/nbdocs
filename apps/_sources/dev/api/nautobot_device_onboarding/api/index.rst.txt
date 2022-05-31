@@ -1,0 +1,22 @@
+:py:mod:`nautobot_device_onboarding.api`
+========================================
+
+.. py:module:: nautobot_device_onboarding.api
+
+.. autoapi-nested-parse::
+
+   REST API module for nautobot_device_onboarding plugin.
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   serializers/index.rst
+   urls/index.rst
+   views/index.rst
+
+

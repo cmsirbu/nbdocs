@@ -1,0 +1,179 @@
+:py:mod:`nautobot_device_onboarding.models`
+===========================================
+
+.. py:module:: nautobot_device_onboarding.models
+
+.. autoapi-nested-parse::
+
+   OnboardingTask Django model.
+
+   (c) 2020-2021 Network To Code
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.models.OnboardingTask
+   nautobot_device_onboarding.models.OnboardingDevice
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.models.init_onboarding_for_new_device
+
+
+
+.. py:class:: OnboardingTask(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.core.models.BaseModel`, :py:obj:`nautobot.extras.models.ChangeLoggedModel`
+
+   The status of each onboarding Task is tracked in the OnboardingTask table.
+
+   .. py:attribute:: label
+      
+
+      
+
+   .. py:attribute:: created_device
+      
+
+      
+
+   .. py:attribute:: ip_address
+      
+
+      
+
+   .. py:attribute:: site
+      
+
+      
+
+   .. py:attribute:: role
+      
+
+      
+
+   .. py:attribute:: device_type
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: status
+      
+
+      
+
+   .. py:attribute:: failed_reason
+      
+
+      
+
+   .. py:attribute:: message
+      
+
+      
+
+   .. py:attribute:: port
+      
+
+      
+
+   .. py:attribute:: timeout
+      
+
+      
+
+   .. py:attribute:: objects
+      
+
+      
+
+   .. py:method:: __str__(self)
+
+      String representation of an OnboardingTask.
+
+
+   .. py:method:: get_absolute_url(self)
+
+      Provide absolute URL to an OnboardingTask.
+
+
+   .. py:method:: save(self, *args, **kwargs)
+
+      Overwrite method to get latest label value and update Task object.
+
+
+
+.. py:class:: OnboardingDevice(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.core.models.BaseModel`
+
+   The status of each Onboarded Device is tracked in the OnboardingDevice table.
+
+   .. py:attribute:: device
+      
+
+      
+
+   .. py:attribute:: enabled
+      
+
+      
+
+   .. py:method:: last_check_attempt_date(self)
+      :property:
+
+      Date of last onboarding attempt for a device.
+
+
+   .. py:method:: last_check_successful_date(self)
+      :property:
+
+      Date of last successful onboarding for a device.
+
+
+   .. py:method:: status(self)
+      :property:
+
+      Last onboarding status.
+
+
+   .. py:method:: last_ot(self)
+      :property:
+
+      Last onboarding task.
+
+
+
+.. py:function:: init_onboarding_for_new_device(sender, instance, created, **kwargs)
+
+   Register to create a OnboardingDevice object for each new Device Object using Django Signal.
+
+   https://docs.djangoproject.com/en/3.0/ref/signals/#post-save
+
+

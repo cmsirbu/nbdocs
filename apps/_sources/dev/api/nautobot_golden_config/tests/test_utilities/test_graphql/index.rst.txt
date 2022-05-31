@@ -1,0 +1,41 @@
+:py:mod:`nautobot_golden_config.tests.test_utilities.test_graphql`
+==================================================================
+
+.. py:module:: nautobot_golden_config.tests.test_utilities.test_graphql
+
+.. autoapi-nested-parse::
+
+   Unit tests for nautobot_golden_config utilities graphql.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tests.test_utilities.test_graphql.GraphQLTest
+
+
+
+
+.. py:class:: GraphQLTest(methodName='runTest')
+
+   Bases: :py:obj:`nautobot.utilities.testing.TestCase`
+
+   Test for the GraphQL Queries.
+
+   .. py:method:: test_graph_ql_query(self, mock)
+
+      Make sure graph_ql_query is called correctly.
+
+
+   .. py:method:: test_bad_graph_ql_query_syntax(self)
+
+      Ensure invalid GraphQL query results with Error.
+
+
+

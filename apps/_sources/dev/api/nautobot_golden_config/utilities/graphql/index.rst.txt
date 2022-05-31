@@ -1,0 +1,42 @@
+:py:mod:`nautobot_golden_config.utilities.graphql`
+==================================================
+
+.. py:module:: nautobot_golden_config.utilities.graphql
+
+.. autoapi-nested-parse::
+
+   Example code to execute GraphQL query from the ORM.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.utilities.graphql.graph_ql_query
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.utilities.graphql.LOGGER
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:function:: graph_ql_query(request, device, query)
+
+   Function to run graphql and transposer command.
+
+

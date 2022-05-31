@@ -1,0 +1,68 @@
+:py:mod:`nautobot_golden_config.utilities.git`
+==============================================
+
+.. py:module:: nautobot_golden_config.utilities.git
+
+.. autoapi-nested-parse::
+
+   Git helper methods and class.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.utilities.git.GitRepo
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.utilities.git._get_secrets
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.utilities.git.LOGGER
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:function:: _get_secrets(git_obj)
+
+   Get Secrets Information from Associated Git Secrets Group.
+
+
+.. py:class:: GitRepo(obj)
+
+   Git Repo object to help with git actions.
+
+   .. py:method:: commit_with_added(self, commit_description)
+
+      Make a force commit.
+
+      Args:
+          commit_description (str): the description of commit
+
+
+   .. py:method:: push(self)
+
+      Push latest to the git repo.
+
+
+

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nautobot_golden_config.filters &mdash; Nautobot App Docs  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="nautobot_golden_config.forms" href="../forms/index.html" />
+    <link rel="prev" title="nautobot_golden_config.datasources" href="../datasources/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html">
+            <img src="../../../../_static/nautobot_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-apps.html">Nautobot App Ecosystem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Device Onboarding</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/dev/index.html">Developer Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Golden Configuration</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/dev_extending.html">Extending the App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/dev_contributing.html">Contributing to the App</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/index.html#api-reference">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Nautobot Golden Configuration</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Nautobot App Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../../nautobot-plugin-golden-config/dev/index.html">Nautobot Golden Configuration</a> &raquo;</li>
+          <li><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config</span></code></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config.filters</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/dev/api/nautobot_golden_config/filters/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-nautobot_golden_config.filters">
+<span id="nautobot-golden-config-filters"></span><h1><a class="reference internal" href="#module-nautobot_golden_config.filters" title="nautobot_golden_config.filters"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config.filters</span></code></a><a class="headerlink" href="#module-nautobot_golden_config.filters" title="Permalink to this headline"></a></h1>
+<p>Filters for UI and API Views.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.filters.GenericPlatformFilterSet" title="nautobot_golden_config.filters.GenericPlatformFilterSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenericPlatformFilterSet</span></code></a></p></td>
+<td><p>Generic method to reuse common FilterSet.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.filters.GoldenConfigFilterSet" title="nautobot_golden_config.filters.GoldenConfigFilterSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigFilterSet</span></code></a></p></td>
+<td><p>Filter capabilities for GoldenConfig instances.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.filters.ConfigComplianceFilterSet" title="nautobot_golden_config.filters.ConfigComplianceFilterSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigComplianceFilterSet</span></code></a></p></td>
+<td><p>Filter capabilities for ConfigCompliance instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.filters.ComplianceFeatureFilterSet" title="nautobot_golden_config.filters.ComplianceFeatureFilterSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceFeatureFilterSet</span></code></a></p></td>
+<td><p>Inherits Base Class CustomFieldModelFilterSet.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.filters.ComplianceRuleFilterSet" title="nautobot_golden_config.filters.ComplianceRuleFilterSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceRuleFilterSet</span></code></a></p></td>
+<td><p>Inherits Base Class CustomFieldModelFilterSet.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.filters.ConfigRemoveFilterSet" title="nautobot_golden_config.filters.ConfigRemoveFilterSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigRemoveFilterSet</span></code></a></p></td>
+<td><p>Inherits Base Class CustomFieldModelFilterSet.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.filters.ConfigReplaceFilterSet" title="nautobot_golden_config.filters.ConfigReplaceFilterSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigReplaceFilterSet</span></code></a></p></td>
+<td><p>Inherits Base Class CustomFieldModelFilterSet.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GenericPlatformFilterSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.filters.</span></span><span class="sig-name descname"><span class="pre">GenericPlatformFilterSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.filters.GenericPlatformFilterSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.filters.CustomFieldModelFilterSet</span></code></p>
+<p>Generic method to reuse common FilterSet.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GenericPlatformFilterSet.platform_id">
+<span class="sig-name descname"><span class="pre">platform_id</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GenericPlatformFilterSet.platform_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GenericPlatformFilterSet.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GenericPlatformFilterSet.platform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.filters.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigFilterSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.filters.CustomFieldModelFilterSet</span></code></p>
+<p>Filter capabilities for GoldenConfig instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Meta class attributes for GoldenConfigFilter.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.Meta.distinct">
+<span class="sig-name descname"><span class="pre">distinct</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.Meta.distinct" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['id']</span></em><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.q">
+<span class="sig-name descname"><span class="pre">q</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.q" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.tenant_group_id">
+<span class="sig-name descname"><span class="pre">tenant_group_id</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.tenant_group_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.tenant_group">
+<span class="sig-name descname"><span class="pre">tenant_group</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.tenant_group" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.tenant_id">
+<span class="sig-name descname"><span class="pre">tenant_id</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.tenant_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.tenant">
+<span class="sig-name descname"><span class="pre">tenant</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.tenant" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.region_id">
+<span class="sig-name descname"><span class="pre">region_id</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.region_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.region">
+<span class="sig-name descname"><span class="pre">region</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.region" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.site_id">
+<span class="sig-name descname"><span class="pre">site_id</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.site_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.site">
+<span class="sig-name descname"><span class="pre">site</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.site" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.rack_group_id">
+<span class="sig-name descname"><span class="pre">rack_group_id</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.rack_group_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.rack_group">
+<span class="sig-name descname"><span class="pre">rack_group</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.rack_group" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.rack_id">
+<span class="sig-name descname"><span class="pre">rack_id</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.rack_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.rack">
+<span class="sig-name descname"><span class="pre">rack</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.rack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.role_id">
+<span class="sig-name descname"><span class="pre">role_id</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.role_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.role">
+<span class="sig-name descname"><span class="pre">role</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.role" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.manufacturer_id">
+<span class="sig-name descname"><span class="pre">manufacturer_id</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.manufacturer_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.manufacturer">
+<span class="sig-name descname"><span class="pre">manufacturer</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.manufacturer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.platform_id">
+<span class="sig-name descname"><span class="pre">platform_id</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.platform_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.platform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.device_status_id">
+<span class="sig-name descname"><span class="pre">device_status_id</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.device_status_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.device_status">
+<span class="sig-name descname"><span class="pre">device_status</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.device_status" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.device_type_id">
+<span class="sig-name descname"><span class="pre">device_type_id</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.device_type_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.device_type">
+<span class="sig-name descname"><span class="pre">device_type</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.device_type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.device_id">
+<span class="sig-name descname"><span class="pre">device_id</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.device_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.device">
+<span class="sig-name descname"><span class="pre">device</span></span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.GoldenConfigFilterSet.search">
+<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.filters.GoldenConfigFilterSet.search" title="Permalink to this definition"></a></dt>
+<dd><p>Perform the filtered search.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigComplianceFilterSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.filters.</span></span><span class="sig-name descname"><span class="pre">ConfigComplianceFilterSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.filters.ConfigComplianceFilterSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nautobot_golden_config.filters.GoldenConfigFilterSet" title="nautobot_golden_config.filters.GoldenConfigFilterSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigFilterSet</span></code></a></p>
+<p>Filter capabilities for ConfigCompliance instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigComplianceFilterSet.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.filters.ConfigComplianceFilterSet.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Meta class attributes for ConfigComplianceFilter.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigComplianceFilterSet.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.filters.ConfigComplianceFilterSet.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigComplianceFilterSet.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['id']</span></em><a class="headerlink" href="#nautobot_golden_config.filters.ConfigComplianceFilterSet.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ComplianceFeatureFilterSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.filters.</span></span><span class="sig-name descname"><span class="pre">ComplianceFeatureFilterSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.filters.ComplianceFeatureFilterSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.filters.CustomFieldModelFilterSet</span></code></p>
+<p>Inherits Base Class CustomFieldModelFilterSet.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ComplianceFeatureFilterSet.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.filters.ComplianceFeatureFilterSet.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate filter Meta data for compliance feature.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ComplianceFeatureFilterSet.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.filters.ComplianceFeatureFilterSet.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ComplianceFeatureFilterSet.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['id',</span> <span class="pre">'name']</span></em><a class="headerlink" href="#nautobot_golden_config.filters.ComplianceFeatureFilterSet.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ComplianceFeatureFilterSet.q">
+<span class="sig-name descname"><span class="pre">q</span></span><a class="headerlink" href="#nautobot_golden_config.filters.ComplianceFeatureFilterSet.q" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ComplianceFeatureFilterSet.search">
+<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.filters.ComplianceFeatureFilterSet.search" title="Permalink to this definition"></a></dt>
+<dd><p>Perform the filtered search.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ComplianceRuleFilterSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.filters.</span></span><span class="sig-name descname"><span class="pre">ComplianceRuleFilterSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.filters.ComplianceRuleFilterSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nautobot_golden_config.filters.GenericPlatformFilterSet" title="nautobot_golden_config.filters.GenericPlatformFilterSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenericPlatformFilterSet</span></code></a></p>
+<p>Inherits Base Class CustomFieldModelFilterSet.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ComplianceRuleFilterSet.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.filters.ComplianceRuleFilterSet.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate filter Meta data for compliance rule.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ComplianceRuleFilterSet.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.filters.ComplianceRuleFilterSet.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ComplianceRuleFilterSet.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['feature',</span> <span class="pre">'id']</span></em><a class="headerlink" href="#nautobot_golden_config.filters.ComplianceRuleFilterSet.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ComplianceRuleFilterSet.q">
+<span class="sig-name descname"><span class="pre">q</span></span><a class="headerlink" href="#nautobot_golden_config.filters.ComplianceRuleFilterSet.q" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ComplianceRuleFilterSet.search">
+<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.filters.ComplianceRuleFilterSet.search" title="Permalink to this definition"></a></dt>
+<dd><p>Perform the filtered search.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigRemoveFilterSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.filters.</span></span><span class="sig-name descname"><span class="pre">ConfigRemoveFilterSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.filters.ConfigRemoveFilterSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nautobot_golden_config.filters.GenericPlatformFilterSet" title="nautobot_golden_config.filters.GenericPlatformFilterSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenericPlatformFilterSet</span></code></a></p>
+<p>Inherits Base Class CustomFieldModelFilterSet.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigRemoveFilterSet.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.filters.ConfigRemoveFilterSet.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate filter Meta data for Config Remove.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigRemoveFilterSet.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.filters.ConfigRemoveFilterSet.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigRemoveFilterSet.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['id',</span> <span class="pre">'name']</span></em><a class="headerlink" href="#nautobot_golden_config.filters.ConfigRemoveFilterSet.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigRemoveFilterSet.q">
+<span class="sig-name descname"><span class="pre">q</span></span><a class="headerlink" href="#nautobot_golden_config.filters.ConfigRemoveFilterSet.q" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigRemoveFilterSet.search">
+<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.filters.ConfigRemoveFilterSet.search" title="Permalink to this definition"></a></dt>
+<dd><p>Perform the filtered search.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigReplaceFilterSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.filters.</span></span><span class="sig-name descname"><span class="pre">ConfigReplaceFilterSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.filters.ConfigReplaceFilterSet" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nautobot_golden_config.filters.GenericPlatformFilterSet" title="nautobot_golden_config.filters.GenericPlatformFilterSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenericPlatformFilterSet</span></code></a></p>
+<p>Inherits Base Class CustomFieldModelFilterSet.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigReplaceFilterSet.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.filters.ConfigReplaceFilterSet.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate filter Meta data for Config Replace.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigReplaceFilterSet.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.filters.ConfigReplaceFilterSet.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigReplaceFilterSet.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['id',</span> <span class="pre">'name']</span></em><a class="headerlink" href="#nautobot_golden_config.filters.ConfigReplaceFilterSet.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigReplaceFilterSet.q">
+<span class="sig-name descname"><span class="pre">q</span></span><a class="headerlink" href="#nautobot_golden_config.filters.ConfigReplaceFilterSet.q" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.filters.ConfigReplaceFilterSet.search">
+<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.filters.ConfigReplaceFilterSet.search" title="Permalink to this definition"></a></dt>
+<dd><p>Perform the filtered search.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../datasources/index.html" class="btn btn-neutral float-left" title="nautobot_golden_config.datasources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../forms/index.html" class="btn btn-neutral float-right" title="nautobot_golden_config.forms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, NTC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

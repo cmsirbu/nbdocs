@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nautobot_golden_config.forms &mdash; Nautobot App Docs  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="nautobot_golden_config.jobs" href="../jobs/index.html" />
+    <link rel="prev" title="nautobot_golden_config.filters" href="../filters/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html">
+            <img src="../../../../_static/nautobot_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-apps.html">Nautobot App Ecosystem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Device Onboarding</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/dev/index.html">Developer Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Golden Configuration</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/dev_extending.html">Extending the App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/dev_contributing.html">Contributing to the App</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/index.html#api-reference">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Nautobot Golden Configuration</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Nautobot App Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../../nautobot-plugin-golden-config/dev/index.html">Nautobot Golden Configuration</a> &raquo;</li>
+          <li><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config</span></code></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config.forms</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/dev/api/nautobot_golden_config/forms/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-nautobot_golden_config.forms">
+<span id="nautobot-golden-config-forms"></span><h1><a class="reference internal" href="#module-nautobot_golden_config.forms" title="nautobot_golden_config.forms"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config.forms</span></code></a><a class="headerlink" href="#module-nautobot_golden_config.forms" title="Permalink to this headline"></a></h1>
+<p>Forms for Device Configuration Backup.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm" title="nautobot_golden_config.forms.ConfigComplianceFilterForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigComplianceFilterForm</span></code></a></p></td>
+<td><p>Filter Form for ConfigCompliance instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ComplianceRuleForm" title="nautobot_golden_config.forms.ComplianceRuleForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceRuleForm</span></code></a></p></td>
+<td><p>Filter Form for ComplianceRule instances.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ComplianceRuleFilterForm" title="nautobot_golden_config.forms.ComplianceRuleFilterForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceRuleFilterForm</span></code></a></p></td>
+<td><p>Form for ComplianceRule instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ComplianceRuleBulkEditForm" title="nautobot_golden_config.forms.ComplianceRuleBulkEditForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceRuleBulkEditForm</span></code></a></p></td>
+<td><p>BulkEdit form for ComplianceRule instances.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ComplianceRuleCSVForm" title="nautobot_golden_config.forms.ComplianceRuleCSVForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceRuleCSVForm</span></code></a></p></td>
+<td><p>CSV Form for ComplianceRule instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ComplianceFeatureForm" title="nautobot_golden_config.forms.ComplianceFeatureForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceFeatureForm</span></code></a></p></td>
+<td><p>Filter Form for ComplianceFeature instances.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ComplianceFeatureFilterForm" title="nautobot_golden_config.forms.ComplianceFeatureFilterForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceFeatureFilterForm</span></code></a></p></td>
+<td><p>Form for ComplianceFeature instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ComplianceFeatureBulkEditForm" title="nautobot_golden_config.forms.ComplianceFeatureBulkEditForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceFeatureBulkEditForm</span></code></a></p></td>
+<td><p>BulkEdit form for ComplianceFeature instances.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ComplianceFeatureCSVForm" title="nautobot_golden_config.forms.ComplianceFeatureCSVForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceFeatureCSVForm</span></code></a></p></td>
+<td><p>CSV Form for ComplianceFeature instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ConfigRemoveForm" title="nautobot_golden_config.forms.ConfigRemoveForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigRemoveForm</span></code></a></p></td>
+<td><p>Filter Form for Line Removal instances.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ConfigRemoveFeatureFilterForm" title="nautobot_golden_config.forms.ConfigRemoveFeatureFilterForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigRemoveFeatureFilterForm</span></code></a></p></td>
+<td><p>Filter Form for Line Removal.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ConfigRemoveBulkEditForm" title="nautobot_golden_config.forms.ConfigRemoveBulkEditForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigRemoveBulkEditForm</span></code></a></p></td>
+<td><p>BulkEdit form for ConfigRemove instances.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ConfigRemoveCSVForm" title="nautobot_golden_config.forms.ConfigRemoveCSVForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigRemoveCSVForm</span></code></a></p></td>
+<td><p>CSV Form for ConfigRemove instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ConfigReplaceForm" title="nautobot_golden_config.forms.ConfigReplaceForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigReplaceForm</span></code></a></p></td>
+<td><p>Filter Form for Line Removal instances.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ConfigReplaceFeatureFilterForm" title="nautobot_golden_config.forms.ConfigReplaceFeatureFilterForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigReplaceFeatureFilterForm</span></code></a></p></td>
+<td><p>Filter Form for Line Replacement.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ConfigReplaceCSVForm" title="nautobot_golden_config.forms.ConfigReplaceCSVForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigReplaceCSVForm</span></code></a></p></td>
+<td><p>CSV Form for ConfigReplace instances.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.ConfigReplaceBulkEditForm" title="nautobot_golden_config.forms.ConfigReplaceBulkEditForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigReplaceBulkEditForm</span></code></a></p></td>
+<td><p>BulkEdit form for ConfigReplace instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.forms.GoldenConfigSettingFeatureForm" title="nautobot_golden_config.forms.GoldenConfigSettingFeatureForm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigSettingFeatureForm</span></code></a></p></td>
+<td><p>Filter Form for GoldenConfigSettingFeatureForm instances.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ConfigComplianceFilterForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.forms.BootstrapMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldFilterForm</span></code></p>
+<p>Filter Form for ConfigCompliance instances.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm.field_order">
+<span class="sig-name descname"><span class="pre">field_order</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['q',</span> <span class="pre">'tenant_group',</span> <span class="pre">'tenant',</span> <span class="pre">'region',</span> <span class="pre">'site',</span> <span class="pre">'rack_group_id',</span> <span class="pre">'rack_id',</span> <span class="pre">'role',...</span></em><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm.field_order" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm.q">
+<span class="sig-name descname"><span class="pre">q</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm.q" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm.tenant_group">
+<span class="sig-name descname"><span class="pre">tenant_group</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm.tenant_group" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm.tenant">
+<span class="sig-name descname"><span class="pre">tenant</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm.tenant" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm.region">
+<span class="sig-name descname"><span class="pre">region</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm.region" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm.site">
+<span class="sig-name descname"><span class="pre">site</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm.site" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm.rack_group_id">
+<span class="sig-name descname"><span class="pre">rack_group_id</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm.rack_group_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm.rack_id">
+<span class="sig-name descname"><span class="pre">rack_id</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm.rack_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm.role">
+<span class="sig-name descname"><span class="pre">role</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm.role" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm.manufacturer">
+<span class="sig-name descname"><span class="pre">manufacturer</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm.manufacturer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm.device_type_id">
+<span class="sig-name descname"><span class="pre">device_type_id</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm.device_type_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm.platform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigComplianceFilterForm.device_id">
+<span class="sig-name descname"><span class="pre">device_id</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigComplianceFilterForm.device_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ComplianceRuleForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.forms.BootstrapMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldModelForm</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.RelationshipModelForm</span></code></p>
+<p>Filter Form for ComplianceRule instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate form Meta data for compliance rule.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleForm.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['platform',</span> <span class="pre">'feature',</span> <span class="pre">'description',</span> <span class="pre">'config_ordered',</span> <span class="pre">'match_config',</span> <span class="pre">'config_type']</span></em><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleForm.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleForm.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleForm.platform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleFilterForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ComplianceRuleFilterForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleFilterForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.forms.BootstrapMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldFilterForm</span></code></p>
+<p>Form for ComplianceRule instances.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleFilterForm.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleFilterForm.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleFilterForm.q">
+<span class="sig-name descname"><span class="pre">q</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleFilterForm.q" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleFilterForm.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleFilterForm.platform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleFilterForm.feature">
+<span class="sig-name descname"><span class="pre">feature</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleFilterForm.feature" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleBulkEditForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ComplianceRuleBulkEditForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleBulkEditForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.forms.BootstrapMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.AddRemoveTagsForm</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldBulkEditForm</span></code></p>
+<p>BulkEdit form for ComplianceRule instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleBulkEditForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleBulkEditForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate form Meta data for ComplianceRule.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleBulkEditForm.Meta.nullable_fields">
+<span class="sig-name descname"><span class="pre">nullable_fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleBulkEditForm.Meta.nullable_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleBulkEditForm.pk">
+<span class="sig-name descname"><span class="pre">pk</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleBulkEditForm.pk" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleCSVForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ComplianceRuleCSVForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleCSVForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldModelCSVForm</span></code></p>
+<p>CSV Form for ComplianceRule instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleCSVForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleCSVForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate form Meta data for ComplianceRule.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleCSVForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleCSVForm.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceRuleCSVForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceRuleCSVForm.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ComplianceFeatureForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.forms.BootstrapMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldModelForm</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.RelationshipModelForm</span></code></p>
+<p>Filter Form for ComplianceFeature instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate form Meta data for compliance feature.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureForm.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['name',</span> <span class="pre">'slug',</span> <span class="pre">'description']</span></em><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureForm.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureForm.slug">
+<span class="sig-name descname"><span class="pre">slug</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureForm.slug" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureFilterForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ComplianceFeatureFilterForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureFilterForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.forms.BootstrapMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldFilterForm</span></code></p>
+<p>Form for ComplianceFeature instances.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureFilterForm.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureFilterForm.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureFilterForm.q">
+<span class="sig-name descname"><span class="pre">q</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureFilterForm.q" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureFilterForm.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureFilterForm.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureBulkEditForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ComplianceFeatureBulkEditForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureBulkEditForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.forms.BootstrapMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.AddRemoveTagsForm</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldBulkEditForm</span></code></p>
+<p>BulkEdit form for ComplianceFeature instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureBulkEditForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureBulkEditForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate form Meta data for ComplianceFeature.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureBulkEditForm.Meta.nullable_fields">
+<span class="sig-name descname"><span class="pre">nullable_fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureBulkEditForm.Meta.nullable_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureBulkEditForm.pk">
+<span class="sig-name descname"><span class="pre">pk</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureBulkEditForm.pk" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureCSVForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ComplianceFeatureCSVForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureCSVForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldModelCSVForm</span></code></p>
+<p>CSV Form for ComplianceFeature instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureCSVForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureCSVForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate form Meta data for ComplianceFeature.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureCSVForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureCSVForm.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ComplianceFeatureCSVForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ComplianceFeatureCSVForm.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ConfigRemoveForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.forms.BootstrapMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldModelForm</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.RelationshipModelForm</span></code></p>
+<p>Filter Form for Line Removal instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate form Meta data for removal feature.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveForm.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['platform',</span> <span class="pre">'name',</span> <span class="pre">'description',</span> <span class="pre">'regex']</span></em><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveForm.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveForm.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveForm.platform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveFeatureFilterForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ConfigRemoveFeatureFilterForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveFeatureFilterForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.forms.BootstrapMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldFilterForm</span></code></p>
+<p>Filter Form for Line Removal.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveFeatureFilterForm.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveFeatureFilterForm.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveFeatureFilterForm.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveFeatureFilterForm.platform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveFeatureFilterForm.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveFeatureFilterForm.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveBulkEditForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ConfigRemoveBulkEditForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveBulkEditForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.forms.BootstrapMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.AddRemoveTagsForm</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldBulkEditForm</span></code></p>
+<p>BulkEdit form for ConfigRemove instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveBulkEditForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveBulkEditForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate form Meta data for ConfigRemove.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveBulkEditForm.Meta.nullable_fields">
+<span class="sig-name descname"><span class="pre">nullable_fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveBulkEditForm.Meta.nullable_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveBulkEditForm.pk">
+<span class="sig-name descname"><span class="pre">pk</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveBulkEditForm.pk" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveCSVForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ConfigRemoveCSVForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveCSVForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldModelCSVForm</span></code></p>
+<p>CSV Form for ConfigRemove instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveCSVForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveCSVForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate form Meta data for ConfigRemove.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveCSVForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveCSVForm.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigRemoveCSVForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigRemoveCSVForm.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ConfigReplaceForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.forms.BootstrapMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldModelForm</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.RelationshipModelForm</span></code></p>
+<p>Filter Form for Line Removal instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate form Meta data for removal feature.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceForm.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['platform',</span> <span class="pre">'name',</span> <span class="pre">'description',</span> <span class="pre">'regex',</span> <span class="pre">'replace']</span></em><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceForm.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceForm.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceForm.platform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceFeatureFilterForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ConfigReplaceFeatureFilterForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceFeatureFilterForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.forms.BootstrapMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldFilterForm</span></code></p>
+<p>Filter Form for Line Replacement.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceFeatureFilterForm.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceFeatureFilterForm.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceFeatureFilterForm.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceFeatureFilterForm.platform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceFeatureFilterForm.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceFeatureFilterForm.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceCSVForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ConfigReplaceCSVForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceCSVForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldModelCSVForm</span></code></p>
+<p>CSV Form for ConfigReplace instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceCSVForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceCSVForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate form Meta data for ConfigReplace.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceCSVForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceCSVForm.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceCSVForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceCSVForm.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceBulkEditForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">ConfigReplaceBulkEditForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceBulkEditForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.forms.BootstrapMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.AddRemoveTagsForm</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldBulkEditForm</span></code></p>
+<p>BulkEdit form for ConfigReplace instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceBulkEditForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceBulkEditForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate form Meta data for ConfigReplace.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceBulkEditForm.Meta.nullable_fields">
+<span class="sig-name descname"><span class="pre">nullable_fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceBulkEditForm.Meta.nullable_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.ConfigReplaceBulkEditForm.pk">
+<span class="sig-name descname"><span class="pre">pk</span></span><a class="headerlink" href="#nautobot_golden_config.forms.ConfigReplaceBulkEditForm.pk" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.GoldenConfigSettingFeatureForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.forms.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigSettingFeatureForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.forms.GoldenConfigSettingFeatureForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.forms.BootstrapMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.CustomFieldModelForm</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.forms.RelationshipModelForm</span></code></p>
+<p>Filter Form for GoldenConfigSettingFeatureForm instances.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.GoldenConfigSettingFeatureForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.forms.GoldenConfigSettingFeatureForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Filter Form Meta Data for GoldenConfigSettingFeatureForm instances.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.GoldenConfigSettingFeatureForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.forms.GoldenConfigSettingFeatureForm.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.GoldenConfigSettingFeatureForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['name',</span> <span class="pre">'slug',</span> <span class="pre">'weight',</span> <span class="pre">'description',</span> <span class="pre">'backup_repository',</span> <span class="pre">'backup_path_template',...</span></em><a class="headerlink" href="#nautobot_golden_config.forms.GoldenConfigSettingFeatureForm.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.forms.GoldenConfigSettingFeatureForm.slug">
+<span class="sig-name descname"><span class="pre">slug</span></span><a class="headerlink" href="#nautobot_golden_config.forms.GoldenConfigSettingFeatureForm.slug" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../filters/index.html" class="btn btn-neutral float-left" title="nautobot_golden_config.filters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../jobs/index.html" class="btn btn-neutral float-right" title="nautobot_golden_config.jobs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, NTC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1115 @@
+:py:mod:`nautobot_golden_config.views`
+======================================
+
+.. py:module:: nautobot_golden_config.views
+
+.. autoapi-nested-parse::
+
+   Django views for Nautobot Golden Configuration.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.views.GoldenConfigListView
+   nautobot_golden_config.views.GoldenConfigBulkDeleteView
+   nautobot_golden_config.views.ConfigComplianceListView
+   nautobot_golden_config.views.ConfigComplianceView
+   nautobot_golden_config.views.ConfigComplianceBulkDeleteView
+   nautobot_golden_config.views.ConfigComplianceDeleteView
+   nautobot_golden_config.views.ConfigComplianceDeviceView
+   nautobot_golden_config.views.ComplianceDeviceFilteredReport
+   nautobot_golden_config.views.ConfigComplianceDetails
+   nautobot_golden_config.views.ConfigComplianceOverviewOverviewHelper
+   nautobot_golden_config.views.ConfigComplianceOverview
+   nautobot_golden_config.views.ComplianceFeatureListView
+   nautobot_golden_config.views.ComplianceFeatureView
+   nautobot_golden_config.views.ComplianceFeatureBulkImportView
+   nautobot_golden_config.views.ComplianceFeatureEditView
+   nautobot_golden_config.views.ComplianceFeatureDeleteView
+   nautobot_golden_config.views.ComplianceFeatureBulkDeleteView
+   nautobot_golden_config.views.ComplianceFeatureBulkEditView
+   nautobot_golden_config.views.ComplianceRuleListView
+   nautobot_golden_config.views.ComplianceRuleView
+   nautobot_golden_config.views.ComplianceRuleBulkImportView
+   nautobot_golden_config.views.ComplianceRuleEditView
+   nautobot_golden_config.views.ComplianceRuleDeleteView
+   nautobot_golden_config.views.ComplianceRuleBulkDeleteView
+   nautobot_golden_config.views.ComplianceRuleBulkEditView
+   nautobot_golden_config.views.GoldenConfigSettingView
+   nautobot_golden_config.views.GoldenConfigSettingCreateView
+   nautobot_golden_config.views.GoldenConfigSettingDeleteView
+   nautobot_golden_config.views.GoldenConfigSettingBulkDeleteView
+   nautobot_golden_config.views.GoldenConfigSettingEditView
+   nautobot_golden_config.views.GoldenConfigSettingListView
+   nautobot_golden_config.views.ConfigRemoveListView
+   nautobot_golden_config.views.ConfigRemoveView
+   nautobot_golden_config.views.ConfigRemoveBulkImportView
+   nautobot_golden_config.views.ConfigRemoveBulkEditView
+   nautobot_golden_config.views.ConfigRemoveEditView
+   nautobot_golden_config.views.ConfigRemoveDeleteView
+   nautobot_golden_config.views.ConfigRemoveBulkDeleteView
+   nautobot_golden_config.views.ConfigReplaceListView
+   nautobot_golden_config.views.ConfigReplaceView
+   nautobot_golden_config.views.ConfigReplaceEditView
+   nautobot_golden_config.views.ConfigReplaceBulkDeleteView
+   nautobot_golden_config.views.ConfigReplaceBulkImportView
+   nautobot_golden_config.views.ConfigReplaceDeleteView
+   nautobot_golden_config.views.ConfigReplaceBulkEditView
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.views.LOGGER
+   nautobot_golden_config.views.GREEN
+   nautobot_golden_config.views.RED
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:data:: GREEN
+   :annotation: = #D5E8D4
+
+   
+
+.. py:data:: RED
+   :annotation: = #F8CECC
+
+   
+
+.. py:class:: GoldenConfigListView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectListView`
+
+   View for displaying the configuration management status for backup, intended, diff, and SoT Agg.
+
+   .. py:attribute:: table
+      
+
+      
+
+   .. py:attribute:: filterset
+      
+
+      
+
+   .. py:attribute:: filterset_form
+      
+
+      
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: template_name
+      :annotation: = nautobot_golden_config/goldenconfig_list.html
+
+      
+
+   .. py:method:: extra_context(self)
+
+      Boilerplace code to modify data before returning.
+
+
+   .. py:method:: alter_queryset(self, request)
+
+      Build actual runtime queryset as the build time queryset provides no information.
+
+
+   .. py:method:: queryset_to_csv(self)
+
+      Override nautobot default to account for using Device model for GoldenConfig data.
+
+
+
+.. py:class:: GoldenConfigBulkDeleteView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkDeleteView`
+
+   Standard view for bulk deletion of data.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+   .. py:attribute:: filterset
+      
+
+      
+
+   .. py:method:: post(self, request, **kwargs)
+
+      Delete instances based on post request data.
+
+
+   .. py:method:: get_form(self)
+
+      Override standard form.
+
+
+
+.. py:class:: ConfigComplianceListView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectListView`
+
+   Django View for visualizing the compliance report.
+
+   .. py:attribute:: filterset
+      
+
+      
+
+   .. py:attribute:: filterset_form
+      
+
+      
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: template_name
+      :annotation: = nautobot_golden_config/compliance_report.html
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+   .. py:method:: alter_queryset(self, request)
+
+      Build actual runtime queryset as the build time queryset provides no information.
+
+
+   .. py:method:: extra_context(self)
+
+      Boilerplate code to modify before returning data.
+
+
+   .. py:method:: queryset_to_csv(self)
+
+      Export queryset of objects as comma-separated value (CSV).
+
+
+
+.. py:class:: ConfigComplianceView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectView`
+
+   View for a device's specific configuration compliance feature.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:method:: get_extra_context(self, request, instance)
+
+      Add extra data to detail view for Nautobot.
+
+
+
+.. py:class:: ConfigComplianceBulkDeleteView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkDeleteView`
+
+   View for deleting one or more OnboardingTasks.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+   .. py:attribute:: filterset
+      
+
+      
+
+   .. py:method:: post(self, request, **kwargs)
+
+      Delete instances based on post request data.
+
+
+
+.. py:class:: ConfigComplianceDeleteView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectDeleteView`
+
+   View for deleting compliance rules.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+
+.. py:class:: ConfigComplianceDeviceView(**kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.views.ContentTypePermissionRequiredMixin`, :py:obj:`nautobot.core.views.generic.View`
+
+   View for individual device detailed information.
+
+   .. py:method:: get_required_permission(self)
+
+      Manually set permission when not tied to a model for device report.
+
+
+   .. py:method:: get(self, request, pk)
+
+      Read request into a view of a single device.
+
+
+
+.. py:class:: ComplianceDeviceFilteredReport(**kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.views.ContentTypePermissionRequiredMixin`, :py:obj:`nautobot.core.views.generic.View`
+
+   View for the single device detailed information.
+
+   .. py:method:: get_required_permission(self)
+
+      Manually set permission when not tied to a model for filtered report.
+
+
+   .. py:method:: get(self, request, pk, compliance)
+
+      Read request into a view of a single device.
+
+
+
+.. py:class:: ConfigComplianceDetails(**kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.views.ContentTypePermissionRequiredMixin`, :py:obj:`nautobot.core.views.generic.View`
+
+   View for the single configuration or diff of a single.
+
+   .. py:method:: get_required_permission(self)
+
+      Manually set permission when not tied to a model for config details.
+
+
+   .. py:method:: get(self, request, pk, config_type)
+
+      Read request into a view of a single device.
+
+
+
+.. py:class:: ConfigComplianceOverviewOverviewHelper(**kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.views.ContentTypePermissionRequiredMixin`, :py:obj:`nautobot.core.views.generic.View`
+
+   Customized overview view reports aggregation and filterset.
+
+   .. py:method:: get_required_permission(self)
+
+      Manually set permission when not tied to a model for global report.
+
+
+   .. py:method:: plot_visual(aggr)
+      :staticmethod:
+
+      Plot aggregation visual.
+
+
+   .. py:method:: plot_barchart_visual(qs)
+      :staticmethod:
+
+      Construct report visual from queryset.
+
+
+   .. py:method:: calculate_aggr_percentage(aggr)
+      :staticmethod:
+
+      Calculate percentage of compliance given aggregation fields.
+
+      Returns:
+          aggr: same aggr dict given as parameter with two new keys
+              - comp_percents
+              - non_compliants
+
+
+
+.. py:class:: ConfigComplianceOverview(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectListView`
+
+   View for executive report on configuration compliance.
+
+   .. py:attribute:: filterset
+      
+
+      
+
+   .. py:attribute:: filterset_form
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+   .. py:attribute:: template_name
+      :annotation: = nautobot_golden_config/compliance_overview_report.html
+
+      
+
+   .. py:attribute:: kind
+      :annotation: = Features
+
+      
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: extra_content
+      
+
+      
+
+   .. py:method:: setup(self, request, *args, **kwargs)
+
+      Using request object to perform filtering based on query params.
+
+
+   .. py:method:: get_global_aggr(self, request)
+
+      Get device and feature global reports.
+
+      Returns:
+          device_aggr: device global report dict
+          feature_aggr: feature global report dict
+
+
+   .. py:method:: extra_context(self)
+
+      Extra content method on.
+
+
+   .. py:method:: queryset_to_csv(self)
+
+      Export queryset of objects as comma-separated value (CSV).
+
+
+
+.. py:class:: ComplianceFeatureListView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectListView`
+
+   View for managing the config compliance rule definition.
+
+   .. py:attribute:: table
+      
+
+      
+
+   .. py:attribute:: filterset
+      
+
+      
+
+   .. py:attribute:: filterset_form
+      
+
+      
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: action_buttons
+      :annotation: = ['add', 'export']
+
+      
+
+
+.. py:class:: ComplianceFeatureView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectView`
+
+   View for single ComplianceFeature instance.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:method:: get_extra_context(self, request, instance)
+
+      Add extra data to detail view for Nautobot.
+
+
+
+.. py:class:: ComplianceFeatureBulkImportView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkImportView`
+
+   View for bulk import of ComplianceFeature.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: model_form
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+
+.. py:class:: ComplianceFeatureEditView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectEditView`
+
+   View for managing compliance rules.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: model_form
+      
+
+      
+
+
+.. py:class:: ComplianceFeatureDeleteView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectDeleteView`
+
+   View for deleting compliance rules.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+
+.. py:class:: ComplianceFeatureBulkDeleteView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkDeleteView`
+
+   View for bulk deleting compliance rules.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+
+.. py:class:: ComplianceFeatureBulkEditView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkEditView`
+
+   View for bulk deleting ComplianceFeature instance.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: filterset
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+   .. py:attribute:: form
+      
+
+      
+
+
+.. py:class:: ComplianceRuleListView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectListView`
+
+   View for managing the config compliance rule definition.
+
+   .. py:attribute:: table
+      
+
+      
+
+   .. py:attribute:: filterset
+      
+
+      
+
+   .. py:attribute:: filterset_form
+      
+
+      
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: action_buttons
+      :annotation: = ['add', 'export']
+
+      
+
+
+.. py:class:: ComplianceRuleView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectView`
+
+   View for single ComplianceRule instance.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:method:: get_extra_context(self, request, instance)
+
+      Add extra data to detail view for Nautobot.
+
+
+
+.. py:class:: ComplianceRuleBulkImportView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkImportView`
+
+   View for bulk import of ComplianceRule.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: model_form
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+
+.. py:class:: ComplianceRuleEditView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectEditView`
+
+   View for managing compliance rules.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: model_form
+      
+
+      
+
+
+.. py:class:: ComplianceRuleDeleteView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectDeleteView`
+
+   View for deleting compliance rules.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+
+.. py:class:: ComplianceRuleBulkDeleteView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkDeleteView`
+
+   View for bulk deleting compliance rules.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+
+.. py:class:: ComplianceRuleBulkEditView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkEditView`
+
+   View for bulk deleting ComplianceRule instance.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: filterset
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+   .. py:attribute:: form
+      
+
+      
+
+
+.. py:class:: GoldenConfigSettingView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectView`
+
+   View for single GoldenConfigSetting instance.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+
+.. py:class:: GoldenConfigSettingCreateView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectEditView`
+
+   Create view.
+
+   .. py:attribute:: model
+      
+
+      
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: model_form
+      
+
+      
+
+   .. py:attribute:: template_name
+      :annotation: = nautobot_golden_config/goldenconfigsetting_edit.html
+
+      
+
+
+.. py:class:: GoldenConfigSettingDeleteView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectDeleteView`
+
+   Delete view.
+
+   .. py:attribute:: model
+      
+
+      
+
+   .. py:attribute:: queryset
+      
+
+      
+
+
+.. py:class:: GoldenConfigSettingBulkDeleteView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkDeleteView`
+
+   Delete view.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+
+.. py:class:: GoldenConfigSettingEditView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectEditView`
+
+   Edit view.
+
+   .. py:attribute:: model
+      
+
+      
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: model_form
+      
+
+      
+
+   .. py:attribute:: template_name
+      :annotation: = nautobot_golden_config/goldenconfigsetting_edit.html
+
+      
+
+
+.. py:class:: GoldenConfigSettingListView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectListView`
+
+   List view.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+   .. py:attribute:: action_buttons
+      :annotation: = ['add', 'export']
+
+      
+
+
+.. py:class:: ConfigRemoveListView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectListView`
+
+   View to display the current Line Removals.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+   .. py:attribute:: filterset
+      
+
+      
+
+   .. py:attribute:: filterset_form
+      
+
+      
+
+
+.. py:class:: ConfigRemoveView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectView`
+
+   View for single ConfigRemove instance.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:method:: get_extra_context(self, request, instance)
+
+      Add extra data to detail view for Nautobot.
+
+
+
+.. py:class:: ConfigRemoveBulkImportView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkImportView`
+
+   View for bulk import of ConfigRemove.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: model_form
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+
+.. py:class:: ConfigRemoveBulkEditView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkEditView`
+
+   View for bulk deleting ConfigRemove instances.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: filterset
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+   .. py:attribute:: form
+      
+
+      
+
+
+.. py:class:: ConfigRemoveEditView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectEditView`
+
+   View for editing the current Line Removals.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: model_form
+      
+
+      
+
+
+.. py:class:: ConfigRemoveDeleteView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectDeleteView`
+
+   View for deleting a ConfigRemove instance.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+
+.. py:class:: ConfigRemoveBulkDeleteView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkDeleteView`
+
+   View for bulk deleting Line Removals.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+
+.. py:class:: ConfigReplaceListView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectListView`
+
+   View for displaying the current Line Replacements.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+   .. py:attribute:: filterset
+      
+
+      
+
+   .. py:attribute:: filterset_form
+      
+
+      
+
+
+.. py:class:: ConfigReplaceView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectView`
+
+   View for single ConfigReplace instance.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:method:: get_extra_context(self, request, instance)
+
+      Add extra data to detail view for Nautobot.
+
+
+
+.. py:class:: ConfigReplaceEditView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectEditView`
+
+   View for editing the current Line Replacements.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: model_form
+      
+
+      
+
+
+.. py:class:: ConfigReplaceBulkDeleteView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkDeleteView`
+
+   View for bulk deleting Line Replacements.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+
+.. py:class:: ConfigReplaceBulkImportView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkImportView`
+
+   View for bulk import of ConfigReplace.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: model_form
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+
+.. py:class:: ConfigReplaceDeleteView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.ObjectDeleteView`
+
+   View for deleting a ConfigReplace instance.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+
+.. py:class:: ConfigReplaceBulkEditView(**kwargs)
+
+   Bases: :py:obj:`nautobot.core.views.generic.BulkEditView`
+
+   View for bulk deleting ConfigReplace instances.
+
+   .. py:attribute:: queryset
+      
+
+      
+
+   .. py:attribute:: filterset
+      
+
+      
+
+   .. py:attribute:: table
+      
+
+      
+
+   .. py:attribute:: form
+      
+
+      
+
+

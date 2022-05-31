@@ -1,0 +1,46 @@
+:py:mod:`run_config_compliance`
+===============================
+
+.. py:module:: run_config_compliance
+
+.. autoapi-nested-parse::
+
+   Add the run_config_compliance command to nautobot-server.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   run_config_compliance.Command
+
+
+
+
+.. py:class:: Command(stdout=None, stderr=None, no_color=False, force_color=False)
+
+   Bases: :py:obj:`django.core.management.base.BaseCommand`
+
+   Boilerplate Command to inherit from BaseCommand.
+
+   .. py:attribute:: help
+      :annotation: = Run Config Compliance Job from Golden Config Plugin.
+
+      
+
+   .. py:method:: add_arguments(self, parser)
+
+      Add arguments for run_config_compliance.
+
+
+   .. py:method:: handle(self, *args, **kwargs)
+
+      Add handler for run_config_compliance.
+
+
+

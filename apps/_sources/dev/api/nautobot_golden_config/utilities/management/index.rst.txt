@@ -1,0 +1,29 @@
+:py:mod:`nautobot_golden_config.utilities.management`
+=====================================================
+
+.. py:module:: nautobot_golden_config.utilities.management
+
+.. autoapi-nested-parse::
+
+   Util functions that are leveraged by the managed commands.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.utilities.management.job_runner
+
+
+
+.. py:function:: job_runner(handle_class, job_class, device=None, user=None)
+
+   Function to make management command code more DRY.
+
+

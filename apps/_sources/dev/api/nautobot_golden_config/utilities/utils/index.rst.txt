@@ -1,0 +1,42 @@
+:py:mod:`nautobot_golden_config.utilities.utils`
+================================================
+
+.. py:module:: nautobot_golden_config.utilities.utils
+
+.. autoapi-nested-parse::
+
+   Utility functions.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.utilities.utils.get_platform
+   nautobot_golden_config.utilities.utils.get_secret_value
+
+
+
+.. py:function:: get_platform(platform)
+
+   Utility method to map user defined platform slug to netutils named entity.
+
+
+.. py:function:: get_secret_value(secret_type, git_obj)
+
+   Get value for a secret based on secret type and device.
+
+   Args:
+       secret_type (SecretsGroupSecretTypeChoices): Type of secret to check.
+       git_obj (extras.GitRepository): Nautobot git object.
+
+   Returns:
+       str: Secret value.
+
+

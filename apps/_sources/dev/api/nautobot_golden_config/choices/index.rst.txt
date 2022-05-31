@@ -1,0 +1,51 @@
+:py:mod:`nautobot_golden_config.choices`
+========================================
+
+.. py:module:: nautobot_golden_config.choices
+
+.. autoapi-nested-parse::
+
+   Choicesets for golden config.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.choices.ComplianceRuleTypeChoice
+
+
+
+
+.. py:class:: ComplianceRuleTypeChoice
+
+   Bases: :py:obj:`nautobot.utilities.choices.ChoiceSet`
+
+   Choiceset used by ComplianceRule.
+
+   .. py:attribute:: TYPE_CLI
+      :annotation: = cli
+
+      
+
+   .. py:attribute:: TYPE_JSON
+      :annotation: = json
+
+      
+
+   .. py:attribute:: TYPE_CUSTOM
+      :annotation: = custom
+
+      
+
+   .. py:attribute:: CHOICES
+      :annotation: = [None, None, None]
+
+      
+
+

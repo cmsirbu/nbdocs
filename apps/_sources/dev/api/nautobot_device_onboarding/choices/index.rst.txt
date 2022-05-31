@@ -1,0 +1,115 @@
+:py:mod:`nautobot_device_onboarding.choices`
+============================================
+
+.. py:module:: nautobot_device_onboarding.choices
+
+.. autoapi-nested-parse::
+
+   ChoiceSet classes for device onboarding.
+
+   (c) 2020-2021 Network To Code
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.choices.OnboardingStatusChoices
+   nautobot_device_onboarding.choices.OnboardingFailChoices
+
+
+
+
+.. py:class:: OnboardingStatusChoices
+
+   Bases: :py:obj:`nautobot.utilities.choices.ChoiceSet`
+
+   Valid values for OnboardingTask "status".
+
+   .. py:attribute:: STATUS_FAILED
+      :annotation: = failed
+
+      
+
+   .. py:attribute:: STATUS_PENDING
+      :annotation: = pending
+
+      
+
+   .. py:attribute:: STATUS_RUNNING
+      :annotation: = running
+
+      
+
+   .. py:attribute:: STATUS_SUCCEEDED
+      :annotation: = succeeded
+
+      
+
+   .. py:attribute:: STATUS_SKIPPED
+      :annotation: = skipped
+
+      
+
+   .. py:attribute:: CHOICES
+      :annotation: = [None, None, None, None, None]
+
+      
+
+
+.. py:class:: OnboardingFailChoices
+
+   Bases: :py:obj:`nautobot.utilities.choices.ChoiceSet`
+
+   Valid values for OnboardingTask "failed reason".
+
+   .. py:attribute:: FAIL_LOGIN
+      :annotation: = fail-login
+
+      
+
+   .. py:attribute:: FAIL_CONFIG
+      :annotation: = fail-config
+
+      
+
+   .. py:attribute:: FAIL_CONNECT
+      :annotation: = fail-connect
+
+      
+
+   .. py:attribute:: FAIL_EXECUTE
+      :annotation: = fail-execute
+
+      
+
+   .. py:attribute:: FAIL_GENERAL
+      :annotation: = fail-general
+
+      
+
+   .. py:attribute:: FAIL_DNS
+      :annotation: = fail-dns
+
+      
+
+   .. py:attribute:: CHOICES
+      :annotation: = [None, None, None, None, None, None]
+
+      
+
+

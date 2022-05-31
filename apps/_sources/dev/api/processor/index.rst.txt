@@ -1,0 +1,44 @@
+:py:mod:`processor`
+===================
+
+.. py:module:: processor
+
+.. autoapi-nested-parse::
+
+   Processor used by Golden Config to catch unknown errors.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   processor.ProcessGoldenConfig
+
+
+
+
+.. py:class:: ProcessGoldenConfig(logger)
+
+   Bases: :py:obj:`nornir_nautobot.plugins.processors.BaseLoggingProcessor`
+
+   Processor class for golden configuration jobs.
+
+   .. py:method:: task_instance_completed(self, task: nornir.core.task.Task, host: nornir.core.inventory.Host, result: nornir.core.task.MultiResult) -> None
+
+      Nornir processor task completion for golden configurations.
+
+      Args:
+          task (Task): Nornir task individual object
+          host (Host): Host object with Nornir
+          result (MultiResult): Result from Nornir task
+
+      Returns:
+          None
+
+
+

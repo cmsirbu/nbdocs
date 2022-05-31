@@ -1,0 +1,176 @@
+:py:mod:`nautobot_device_onboarding.nautobot_keeper`
+====================================================
+
+.. py:module:: nautobot_device_onboarding.nautobot_keeper
+
+.. autoapi-nested-parse::
+
+   Nautobot Keeper.
+
+   (c) 2020-2021 Network To Code
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.nautobot_keeper.NautobotKeeper
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.nautobot_keeper.ensure_default_cf
+   nautobot_device_onboarding.nautobot_keeper.object_match
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.nautobot_keeper.logger
+   nautobot_device_onboarding.nautobot_keeper.PLUGIN_SETTINGS
+
+
+.. py:data:: logger
+   
+
+   
+
+.. py:data:: PLUGIN_SETTINGS
+   
+
+   
+
+.. py:function:: ensure_default_cf(obj, model)
+
+   Update objects's default custom fields.
+
+
+.. py:function:: object_match(obj, search_array)
+
+   Used to search models for multiple criteria.
+
+   Inputs:
+       obj:            The model used for searching.
+       search_array:   Nested dictionaries used to search models. First criteria will be used
+                       for strict searching. Loose searching will loop through the search_array
+                       until it finds a match. Example below.
+                       [
+                           {"slug__iexact": 'switch1'},
+                           {"model__iexact": 'Cisco'}
+                       ]
+
+
+.. py:class:: NautobotKeeper(netdev_hostname, netdev_nb_role_slug, netdev_vendor, netdev_nb_site_slug, netdev_nb_device_type_slug=None, netdev_model=None, netdev_nb_role_color=None, netdev_mgmt_ip_address=None, netdev_nb_platform_slug=None, netdev_serial_number=None, netdev_mgmt_ifname=None, netdev_mgmt_pflen=None, netdev_netmiko_device_type=None, onboarding_class=None, driver_addon_result=None)
+
+   Used to manage the information relating to the network device within the Nautobot server.
+
+   .. py:method:: ensure_onboarded_device(self)
+
+      Lookup if the device already exists in the Nautobot.
+
+      Lookup is performed by querying for the IP address of the onboarded device.
+      If the device with a given IP is already in Nautobot, its attributes including name could be updated
+
+
+   .. py:method:: ensure_device_site(self)
+
+      Ensure device's site.
+
+
+   .. py:method:: ensure_device_manufacturer(self, create_manufacturer=PLUGIN_SETTINGS['create_manufacturer_if_missing'], skip_manufacturer_on_update=PLUGIN_SETTINGS['skip_manufacturer_on_update'])
+
+      Ensure device's manufacturer.
+
+
+   .. py:method:: ensure_device_type(self, create_device_type=PLUGIN_SETTINGS['create_device_type_if_missing'], skip_device_type_on_update=PLUGIN_SETTINGS['skip_device_type_on_update'])
+
+      Ensure the Device Type (slug) exists in Nautobot associated to the netdev "model" and "vendor" (manufacturer).
+
+      Args:
+        create_device_type (bool): Flag to indicate if we need to create the device_type, if not already present
+        skip_device_type_on_update (bool): Flag to indicate if we skip device type updates for existing devices
+      Raises:
+        OnboardException('fail-config'):
+          When the device vendor value does not exist as a Manufacturer in
+          Nautobot.
+
+        OnboardException('fail-config'):
+          When the device-type exists by slug, but is assigned to a different
+          manufacturer.  This should *not* happen, but guard-rail checking
+          regardless in case two vendors have the same model name.
+
+
+   .. py:method:: ensure_device_role(self, create_device_role=PLUGIN_SETTINGS['create_device_role_if_missing'])
+
+      Ensure that the device role is defined / exist in Nautobot or create it if it doesn't exist.
+
+      Args:
+        create_device_role (bool) :Flag to indicate if we need to create the device_role, if not already present
+      Raises:
+        OnboardException('fail-config'):
+          When the device role value does not exist
+          Nautobot.
+
+
+   .. py:method:: ensure_device_platform(self, create_platform_if_missing=PLUGIN_SETTINGS['create_platform_if_missing'])
+
+      Get platform object from Nautobot filtered by platform_slug.
+
+      Args:
+          platform_slug (string): slug of a platform object present in Nautobot, object will be created if not present
+          and create_platform_if_missing is enabled
+
+      Return:
+          nautobot.dcim.models.Platform object
+
+      Raises:
+          OnboardException
+
+      Lookup is performed based on the object's slug field (not the name field)
+
+
+   .. py:method:: ensure_device_instance(self, default_status=PLUGIN_SETTINGS['default_device_status'])
+
+      Ensure that the device instance exists in Nautobot and is assigned the provided device role or DEFAULT_ROLE.
+
+      Args:
+        default_status (str) : status assigned to a new device by default.
+
+
+   .. py:method:: ensure_interface(self)
+
+      Ensures that the interface associated with the mgmt_ipaddr exists and is assigned to the device.
+
+
+   .. py:method:: ensure_primary_ip(self)
+
+      Ensure mgmt_ipaddr exists in IPAM, has the device interface, and is assigned as the primary IP address.
+
+
+   .. py:method:: ensure_device(self)
+
+      Ensure that the device represented by the DevNetKeeper exists in the Nautobot system.
+
+
+

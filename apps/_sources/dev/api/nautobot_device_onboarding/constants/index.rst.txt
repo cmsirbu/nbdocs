@@ -1,0 +1,19 @@
+:py:mod:`nautobot_device_onboarding.constants`
+==============================================
+
+.. py:module:: nautobot_device_onboarding.constants
+
+.. autoapi-nested-parse::
+
+   Constants for nautobot_device_onboarding plugin.
+
+
+
+Module Contents
+---------------
+
+.. py:data:: NETMIKO_TO_NAPALM_STATIC
+   
+
+   
+

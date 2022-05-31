@@ -1,0 +1,130 @@
+:py:mod:`nautobot_device_onboarding.api.serializers`
+====================================================
+
+.. py:module:: nautobot_device_onboarding.api.serializers
+
+.. autoapi-nested-parse::
+
+   Model serializers for the nautobot_device_onboarding REST API.
+
+   (c) 2020-2021 Network To Code
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.api.serializers.OnboardingTaskSerializer
+
+
+
+
+.. py:class:: OnboardingTaskSerializer(instance=None, data=empty, **kwargs)
+
+   Bases: :py:obj:`rest_framework.serializers.ModelSerializer`
+
+   Serializer for the OnboardingTask model.
+
+   .. py:class:: Meta
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['id', 'site', 'ip_address', 'username', 'password', 'secret', 'port', 'timeout', 'role',...
+
+         
+
+
+   .. py:attribute:: site
+      
+
+      
+
+   .. py:attribute:: ip_address
+      
+
+      
+
+   .. py:attribute:: username
+      
+
+      
+
+   .. py:attribute:: password
+      
+
+      
+
+   .. py:attribute:: secret
+      
+
+      
+
+   .. py:attribute:: port
+      
+
+      
+
+   .. py:attribute:: timeout
+      
+
+      
+
+   .. py:attribute:: role
+      
+
+      
+
+   .. py:attribute:: device_type
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: created_device
+      
+
+      
+
+   .. py:attribute:: status
+      
+
+      
+
+   .. py:attribute:: failed_reason
+      
+
+      
+
+   .. py:attribute:: message
+      
+
+      
+
+   .. py:method:: create(self, validated_data)
+
+      Create an OnboardingTask and enqueue it for processing.
+
+
+

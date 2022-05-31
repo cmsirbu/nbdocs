@@ -1,0 +1,600 @@
+:py:mod:`nautobot_golden_config.tables`
+=======================================
+
+.. py:module:: nautobot_golden_config.tables
+
+.. autoapi-nested-parse::
+
+   Django Tables2 classes for golden_config plugin.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tables.PercentageColumn
+   nautobot_golden_config.tables.ComplianceColumn
+   nautobot_golden_config.tables.ConfigComplianceTable
+   nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable
+   nautobot_golden_config.tables.ConfigComplianceDeleteTable
+   nautobot_golden_config.tables.DeleteGoldenConfigTable
+   nautobot_golden_config.tables.GoldenConfigTable
+   nautobot_golden_config.tables.ComplianceFeatureTable
+   nautobot_golden_config.tables.ComplianceRuleTable
+   nautobot_golden_config.tables.ConfigRemoveTable
+   nautobot_golden_config.tables.ConfigReplaceTable
+   nautobot_golden_config.tables.GoldenConfigSettingTable
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tables.actual_fields
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tables.ALL_ACTIONS
+   nautobot_golden_config.tables.MATCH_CONFIG
+
+
+.. py:data:: ALL_ACTIONS
+   :annotation: = Multiline-String
+
+    .. raw:: html
+
+        <details><summary>Show Value</summary>
+
+    .. code-block:: text
+        :linenos:
+
+        
+        {% if backup == True %}
+            {% if record.configcompliance_set.first.rule.config_type == 'json' %}
+                <i class="mdi mdi-circle-small"></i>
+            {% else %}
+                {% if record.goldenconfig_set.first.backup_config %}
+                    <a value="{% url 'plugins:nautobot_golden_config:configcompliance_details' pk=record.pk config_type='backup' %}" class="openBtn" data-href="{% url 'plugins:nautobot_golden_config:configcompliance_details' pk=record.pk config_type='backup' %}?modal=true">
+                        <i class="mdi mdi-file-document-outline" title="Backup Configuration"></i>
+                    </a>
+                {% else %}
+                    <i class="mdi mdi-circle-small"></i>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+        {% if intended == True %}
+            {% if record.configcompliance_set.first.rule.config_type == 'json' %}
+                <i class="mdi mdi-circle-small"></i>
+            {% else %}
+                {% if record.goldenconfig_set.first.intended_config %}
+                    <a value="{% url 'plugins:nautobot_golden_config:configcompliance_details' pk=record.pk config_type='intended' %}" class="openBtn" data-href="{% url 'plugins:nautobot_golden_config:configcompliance_details' pk=record.pk config_type='intended' %}?modal=true">
+                        <i class="mdi mdi-text-box-check-outline" title="Intended Configuration"></i>
+                    </a>
+                {% else %}
+                    <i class="mdi mdi-circle-small"></i>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+        {% if compliance == True %}
+            {% if record.configcompliance_set.first.rule.config_type == 'json' %}
+                    <a value="{% url 'plugins:nautobot_golden_config:configcompliance_details' pk=record.pk config_type='json_compliance' %}" class="openBtn" data-href="{% url 'plugins:nautobot_golden_config:configcompliance_details' pk=record.pk config_type='json_compliance' %}?modal=true">
+                        <i class="mdi mdi-file-compare" title="Compliance Details JSON"></i>
+                    </a>
+            {% else %}
+                {% if record.goldenconfig_set.first.compliance_config %}
+                    <a value="{% url 'plugins:nautobot_golden_config:configcompliance_details' pk=record.pk config_type='compliance' %}" class="openBtn" data-href="{% url 'plugins:nautobot_golden_config:configcompliance_details' pk=record.pk config_type='compliance' %}?modal=true">
+                        <i class="mdi mdi-file-compare" title="Compliance Details"></i>
+                    </a>
+                {% else %}
+                    <i class="mdi mdi-circle-small"></i>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+        {% if sotagg == True %}
+            <a value="{% url 'plugins:nautobot_golden_config:configcompliance_details' pk=record.pk config_type='sotagg' %}" class="openBtn" data-href="{% url 'plugins:nautobot_golden_config:configcompliance_details' pk=record.pk config_type='sotagg' %}?modal=true">
+                <i class="mdi mdi-code-json" title="SOT Aggregate Data"></i>
+            </a>
+            {% if record.configcompliance_set.first.rule.config_type == 'json' %}
+                <i class="mdi mdi-circle-small"></i>
+            {% else %}
+                <a href="{% url 'extras:job' class_path='plugins/nautobot_golden_config.jobs/AllGoldenConfig' %}?device={{ record.pk }}"
+                    <span class="text-primary">
+                        <i class="mdi mdi-play-circle" title="Execute All Golden Config Jobs"></i>
+                    </span>
+                </a>
+            {% endif %}
+        {% endif %}
+
+
+    .. raw:: html
+
+        </details>
+
+   
+
+.. py:data:: MATCH_CONFIG
+   :annotation: = {{ record.match_config|linebreaksbr }}
+
+   
+
+.. py:function:: actual_fields()
+
+   Convienance function to conditionally toggle columns.
+
+
+.. py:class:: PercentageColumn(verbose_name=None, accessor=None, default=None, visible=True, orderable=None, attrs=None, order_by=None, empty_values=None, localize=None, footer=None, exclude_from_export=False, linkify=False, initial_sort_descending=False)
+
+   Bases: :py:obj:`django_tables2.Column`
+
+   Column used to display percentage.
+
+   .. py:method:: render(self, value)
+
+      Render percentage value.
+
+
+
+.. py:class:: ComplianceColumn(verbose_name=None, accessor=None, default=None, visible=True, orderable=None, attrs=None, order_by=None, empty_values=None, localize=None, footer=None, exclude_from_export=False, linkify=False, initial_sort_descending=False)
+
+   Bases: :py:obj:`django_tables2.Column`
+
+   Column used to display config compliance status (True/False/None).
+
+   .. py:method:: render(self, value)
+
+      Render an entry in this column.
+
+
+
+.. py:class:: ConfigComplianceTable(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.tables.BaseTable`
+
+   Table for rendering a listing of Device entries and their associated ConfigCompliance record status.
+
+   .. py:class:: Meta
+
+      Bases: :py:obj:`nautobot.utilities.tables.BaseTable.Meta`
+
+      Metaclass attributes of ConfigComplianceTable.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['pk', 'device']
+
+         
+
+
+   .. py:attribute:: pk
+      
+
+      
+
+   .. py:attribute:: device
+      
+
+      
+
+
+.. py:class:: ConfigComplianceGlobalFeatureTable(*args, user=None, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.tables.BaseTable`
+
+   Table for feature compliance report.
+
+   .. py:class:: Meta
+
+      Bases: :py:obj:`nautobot.utilities.tables.BaseTable.Meta`
+
+      Metaclass attributes of ConfigComplianceGlobalFeatureTable.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['name', 'count', 'compliant', 'non_compliant', 'comp_percent']
+
+         
+
+      .. py:attribute:: default_columns
+         :annotation: = ['name', 'count', 'compliant', 'non_compliant', 'comp_percent']
+
+         
+
+
+   .. py:attribute:: name
+      
+
+      
+
+   .. py:attribute:: count
+      
+
+      
+
+   .. py:attribute:: compliant
+      
+
+      
+
+   .. py:attribute:: non_compliant
+      
+
+      
+
+   .. py:attribute:: comp_percent
+      
+
+      
+
+
+.. py:class:: ConfigComplianceDeleteTable(*args, user=None, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.tables.BaseTable`
+
+   Table for device compliance report.
+
+   .. py:class:: Meta
+
+      Bases: :py:obj:`nautobot.utilities.tables.BaseTable.Meta`
+
+      Metaclass attributes of ConfigComplianceDeleteTable.
+
+      .. py:attribute:: device
+         
+
+         
+
+      .. py:attribute:: compliance
+         
+
+         
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['device', 'feature', 'compliance']
+
+         
+
+
+   .. py:attribute:: feature
+      
+
+      
+
+
+.. py:class:: DeleteGoldenConfigTable(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.tables.BaseTable`
+
+   Table used in bulk delete confirmation.
+
+   This is required since there model is different when deleting the record compared to when viewing the records initially via Device.
+
+   .. py:class:: Meta
+
+      Bases: :py:obj:`nautobot.utilities.tables.BaseTable.Meta`
+
+      Meta for class DeleteGoldenConfigTable.
+
+      .. py:attribute:: model
+         
+
+         
+
+
+   .. py:attribute:: pk
+      
+
+      
+
+
+.. py:class:: GoldenConfigTable(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.tables.BaseTable`
+
+   Table to display Config Management Status.
+
+   .. py:class:: Meta
+
+      Bases: :py:obj:`nautobot.utilities.tables.BaseTable.Meta`
+
+      Meta for class GoldenConfigTable.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         
+
+         
+
+
+   .. py:attribute:: pk
+      
+
+      
+
+   .. py:attribute:: name
+      
+
+      
+
+   .. py:attribute:: actions
+      
+
+      
+
+   .. py:method:: _render_last_success_date(self, record, column, value)
+
+      Abstract method to get last success per row record.
+
+
+   .. py:method:: render_backup_last_success_date(self, record, column)
+
+      Pull back backup last success per row record.
+
+
+   .. py:method:: render_intended_last_success_date(self, record, column)
+
+      Pull back intended last success per row record.
+
+
+   .. py:method:: render_compliance_last_success_date(self, record, column)
+
+      Pull back compliance last success per row record.
+
+
+
+.. py:class:: ComplianceFeatureTable(*args, user=None, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.tables.BaseTable`
+
+   Table to display Compliance Features.
+
+   .. py:class:: Meta
+
+      Bases: :py:obj:`nautobot.utilities.tables.BaseTable.Meta`
+
+      Table to display Compliance Features Meta Data.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['pk', 'name', 'slug', 'description']
+
+         
+
+      .. py:attribute:: default_columns
+         :annotation: = ['pk', 'name', 'slug', 'description']
+
+         
+
+
+   .. py:attribute:: pk
+      
+
+      
+
+   .. py:attribute:: name
+      
+
+      
+
+
+.. py:class:: ComplianceRuleTable(*args, user=None, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.tables.BaseTable`
+
+   Table to display Compliance Rules.
+
+   .. py:class:: Meta
+
+      Bases: :py:obj:`nautobot.utilities.tables.BaseTable.Meta`
+
+      Table to display Compliance Rules Meta Data.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['pk', 'feature', 'platform', 'description', 'config_ordered', 'match_config', 'config_type']
+
+         
+
+      .. py:attribute:: default_columns
+         :annotation: = ['pk', 'feature', 'platform', 'description', 'config_ordered', 'match_config', 'config_type']
+
+         
+
+
+   .. py:attribute:: pk
+      
+
+      
+
+   .. py:attribute:: feature
+      
+
+      
+
+   .. py:attribute:: match_config
+      
+
+      
+
+
+.. py:class:: ConfigRemoveTable(*args, user=None, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.tables.BaseTable`
+
+   Table to display Compliance Rules.
+
+   .. py:class:: Meta
+
+      Bases: :py:obj:`nautobot.utilities.tables.BaseTable.Meta`
+
+      Table to display Compliance Rules Meta Data.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['pk', 'name', 'platform', 'description', 'regex']
+
+         
+
+      .. py:attribute:: default_columns
+         :annotation: = ['pk', 'name', 'platform', 'description', 'regex']
+
+         
+
+
+   .. py:attribute:: pk
+      
+
+      
+
+   .. py:attribute:: name
+      
+
+      
+
+
+.. py:class:: ConfigReplaceTable(*args, user=None, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.tables.BaseTable`
+
+   Table to display Compliance Rules.
+
+   .. py:class:: Meta
+
+      Bases: :py:obj:`nautobot.utilities.tables.BaseTable.Meta`
+
+      Table to display Compliance Rules Meta Data.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['pk', 'name', 'platform', 'description', 'regex', 'replace']
+
+         
+
+      .. py:attribute:: default_columns
+         :annotation: = ['pk', 'name', 'platform', 'description', 'regex', 'replace']
+
+         
+
+
+   .. py:attribute:: pk
+      
+
+      
+
+   .. py:attribute:: name
+      
+
+      
+
+
+.. py:class:: GoldenConfigSettingTable(*args, user=None, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.tables.BaseTable`
+
+   Table for list view.
+
+   .. py:class:: Meta
+
+      Bases: :py:obj:`nautobot.utilities.tables.BaseTable.Meta`
+
+      Meta attributes.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['pk', 'name', 'weight', 'description', 'backup_repository', 'intended_repository', 'jinja_repository']
+
+         
+
+
+   .. py:attribute:: pk
+      
+
+      
+
+   .. py:attribute:: name
+      
+
+      
+
+   .. py:attribute:: jinja_repository
+      
+
+      
+
+   .. py:attribute:: intended_repository
+      
+
+      
+
+   .. py:attribute:: backup_repository
+      
+
+      
+
+   .. py:method:: _render_capability(self, record, column, record_attribute)
+
+
+   .. py:method:: render_backup_repository(self, record, column)
+
+      Render backup repository YES/NO value.
+
+
+   .. py:method:: render_intended_repository(self, record, column)
+
+      Render intended repository YES/NO value.
+
+
+   .. py:method:: render_jinja_repository(self, record, column)
+
+      Render jinja repository YES/NO value.
+
+
+

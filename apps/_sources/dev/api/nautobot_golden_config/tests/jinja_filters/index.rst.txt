@@ -1,0 +1,22 @@
+:py:mod:`nautobot_golden_config.tests.jinja_filters`
+====================================================
+
+.. py:module:: nautobot_golden_config.tests.jinja_filters
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tests.jinja_filters.return_a
+
+
+
+.. py:function:: return_a(x)
+
+

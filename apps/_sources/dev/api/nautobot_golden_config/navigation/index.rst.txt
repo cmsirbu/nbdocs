@@ -1,0 +1,24 @@
+:py:mod:`nautobot_golden_config.navigation`
+===========================================
+
+.. py:module:: nautobot_golden_config.navigation
+
+.. autoapi-nested-parse::
+
+   Add the configuration compliance buttons to the Plugins Navigation.
+
+
+
+Module Contents
+---------------
+
+.. py:data:: items
+   
+
+   
+
+.. py:data:: menu_items
+   
+
+   
+

@@ -1,0 +1,71 @@
+:py:mod:`nautobot_golden_config.tests.test_datasources`
+=======================================================
+
+.. py:module:: nautobot_golden_config.tests.test_datasources
+
+.. autoapi-nested-parse::
+
+   Unit tests for nautobot_golden_config datasources.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tests.test_datasources.GitPropertiesDatasourceTestCase
+
+
+
+
+.. py:class:: GitPropertiesDatasourceTestCase(methodName='runTest')
+
+   Bases: :py:obj:`django.test.TestCase`
+
+   Test Git GC Properties datasource.
+
+   .. py:method:: setUp(self)
+
+      Setup Object.
+
+
+   .. py:method:: test_get_id_kwargs_1(self)
+
+      Test simple get_id_kwargs 1.
+
+
+   .. py:method:: test_get_id_kwargs_2(self)
+
+      Test simple get_id_kwargs 2.
+
+
+   .. py:method:: test_get_id_kwargs_3(self)
+
+      Test simple get_id_kwargs 3.
+
+
+   .. py:method:: test_get_id_kwargs_4(self)
+
+      Test simple get_id_kwargs .
+
+
+   .. py:method:: test_get_id_kwargs_5(self)
+
+      Test simple get_id_kwargs 5.
+
+
+   .. py:method:: test_get_id_kwargs_6(self)
+
+      Test simple get_id_kwargs 6.
+
+
+   .. py:method:: test_get_id_kwargs_7(self)
+
+      Test simple get_id_kwargs 7.
+
+
+

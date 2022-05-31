@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nautobot_device_onboarding &mdash; Nautobot App Docs  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="nautobot_device_onboarding.api" href="api/index.html" />
+    <link rel="prev" title="Contributing to the App" href="../../../nautobot-plugin-device-onboarding/dev/dev_contributing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html">
+            <img src="../../../_static/nautobot_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nautobot-apps.html">Nautobot App Ecosystem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Device Onboarding</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../nautobot-plugin-device-onboarding/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nautobot-plugin-device-onboarding/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../nautobot-plugin-device-onboarding/dev/index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../nautobot-plugin-device-onboarding/dev/dev_extending.html">Extending the App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../nautobot-plugin-device-onboarding/dev/dev_contributing.html">Contributing to the App</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../nautobot-plugin-device-onboarding/dev/index.html#api-reference">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Nautobot Device Onboarding</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Golden Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nautobot-plugin-golden-config/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nautobot-plugin-golden-config/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nautobot-plugin-golden-config/dev/index.html">Developer Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Nautobot App Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../nautobot-plugin-device-onboarding/dev/index.html">Nautobot Device Onboarding</a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/dev/api/nautobot_device_onboarding/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-nautobot_device_onboarding">
+<span id="nautobot-device-onboarding"></span><h1><a class="reference internal" href="#module-nautobot_device_onboarding" title="nautobot_device_onboarding"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding</span></code></a><a class="headerlink" href="#module-nautobot_device_onboarding" title="Permalink to this headline"></a></h1>
+<p>Plugin declaration for nautobot_device_onboarding.</p>
+<p>(c) 2020-2021 Network To Code
+Licensed under the Apache License, Version 2.0 (the “License”);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<blockquote>
+<div><p><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+</div></blockquote>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.api</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/serializers/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.api.serializers</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/urls/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.api.urls</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/views/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.api.views</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="onboarding/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.onboarding</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="onboarding/onboarding/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.onboarding.onboarding</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="onboarding_extensions/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.onboarding_extensions</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="onboarding_extensions/ios/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.onboarding_extensions.ios</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.tests</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests/test_api/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.tests.test_api</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/test_models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.tests.test_models</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/test_nautobot_keeper/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.tests.test_nautobot_keeper</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/test_netdev_keeper/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.tests.test_netdev_keeper</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/test_views/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.tests.test_views</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="admin/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.admin</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="choices/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.choices</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="constants/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.constants</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.exceptions</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="filters/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.filters</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="forms/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.forms</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.helpers</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.metrics</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.models</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="nautobot_keeper/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.nautobot_keeper</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="navigation/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.navigation</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="netdev_keeper/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.netdev_keeper</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="onboard/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.onboard</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="tables/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.tables</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="template_content/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.template_content</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="urls/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.urls</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="views/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.views</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="worker/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.worker</span></code></a></li>
+</ul>
+</div>
+</section>
+<section id="package-contents">
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_device_onboarding.OnboardingConfig" title="nautobot_device_onboarding.OnboardingConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OnboardingConfig</span></code></a></p></td>
+<td><p>Plugin configuration for the nautobot_device_onboarding plugin.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_device_onboarding.__version__" title="nautobot_device_onboarding.__version__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__version__</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_device_onboarding.config" title="nautobot_device_onboarding.config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">config</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.__version__">
+<span class="sig-prename descclassname"><span class="pre">nautobot_device_onboarding.</span></span><span class="sig-name descname"><span class="pre">__version__</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1.1.1</span></em><a class="headerlink" href="#nautobot_device_onboarding.__version__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.OnboardingConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_device_onboarding.</span></span><span class="sig-name descname"><span class="pre">OnboardingConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_device_onboarding.OnboardingConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.plugins.PluginConfig</span></code></p>
+<p>Plugin configuration for the nautobot_device_onboarding plugin.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.OnboardingConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">nautobot_device_onboarding</span></em><a class="headerlink" href="#nautobot_device_onboarding.OnboardingConfig.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.OnboardingConfig.verbose_name">
+<span class="sig-name descname"><span class="pre">verbose_name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Device</span> <span class="pre">Onboarding</span></em><a class="headerlink" href="#nautobot_device_onboarding.OnboardingConfig.verbose_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.OnboardingConfig.version">
+<span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#nautobot_device_onboarding.OnboardingConfig.version" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.OnboardingConfig.min_version">
+<span class="sig-name descname"><span class="pre">min_version</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1.0.0</span></em><a class="headerlink" href="#nautobot_device_onboarding.OnboardingConfig.min_version" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.OnboardingConfig.author">
+<span class="sig-name descname"><span class="pre">author</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Network</span> <span class="pre">to</span> <span class="pre">Code</span></em><a class="headerlink" href="#nautobot_device_onboarding.OnboardingConfig.author" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.OnboardingConfig.author_email">
+<span class="sig-name descname"><span class="pre">author_email</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">opensource&#64;networktocode.com</span></em><a class="headerlink" href="#nautobot_device_onboarding.OnboardingConfig.author_email" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.OnboardingConfig.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">A</span> <span class="pre">plugin</span> <span class="pre">for</span> <span class="pre">Nautobot</span> <span class="pre">to</span> <span class="pre">easily</span> <span class="pre">onboard</span> <span class="pre">new</span> <span class="pre">devices.</span></em><a class="headerlink" href="#nautobot_device_onboarding.OnboardingConfig.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.OnboardingConfig.base_url">
+<span class="sig-name descname"><span class="pre">base_url</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">device-onboarding</span></em><a class="headerlink" href="#nautobot_device_onboarding.OnboardingConfig.base_url" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.OnboardingConfig.required_settings">
+<span class="sig-name descname"><span class="pre">required_settings</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nautobot_device_onboarding.OnboardingConfig.required_settings" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.OnboardingConfig.default_settings">
+<span class="sig-name descname"><span class="pre">default_settings</span></span><a class="headerlink" href="#nautobot_device_onboarding.OnboardingConfig.default_settings" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.OnboardingConfig.caching_config">
+<span class="sig-name descname"><span class="pre">caching_config</span></span><a class="headerlink" href="#nautobot_device_onboarding.OnboardingConfig.caching_config" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.config">
+<span class="sig-prename descclassname"><span class="pre">nautobot_device_onboarding.</span></span><span class="sig-name descname"><span class="pre">config</span></span><a class="headerlink" href="#nautobot_device_onboarding.config" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../../nautobot-plugin-device-onboarding/dev/dev_contributing.html" class="btn btn-neutral float-left" title="Contributing to the App" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api/index.html" class="btn btn-neutral float-right" title="nautobot_device_onboarding.api" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, NTC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

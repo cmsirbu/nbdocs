@@ -1,0 +1,36 @@
+# The Nautobot App Ecosystem
+
+## Overview
+
+```{admonition} Developer Note - Remove Me!
+An introduction to Nautobot Apps (or Plugins).
+```
+
+To view and search the full list of Apps, head over to the [Nautobot App Ecosystem Page on networktocode.com](https://www.networktocode.com/nautobot/apps/).
+
+## Existing Apps
+
+```{admonition} Developer Note - Remove Me!
+ Aid in discovering what's available - a short list with one-liner descriptions of what they do.
+```
+
+### With documentation here
+
+- [Nautobot Device Onboarding](nautobot-plugin-device-onboarding/user/index.md)
+    + This App greatly aims to simplify the onboarding process of a new device by allowing the user to specify a small amount of info and having the plugin populate a much larger amount of device data in Nautobot.
+- [Nautobot Golden Configuration](nautobot-plugin-golden-config/user/index.md)
+    + The Golden Configuration App aims to solve common configuration management challenges. It provides functionality for performing **Configuration Backups to Git**, **Intended Configuration Generation**, **SoT Data Aggregation**, and **Comparing Intended Configuration with Backups**.
+
+### With documentation elsewhere
+
+```{admonition} Developer Note - Remove Me!
+Manually curated list of other apps that are:
+1. Not migrated yet to the new docs system.
+2. Built by others in the community.
+Should be reviewed periodically to ensure projects are not abandoned, links still work (this can be automated in CI) etc.
+```
+
+- [Nautobot Device Lifecycle Management](https://github.com/nautobot/nautobot-plugin-device-lifecycle-mgmt)
+    + This App works by making related associations to Devices, Device Types, and Inventory Items to help provide data about the hardware end of life notices, appropriate software versions to be running on the devices, and the maintenance contracts associated with devices.
+- [Nautobot Single Source of Truth (SSoT)](https://github.com/nautobot/nautobot-plugin-ssot)
+    + This App facilitates integration and data synchronization between various "source of truth" (SoT) systems, with Nautobot acting as a central clearinghouse for data - a Single Source of Truth, if you will. A goal of this plugin is to make it relatively quick and straightforward to develop and integrate your own system-specific Data Sources and Data Targets into Nautobot with a common UI and user experience.

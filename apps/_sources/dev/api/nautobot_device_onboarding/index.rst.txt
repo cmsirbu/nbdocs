@@ -1,0 +1,154 @@
+:py:mod:`nautobot_device_onboarding`
+====================================
+
+.. py:module:: nautobot_device_onboarding
+
+.. autoapi-nested-parse::
+
+   Plugin declaration for nautobot_device_onboarding.
+
+   (c) 2020-2021 Network To Code
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   api/index.rst
+   onboarding/index.rst
+   onboarding_extensions/index.rst
+   tests/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   admin/index.rst
+   choices/index.rst
+   constants/index.rst
+   exceptions/index.rst
+   filters/index.rst
+   forms/index.rst
+   helpers/index.rst
+   metrics/index.rst
+   models/index.rst
+   nautobot_keeper/index.rst
+   navigation/index.rst
+   netdev_keeper/index.rst
+   onboard/index.rst
+   tables/index.rst
+   template_content/index.rst
+   urls/index.rst
+   views/index.rst
+   worker/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.OnboardingConfig
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.__version__
+   nautobot_device_onboarding.config
+
+
+.. py:data:: __version__
+   :annotation: = 1.1.1
+
+   
+
+.. py:class:: OnboardingConfig(app_name, app_module)
+
+   Bases: :py:obj:`nautobot.extras.plugins.PluginConfig`
+
+   Plugin configuration for the nautobot_device_onboarding plugin.
+
+   .. py:attribute:: name
+      :annotation: = nautobot_device_onboarding
+
+      
+
+   .. py:attribute:: verbose_name
+      :annotation: = Device Onboarding
+
+      
+
+   .. py:attribute:: version
+      
+
+      
+
+   .. py:attribute:: min_version
+      :annotation: = 1.0.0
+
+      
+
+   .. py:attribute:: author
+      :annotation: = Network to Code
+
+      
+
+   .. py:attribute:: author_email
+      :annotation: = opensource@networktocode.com
+
+      
+
+   .. py:attribute:: description
+      :annotation: = A plugin for Nautobot to easily onboard new devices.
+
+      
+
+   .. py:attribute:: base_url
+      :annotation: = device-onboarding
+
+      
+
+   .. py:attribute:: required_settings
+      :annotation: = []
+
+      
+
+   .. py:attribute:: default_settings
+      
+
+      
+
+   .. py:attribute:: caching_config
+      
+
+      
+
+
+.. py:data:: config
+   
+
+   
+

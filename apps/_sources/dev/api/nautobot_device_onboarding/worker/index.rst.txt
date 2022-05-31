@@ -1,0 +1,71 @@
+:py:mod:`nautobot_device_onboarding.worker`
+===========================================
+
+.. py:module:: nautobot_device_onboarding.worker
+
+.. autoapi-nested-parse::
+
+   Worker code for processing inbound OnboardingTasks.
+
+   (c) 2020-2021 Network To Code
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.worker.onboard_device
+   nautobot_device_onboarding.worker.enqueue_onboarding_task
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.worker.logger
+   nautobot_device_onboarding.worker.REQUEST_TIME
+   nautobot_device_onboarding.worker.CELERY_WORKER
+
+
+.. py:data:: logger
+   
+
+   
+
+.. py:data:: REQUEST_TIME
+   
+
+   
+
+.. py:data:: CELERY_WORKER
+   :annotation: = True
+
+   
+
+.. py:function:: onboard_device(task_id, credentials)
+
+   Process a single OnboardingTask instance.
+
+
+.. py:function:: enqueue_onboarding_task(task_id, credentials)
+
+   Detect worker type and enqueue task.
+
+

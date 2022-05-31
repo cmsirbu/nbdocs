@@ -1,0 +1,36 @@
+:py:mod:`nautobot_golden_config.tests.test_basics`
+==================================================
+
+.. py:module:: nautobot_golden_config.tests.test_basics
+
+.. autoapi-nested-parse::
+
+   Basic tests that do not require Django.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tests.test_basics.TestVersion
+
+
+
+
+.. py:class:: TestVersion(methodName='runTest')
+
+   Bases: :py:obj:`unittest.TestCase`
+
+   Test Version is the same.
+
+   .. py:method:: test_version(self)
+
+      Verify that pyproject.toml version is same as version specified in the package.
+
+
+

@@ -1,0 +1,46 @@
+:py:mod:`run_generate_config`
+=============================
+
+.. py:module:: run_generate_config
+
+.. autoapi-nested-parse::
+
+   Add the run_generate_config command to nautobot-server.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   run_generate_config.Command
+
+
+
+
+.. py:class:: Command(stdout=None, stderr=None, no_color=False, force_color=False)
+
+   Bases: :py:obj:`django.core.management.base.BaseCommand`
+
+   Boilerplate Command to inherit from BaseCommand.
+
+   .. py:attribute:: help
+      :annotation: = Run Job to generate your intended configuration from Golden Config Plugin.
+
+      
+
+   .. py:method:: add_arguments(self, parser)
+
+      Add arguments for run_generate_config.
+
+
+   .. py:method:: handle(self, *args, **kwargs)
+
+      Add handler for run_generate_config.
+
+
+

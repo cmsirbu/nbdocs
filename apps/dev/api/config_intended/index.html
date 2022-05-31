@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>config_intended &mdash; Nautobot App Docs  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html">
+            <img src="../../../_static/nautobot_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nautobot-apps.html">Nautobot App Ecosystem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Device Onboarding</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nautobot-plugin-device-onboarding/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nautobot-plugin-device-onboarding/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nautobot-plugin-device-onboarding/dev/index.html">Developer Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Golden Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nautobot-plugin-golden-config/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nautobot-plugin-golden-config/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nautobot-plugin-golden-config/dev/index.html">Developer Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Nautobot App Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">config_intended</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/dev/api/config_intended/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-config_intended">
+<span id="config-intended"></span><h1><a class="reference internal" href="#module-config_intended" title="config_intended"><code class="xref py py-mod docutils literal notranslate"><span class="pre">config_intended</span></code></a><a class="headerlink" href="#module-config_intended" title="Permalink to this headline"></a></h1>
+<p>Nornir job for generating the intended config.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#config_intended.run_template" title="config_intended.run_template"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_template</span></code></a>(task: nornir.core.task.Task, logger, device_to_settings_map, nautobot_job) → nornir.core.task.Result</p></td>
+<td><p>Render Jinja Template.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#config_intended.config_intended" title="config_intended.config_intended"><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_intended</span></code></a>(nautobot_job, data)</p></td>
+<td><p>Nornir play to generate configurations.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#config_intended.LOGGER" title="config_intended.LOGGER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LOGGER</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#config_intended.jinja_settings" title="config_intended.jinja_settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">jinja_settings</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#config_intended.jinja_env" title="config_intended.jinja_env"><code class="xref py py-obj docutils literal notranslate"><span class="pre">jinja_env</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="config_intended.LOGGER">
+<span class="sig-prename descclassname"><span class="pre">config_intended.</span></span><span class="sig-name descname"><span class="pre">LOGGER</span></span><a class="headerlink" href="#config_intended.LOGGER" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="config_intended.jinja_settings">
+<span class="sig-prename descclassname"><span class="pre">config_intended.</span></span><span class="sig-name descname"><span class="pre">jinja_settings</span></span><a class="headerlink" href="#config_intended.jinja_settings" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="config_intended.jinja_env">
+<span class="sig-prename descclassname"><span class="pre">config_intended.</span></span><span class="sig-name descname"><span class="pre">jinja_env</span></span><a class="headerlink" href="#config_intended.jinja_env" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="config_intended.run_template">
+<span class="sig-prename descclassname"><span class="pre">config_intended.</span></span><span class="sig-name descname"><span class="pre">run_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">nornir.core.task.Task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_to_settings_map</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nautobot_job</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">nornir.core.task.Result</span></span></span><a class="headerlink" href="#config_intended.run_template" title="Permalink to this definition"></a></dt>
+<dd><p>Render Jinja Template.</p>
+<p>Only one template is supported, so the expectation is that that template includes all other templates.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>task (Task): Nornir task individual object
+logger (NornirLogger): Logger to log messages to.
+global_settings (GoldenConfigSetting): The settings for GoldenConfigPlugin.
+nautobot_job (Result): The the output from the Nautobot Job instance being run.</p>
+</dd>
+<dt>Returns:</dt><dd><p>result (Result): Result from Nornir task</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="config_intended.config_intended">
+<span class="sig-prename descclassname"><span class="pre">config_intended.</span></span><span class="sig-name descname"><span class="pre">config_intended</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nautobot_job</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#config_intended.config_intended" title="Permalink to this definition"></a></dt>
+<dd><p>Nornir play to generate configurations.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>nautobot_job (Result): The Nautobot Job instance being run.
+data (dict): Form data from Nautobot Job.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None: Intended configuration files are written to filesystem.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, NTC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

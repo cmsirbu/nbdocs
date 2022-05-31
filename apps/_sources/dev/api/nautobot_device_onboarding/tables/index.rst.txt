@@ -1,0 +1,110 @@
+:py:mod:`nautobot_device_onboarding.tables`
+===========================================
+
+.. py:module:: nautobot_device_onboarding.tables
+
+.. autoapi-nested-parse::
+
+   Tables for device onboarding tasks.
+
+   (c) 2020-2021 Network To Code
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.tables.OnboardingTaskTable
+   nautobot_device_onboarding.tables.OnboardingTaskFeedBulkTable
+
+
+
+
+.. py:class:: OnboardingTaskTable(*args, user=None, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.tables.BaseTable`
+
+   Table for displaying OnboardingTask instances.
+
+   .. py:class:: Meta
+
+      Bases: :py:obj:`nautobot.utilities.tables.BaseTable.Meta`
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['pk', 'label', 'created', 'ip_address', 'site', 'platform', 'created_device', 'status',...
+
+         
+
+
+   .. py:attribute:: pk
+      
+
+      
+
+   .. py:attribute:: label
+      
+
+      
+
+   .. py:attribute:: site
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: created_device
+      
+
+      
+
+
+.. py:class:: OnboardingTaskFeedBulkTable(*args, user=None, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.tables.BaseTable`
+
+   TODO document me.
+
+   .. py:class:: Meta
+
+      Bases: :py:obj:`nautobot.utilities.tables.BaseTable.Meta`
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['label', 'created', 'site', 'platform', 'ip_address', 'port', 'timeout']
+
+         
+
+
+   .. py:attribute:: site
+      
+
+      
+
+

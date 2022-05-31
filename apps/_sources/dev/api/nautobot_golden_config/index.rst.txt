@@ -1,0 +1,130 @@
+:py:mod:`nautobot_golden_config`
+================================
+
+.. py:module:: nautobot_golden_config
+
+.. autoapi-nested-parse::
+
+   Plugin declaration for nautobot_golden_config.
+
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   api/index.rst
+   tests/index.rst
+   utilities/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   choices/index.rst
+   datasources/index.rst
+   filters/index.rst
+   forms/index.rst
+   jobs/index.rst
+   models/index.rst
+   navigation/index.rst
+   tables/index.rst
+   template_content/index.rst
+   urls/index.rst
+   views/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.GoldenConfig
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.__version__
+   nautobot_golden_config.config
+
+
+.. py:data:: __version__
+   :annotation: = 1.0.2
+
+   
+
+.. py:class:: GoldenConfig(app_name, app_module)
+
+   Bases: :py:obj:`nautobot.extras.plugins.PluginConfig`
+
+   Plugin configuration for the nautobot_golden_config plugin.
+
+   .. py:attribute:: name
+      :annotation: = nautobot_golden_config
+
+      
+
+   .. py:attribute:: verbose_name
+      :annotation: = Golden Configuration
+
+      
+
+   .. py:attribute:: version
+      
+
+      
+
+   .. py:attribute:: author
+      :annotation: = Network to Code, LLC
+
+      
+
+   .. py:attribute:: author_email
+      :annotation: = opensource@networktocode.com
+
+      
+
+   .. py:attribute:: description
+      :annotation: = A plugin for managing Golden Configurations.
+
+      
+
+   .. py:attribute:: base_url
+      :annotation: = golden-config
+
+      
+
+   .. py:attribute:: min_version
+      :annotation: = 1.2.0
+
+      
+
+   .. py:attribute:: max_version
+      :annotation: = 1.3.99
+
+      
+
+   .. py:attribute:: default_settings
+      
+
+      
+
+
+.. py:data:: config
+   
+
+   
+

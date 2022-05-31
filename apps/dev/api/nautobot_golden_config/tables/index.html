@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nautobot_golden_config.tables &mdash; Nautobot App Docs  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="nautobot_golden_config.template_content" href="../template_content/index.html" />
+    <link rel="prev" title="nautobot_golden_config.navigation" href="../navigation/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html">
+            <img src="../../../../_static/nautobot_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-apps.html">Nautobot App Ecosystem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Device Onboarding</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/dev/index.html">Developer Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Golden Configuration</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/dev_extending.html">Extending the App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/dev_contributing.html">Contributing to the App</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/index.html#api-reference">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Nautobot Golden Configuration</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Nautobot App Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../../nautobot-plugin-golden-config/dev/index.html">Nautobot Golden Configuration</a> &raquo;</li>
+          <li><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config</span></code></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config.tables</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/dev/api/nautobot_golden_config/tables/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-nautobot_golden_config.tables">
+<span id="nautobot-golden-config-tables"></span><h1><a class="reference internal" href="#module-nautobot_golden_config.tables" title="nautobot_golden_config.tables"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config.tables</span></code></a><a class="headerlink" href="#module-nautobot_golden_config.tables" title="Permalink to this headline"></a></h1>
+<p>Django Tables2 classes for golden_config plugin.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.PercentageColumn" title="nautobot_golden_config.tables.PercentageColumn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PercentageColumn</span></code></a></p></td>
+<td><p>Column used to display percentage.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.ComplianceColumn" title="nautobot_golden_config.tables.ComplianceColumn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceColumn</span></code></a></p></td>
+<td><p>Column used to display config compliance status (True/False/None).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.ConfigComplianceTable" title="nautobot_golden_config.tables.ConfigComplianceTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigComplianceTable</span></code></a></p></td>
+<td><p>Table for rendering a listing of Device entries and their associated ConfigCompliance record status.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable" title="nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigComplianceGlobalFeatureTable</span></code></a></p></td>
+<td><p>Table for feature compliance report.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.ConfigComplianceDeleteTable" title="nautobot_golden_config.tables.ConfigComplianceDeleteTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigComplianceDeleteTable</span></code></a></p></td>
+<td><p>Table for device compliance report.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.DeleteGoldenConfigTable" title="nautobot_golden_config.tables.DeleteGoldenConfigTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DeleteGoldenConfigTable</span></code></a></p></td>
+<td><p>Table used in bulk delete confirmation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.GoldenConfigTable" title="nautobot_golden_config.tables.GoldenConfigTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigTable</span></code></a></p></td>
+<td><p>Table to display Config Management Status.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.ComplianceFeatureTable" title="nautobot_golden_config.tables.ComplianceFeatureTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceFeatureTable</span></code></a></p></td>
+<td><p>Table to display Compliance Features.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.ComplianceRuleTable" title="nautobot_golden_config.tables.ComplianceRuleTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceRuleTable</span></code></a></p></td>
+<td><p>Table to display Compliance Rules.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.ConfigRemoveTable" title="nautobot_golden_config.tables.ConfigRemoveTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigRemoveTable</span></code></a></p></td>
+<td><p>Table to display Compliance Rules.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.ConfigReplaceTable" title="nautobot_golden_config.tables.ConfigReplaceTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigReplaceTable</span></code></a></p></td>
+<td><p>Table to display Compliance Rules.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.GoldenConfigSettingTable" title="nautobot_golden_config.tables.GoldenConfigSettingTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigSettingTable</span></code></a></p></td>
+<td><p>Table for list view.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.actual_fields" title="nautobot_golden_config.tables.actual_fields"><code class="xref py py-obj docutils literal notranslate"><span class="pre">actual_fields</span></code></a>()</p></td>
+<td><p>Convienance function to conditionally toggle columns.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.ALL_ACTIONS" title="nautobot_golden_config.tables.ALL_ACTIONS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ALL_ACTIONS</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.tables.MATCH_CONFIG" title="nautobot_golden_config.tables.MATCH_CONFIG"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MATCH_CONFIG</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ALL_ACTIONS">
+<span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">ALL_ACTIONS</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Multiline-String</span></em><a class="headerlink" href="#nautobot_golden_config.tables.ALL_ACTIONS" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-text notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>{% if backup == True %}
+<span class="linenos"> 2</span>    {% if record.configcompliance_set.first.rule.config_type == &#39;json&#39; %}
+<span class="linenos"> 3</span>        &lt;i class=&quot;mdi mdi-circle-small&quot;&gt;&lt;/i&gt;
+<span class="linenos"> 4</span>    {% else %}
+<span class="linenos"> 5</span>        {% if record.goldenconfig_set.first.backup_config %}
+<span class="linenos"> 6</span>            &lt;a value=&quot;{% url &#39;plugins:nautobot_golden_config:configcompliance_details&#39; pk=record.pk config_type=&#39;backup&#39; %}&quot; class=&quot;openBtn&quot; data-href=&quot;{% url &#39;plugins:nautobot_golden_config:configcompliance_details&#39; pk=record.pk config_type=&#39;backup&#39; %}?modal=true&quot;&gt;
+<span class="linenos"> 7</span>                &lt;i class=&quot;mdi mdi-file-document-outline&quot; title=&quot;Backup Configuration&quot;&gt;&lt;/i&gt;
+<span class="linenos"> 8</span>            &lt;/a&gt;
+<span class="linenos"> 9</span>        {% else %}
+<span class="linenos">10</span>            &lt;i class=&quot;mdi mdi-circle-small&quot;&gt;&lt;/i&gt;
+<span class="linenos">11</span>        {% endif %}
+<span class="linenos">12</span>    {% endif %}
+<span class="linenos">13</span>{% endif %}
+<span class="linenos">14</span>{% if intended == True %}
+<span class="linenos">15</span>    {% if record.configcompliance_set.first.rule.config_type == &#39;json&#39; %}
+<span class="linenos">16</span>        &lt;i class=&quot;mdi mdi-circle-small&quot;&gt;&lt;/i&gt;
+<span class="linenos">17</span>    {% else %}
+<span class="linenos">18</span>        {% if record.goldenconfig_set.first.intended_config %}
+<span class="linenos">19</span>            &lt;a value=&quot;{% url &#39;plugins:nautobot_golden_config:configcompliance_details&#39; pk=record.pk config_type=&#39;intended&#39; %}&quot; class=&quot;openBtn&quot; data-href=&quot;{% url &#39;plugins:nautobot_golden_config:configcompliance_details&#39; pk=record.pk config_type=&#39;intended&#39; %}?modal=true&quot;&gt;
+<span class="linenos">20</span>                &lt;i class=&quot;mdi mdi-text-box-check-outline&quot; title=&quot;Intended Configuration&quot;&gt;&lt;/i&gt;
+<span class="linenos">21</span>            &lt;/a&gt;
+<span class="linenos">22</span>        {% else %}
+<span class="linenos">23</span>            &lt;i class=&quot;mdi mdi-circle-small&quot;&gt;&lt;/i&gt;
+<span class="linenos">24</span>        {% endif %}
+<span class="linenos">25</span>    {% endif %}
+<span class="linenos">26</span>{% endif %}
+<span class="linenos">27</span>{% if compliance == True %}
+<span class="linenos">28</span>    {% if record.configcompliance_set.first.rule.config_type == &#39;json&#39; %}
+<span class="linenos">29</span>            &lt;a value=&quot;{% url &#39;plugins:nautobot_golden_config:configcompliance_details&#39; pk=record.pk config_type=&#39;json_compliance&#39; %}&quot; class=&quot;openBtn&quot; data-href=&quot;{% url &#39;plugins:nautobot_golden_config:configcompliance_details&#39; pk=record.pk config_type=&#39;json_compliance&#39; %}?modal=true&quot;&gt;
+<span class="linenos">30</span>                &lt;i class=&quot;mdi mdi-file-compare&quot; title=&quot;Compliance Details JSON&quot;&gt;&lt;/i&gt;
+<span class="linenos">31</span>            &lt;/a&gt;
+<span class="linenos">32</span>    {% else %}
+<span class="linenos">33</span>        {% if record.goldenconfig_set.first.compliance_config %}
+<span class="linenos">34</span>            &lt;a value=&quot;{% url &#39;plugins:nautobot_golden_config:configcompliance_details&#39; pk=record.pk config_type=&#39;compliance&#39; %}&quot; class=&quot;openBtn&quot; data-href=&quot;{% url &#39;plugins:nautobot_golden_config:configcompliance_details&#39; pk=record.pk config_type=&#39;compliance&#39; %}?modal=true&quot;&gt;
+<span class="linenos">35</span>                &lt;i class=&quot;mdi mdi-file-compare&quot; title=&quot;Compliance Details&quot;&gt;&lt;/i&gt;
+<span class="linenos">36</span>            &lt;/a&gt;
+<span class="linenos">37</span>        {% else %}
+<span class="linenos">38</span>            &lt;i class=&quot;mdi mdi-circle-small&quot;&gt;&lt;/i&gt;
+<span class="linenos">39</span>        {% endif %}
+<span class="linenos">40</span>    {% endif %}
+<span class="linenos">41</span>{% endif %}
+<span class="linenos">42</span>{% if sotagg == True %}
+<span class="linenos">43</span>    &lt;a value=&quot;{% url &#39;plugins:nautobot_golden_config:configcompliance_details&#39; pk=record.pk config_type=&#39;sotagg&#39; %}&quot; class=&quot;openBtn&quot; data-href=&quot;{% url &#39;plugins:nautobot_golden_config:configcompliance_details&#39; pk=record.pk config_type=&#39;sotagg&#39; %}?modal=true&quot;&gt;
+<span class="linenos">44</span>        &lt;i class=&quot;mdi mdi-code-json&quot; title=&quot;SOT Aggregate Data&quot;&gt;&lt;/i&gt;
+<span class="linenos">45</span>    &lt;/a&gt;
+<span class="linenos">46</span>    {% if record.configcompliance_set.first.rule.config_type == &#39;json&#39; %}
+<span class="linenos">47</span>        &lt;i class=&quot;mdi mdi-circle-small&quot;&gt;&lt;/i&gt;
+<span class="linenos">48</span>    {% else %}
+<span class="linenos">49</span>        &lt;a href=&quot;{% url &#39;extras:job&#39; class_path=&#39;plugins/nautobot_golden_config.jobs/AllGoldenConfig&#39; %}?device={{ record.pk }}&quot;
+<span class="linenos">50</span>            &lt;span class=&quot;text-primary&quot;&gt;
+<span class="linenos">51</span>                &lt;i class=&quot;mdi mdi-play-circle&quot; title=&quot;Execute All Golden Config Jobs&quot;&gt;&lt;/i&gt;
+<span class="linenos">52</span>            &lt;/span&gt;
+<span class="linenos">53</span>        &lt;/a&gt;
+<span class="linenos">54</span>    {% endif %}
+<span class="linenos">55</span>{% endif %}
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.MATCH_CONFIG">
+<span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">MATCH_CONFIG</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">{{</span> <span class="pre">record.match_config|linebreaksbr</span> <span class="pre">}}</span></em><a class="headerlink" href="#nautobot_golden_config.tables.MATCH_CONFIG" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.actual_fields">
+<span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">actual_fields</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.actual_fields" title="Permalink to this definition"></a></dt>
+<dd><p>Convienance function to conditionally toggle columns.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.PercentageColumn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">PercentageColumn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accessor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visible</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orderable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order_by</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">footer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_from_export</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linkify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_sort_descending</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.PercentageColumn" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">django_tables2.Column</span></code></p>
+<p>Column used to display percentage.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.PercentageColumn.render">
+<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.PercentageColumn.render" title="Permalink to this definition"></a></dt>
+<dd><p>Render percentage value.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceColumn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">ComplianceColumn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accessor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visible</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orderable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order_by</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">footer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_from_export</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linkify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_sort_descending</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceColumn" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">django_tables2.Column</span></code></p>
+<p>Column used to display config compliance status (True/False/None).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceColumn.render">
+<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceColumn.render" title="Permalink to this definition"></a></dt>
+<dd><p>Render an entry in this column.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">ConfigComplianceTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceTable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable</span></code></p>
+<p>Table for rendering a listing of Device entries and their associated ConfigCompliance record status.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceTable.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceTable.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable.Meta</span></code></p>
+<p>Metaclass attributes of ConfigComplianceTable.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceTable.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceTable.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceTable.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['pk',</span> <span class="pre">'device']</span></em><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceTable.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceTable.pk">
+<span class="sig-name descname"><span class="pre">pk</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceTable.pk" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceTable.device">
+<span class="sig-name descname"><span class="pre">device</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceTable.device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">ConfigComplianceGlobalFeatureTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable</span></code></p>
+<p>Table for feature compliance report.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable.Meta</span></code></p>
+<p>Metaclass attributes of ConfigComplianceGlobalFeatureTable.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['name',</span> <span class="pre">'count',</span> <span class="pre">'compliant',</span> <span class="pre">'non_compliant',</span> <span class="pre">'comp_percent']</span></em><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.Meta.default_columns">
+<span class="sig-name descname"><span class="pre">default_columns</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['name',</span> <span class="pre">'count',</span> <span class="pre">'compliant',</span> <span class="pre">'non_compliant',</span> <span class="pre">'comp_percent']</span></em><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.Meta.default_columns" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.count">
+<span class="sig-name descname"><span class="pre">count</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.count" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.compliant">
+<span class="sig-name descname"><span class="pre">compliant</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.compliant" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.non_compliant">
+<span class="sig-name descname"><span class="pre">non_compliant</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.non_compliant" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.comp_percent">
+<span class="sig-name descname"><span class="pre">comp_percent</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceGlobalFeatureTable.comp_percent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceDeleteTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">ConfigComplianceDeleteTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceDeleteTable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable</span></code></p>
+<p>Table for device compliance report.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceDeleteTable.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceDeleteTable.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable.Meta</span></code></p>
+<p>Metaclass attributes of ConfigComplianceDeleteTable.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceDeleteTable.Meta.device">
+<span class="sig-name descname"><span class="pre">device</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceDeleteTable.Meta.device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceDeleteTable.Meta.compliance">
+<span class="sig-name descname"><span class="pre">compliance</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceDeleteTable.Meta.compliance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceDeleteTable.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceDeleteTable.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceDeleteTable.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['device',</span> <span class="pre">'feature',</span> <span class="pre">'compliance']</span></em><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceDeleteTable.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigComplianceDeleteTable.feature">
+<span class="sig-name descname"><span class="pre">feature</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigComplianceDeleteTable.feature" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.DeleteGoldenConfigTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">DeleteGoldenConfigTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.DeleteGoldenConfigTable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable</span></code></p>
+<p>Table used in bulk delete confirmation.</p>
+<p>This is required since there model is different when deleting the record compared to when viewing the records initially via Device.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.DeleteGoldenConfigTable.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.tables.DeleteGoldenConfigTable.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable.Meta</span></code></p>
+<p>Meta for class DeleteGoldenConfigTable.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.DeleteGoldenConfigTable.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.tables.DeleteGoldenConfigTable.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.DeleteGoldenConfigTable.pk">
+<span class="sig-name descname"><span class="pre">pk</span></span><a class="headerlink" href="#nautobot_golden_config.tables.DeleteGoldenConfigTable.pk" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigTable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable</span></code></p>
+<p>Table to display Config Management Status.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigTable.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigTable.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable.Meta</span></code></p>
+<p>Meta for class GoldenConfigTable.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigTable.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigTable.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigTable.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigTable.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigTable.pk">
+<span class="sig-name descname"><span class="pre">pk</span></span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigTable.pk" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigTable.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigTable.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigTable.actions">
+<span class="sig-name descname"><span class="pre">actions</span></span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigTable.actions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigTable._render_last_success_date">
+<span class="sig-name descname"><span class="pre">_render_last_success_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigTable._render_last_success_date" title="Permalink to this definition"></a></dt>
+<dd><p>Abstract method to get last success per row record.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigTable.render_backup_last_success_date">
+<span class="sig-name descname"><span class="pre">render_backup_last_success_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigTable.render_backup_last_success_date" title="Permalink to this definition"></a></dt>
+<dd><p>Pull back backup last success per row record.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigTable.render_intended_last_success_date">
+<span class="sig-name descname"><span class="pre">render_intended_last_success_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigTable.render_intended_last_success_date" title="Permalink to this definition"></a></dt>
+<dd><p>Pull back intended last success per row record.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigTable.render_compliance_last_success_date">
+<span class="sig-name descname"><span class="pre">render_compliance_last_success_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigTable.render_compliance_last_success_date" title="Permalink to this definition"></a></dt>
+<dd><p>Pull back compliance last success per row record.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceFeatureTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">ComplianceFeatureTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceFeatureTable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable</span></code></p>
+<p>Table to display Compliance Features.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceFeatureTable.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceFeatureTable.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable.Meta</span></code></p>
+<p>Table to display Compliance Features Meta Data.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceFeatureTable.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceFeatureTable.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceFeatureTable.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['pk',</span> <span class="pre">'name',</span> <span class="pre">'slug',</span> <span class="pre">'description']</span></em><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceFeatureTable.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceFeatureTable.Meta.default_columns">
+<span class="sig-name descname"><span class="pre">default_columns</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['pk',</span> <span class="pre">'name',</span> <span class="pre">'slug',</span> <span class="pre">'description']</span></em><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceFeatureTable.Meta.default_columns" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceFeatureTable.pk">
+<span class="sig-name descname"><span class="pre">pk</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceFeatureTable.pk" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceFeatureTable.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceFeatureTable.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceRuleTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">ComplianceRuleTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceRuleTable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable</span></code></p>
+<p>Table to display Compliance Rules.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceRuleTable.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceRuleTable.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable.Meta</span></code></p>
+<p>Table to display Compliance Rules Meta Data.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceRuleTable.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceRuleTable.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceRuleTable.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['pk',</span> <span class="pre">'feature',</span> <span class="pre">'platform',</span> <span class="pre">'description',</span> <span class="pre">'config_ordered',</span> <span class="pre">'match_config',</span> <span class="pre">'config_type']</span></em><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceRuleTable.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceRuleTable.Meta.default_columns">
+<span class="sig-name descname"><span class="pre">default_columns</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['pk',</span> <span class="pre">'feature',</span> <span class="pre">'platform',</span> <span class="pre">'description',</span> <span class="pre">'config_ordered',</span> <span class="pre">'match_config',</span> <span class="pre">'config_type']</span></em><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceRuleTable.Meta.default_columns" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceRuleTable.pk">
+<span class="sig-name descname"><span class="pre">pk</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceRuleTable.pk" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceRuleTable.feature">
+<span class="sig-name descname"><span class="pre">feature</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceRuleTable.feature" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ComplianceRuleTable.match_config">
+<span class="sig-name descname"><span class="pre">match_config</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ComplianceRuleTable.match_config" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigRemoveTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">ConfigRemoveTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigRemoveTable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable</span></code></p>
+<p>Table to display Compliance Rules.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigRemoveTable.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigRemoveTable.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable.Meta</span></code></p>
+<p>Table to display Compliance Rules Meta Data.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigRemoveTable.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigRemoveTable.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigRemoveTable.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['pk',</span> <span class="pre">'name',</span> <span class="pre">'platform',</span> <span class="pre">'description',</span> <span class="pre">'regex']</span></em><a class="headerlink" href="#nautobot_golden_config.tables.ConfigRemoveTable.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigRemoveTable.Meta.default_columns">
+<span class="sig-name descname"><span class="pre">default_columns</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['pk',</span> <span class="pre">'name',</span> <span class="pre">'platform',</span> <span class="pre">'description',</span> <span class="pre">'regex']</span></em><a class="headerlink" href="#nautobot_golden_config.tables.ConfigRemoveTable.Meta.default_columns" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigRemoveTable.pk">
+<span class="sig-name descname"><span class="pre">pk</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigRemoveTable.pk" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigRemoveTable.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigRemoveTable.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigReplaceTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">ConfigReplaceTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigReplaceTable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable</span></code></p>
+<p>Table to display Compliance Rules.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigReplaceTable.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigReplaceTable.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable.Meta</span></code></p>
+<p>Table to display Compliance Rules Meta Data.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigReplaceTable.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigReplaceTable.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigReplaceTable.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['pk',</span> <span class="pre">'name',</span> <span class="pre">'platform',</span> <span class="pre">'description',</span> <span class="pre">'regex',</span> <span class="pre">'replace']</span></em><a class="headerlink" href="#nautobot_golden_config.tables.ConfigReplaceTable.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigReplaceTable.Meta.default_columns">
+<span class="sig-name descname"><span class="pre">default_columns</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['pk',</span> <span class="pre">'name',</span> <span class="pre">'platform',</span> <span class="pre">'description',</span> <span class="pre">'regex',</span> <span class="pre">'replace']</span></em><a class="headerlink" href="#nautobot_golden_config.tables.ConfigReplaceTable.Meta.default_columns" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigReplaceTable.pk">
+<span class="sig-name descname"><span class="pre">pk</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigReplaceTable.pk" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.ConfigReplaceTable.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#nautobot_golden_config.tables.ConfigReplaceTable.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigSettingTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tables.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigSettingTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigSettingTable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable</span></code></p>
+<p>Table for list view.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigSettingTable.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigSettingTable.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.tables.BaseTable.Meta</span></code></p>
+<p>Meta attributes.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigSettingTable.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigSettingTable.Meta.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigSettingTable.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['pk',</span> <span class="pre">'name',</span> <span class="pre">'weight',</span> <span class="pre">'description',</span> <span class="pre">'backup_repository',</span> <span class="pre">'intended_repository',</span> <span class="pre">'jinja_repository']</span></em><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigSettingTable.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigSettingTable.pk">
+<span class="sig-name descname"><span class="pre">pk</span></span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigSettingTable.pk" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigSettingTable.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigSettingTable.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigSettingTable.jinja_repository">
+<span class="sig-name descname"><span class="pre">jinja_repository</span></span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigSettingTable.jinja_repository" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigSettingTable.intended_repository">
+<span class="sig-name descname"><span class="pre">intended_repository</span></span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigSettingTable.intended_repository" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigSettingTable.backup_repository">
+<span class="sig-name descname"><span class="pre">backup_repository</span></span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigSettingTable.backup_repository" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigSettingTable._render_capability">
+<span class="sig-name descname"><span class="pre">_render_capability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record_attribute</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigSettingTable._render_capability" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigSettingTable.render_backup_repository">
+<span class="sig-name descname"><span class="pre">render_backup_repository</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigSettingTable.render_backup_repository" title="Permalink to this definition"></a></dt>
+<dd><p>Render backup repository YES/NO value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigSettingTable.render_intended_repository">
+<span class="sig-name descname"><span class="pre">render_intended_repository</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigSettingTable.render_intended_repository" title="Permalink to this definition"></a></dt>
+<dd><p>Render intended repository YES/NO value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tables.GoldenConfigSettingTable.render_jinja_repository">
+<span class="sig-name descname"><span class="pre">render_jinja_repository</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tables.GoldenConfigSettingTable.render_jinja_repository" title="Permalink to this definition"></a></dt>
+<dd><p>Render jinja repository YES/NO value.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../navigation/index.html" class="btn btn-neutral float-left" title="nautobot_golden_config.navigation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../template_content/index.html" class="btn btn-neutral float-right" title="nautobot_golden_config.template_content" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, NTC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

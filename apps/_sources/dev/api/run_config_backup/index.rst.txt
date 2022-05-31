@@ -1,0 +1,46 @@
+:py:mod:`run_config_backup`
+===========================
+
+.. py:module:: run_config_backup
+
+.. autoapi-nested-parse::
+
+   Add the run_config_backup command to nautobot-server.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   run_config_backup.Command
+
+
+
+
+.. py:class:: Command(stdout=None, stderr=None, no_color=False, force_color=False)
+
+   Bases: :py:obj:`django.core.management.base.BaseCommand`
+
+   Boilerplate Command to inherit from BaseCommand.
+
+   .. py:attribute:: help
+      :annotation: = Run Config Backup from Golden Config Plugin.
+
+      
+
+   .. py:method:: add_arguments(self, parser)
+
+      Add arguments for run_config_backup.
+
+
+   .. py:method:: handle(self, *args, **kwargs)
+
+      Add handler for run_config_backup.
+
+
+

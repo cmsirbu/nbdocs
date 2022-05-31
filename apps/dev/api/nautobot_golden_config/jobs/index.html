@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nautobot_golden_config.jobs &mdash; Nautobot App Docs  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="nautobot_golden_config.models" href="../models/index.html" />
+    <link rel="prev" title="nautobot_golden_config.forms" href="../forms/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html">
+            <img src="../../../../_static/nautobot_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-apps.html">Nautobot App Ecosystem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Device Onboarding</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/dev/index.html">Developer Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Golden Configuration</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/dev_extending.html">Extending the App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/dev_contributing.html">Contributing to the App</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/index.html#api-reference">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Nautobot Golden Configuration</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Nautobot App Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../../nautobot-plugin-golden-config/dev/index.html">Nautobot Golden Configuration</a> &raquo;</li>
+          <li><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config</span></code></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config.jobs</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/dev/api/nautobot_golden_config/jobs/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-nautobot_golden_config.jobs">
+<span id="nautobot-golden-config-jobs"></span><h1><a class="reference internal" href="#module-nautobot_golden_config.jobs" title="nautobot_golden_config.jobs"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config.jobs</span></code></a><a class="headerlink" href="#module-nautobot_golden_config.jobs" title="Permalink to this headline"></a></h1>
+<p>Jobs to run backups, intended config, and compliance.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.jobs.FormEntry" title="nautobot_golden_config.jobs.FormEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FormEntry</span></code></a></p></td>
+<td><p>Class definition to use as Mixin for form definitions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.jobs.ComplianceJob" title="nautobot_golden_config.jobs.ComplianceJob"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceJob</span></code></a></p></td>
+<td><p>Job to to run the compliance engine.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.jobs.IntendedJob" title="nautobot_golden_config.jobs.IntendedJob"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IntendedJob</span></code></a></p></td>
+<td><p>Job to to run generation of intended configurations.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.jobs.BackupJob" title="nautobot_golden_config.jobs.BackupJob"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BackupJob</span></code></a></p></td>
+<td><p>Job to to run the backup job.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.jobs.AllGoldenConfig" title="nautobot_golden_config.jobs.AllGoldenConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AllGoldenConfig</span></code></a></p></td>
+<td><p>Job to to run all three jobs against a single device.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig" title="nautobot_golden_config.jobs.AllDevicesGoldenConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AllDevicesGoldenConfig</span></code></a></p></td>
+<td><p>Job to to run all three jobs against multiple devices.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.jobs.get_refreshed_repos" title="nautobot_golden_config.jobs.get_refreshed_repos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_refreshed_repos</span></code></a>(job_obj, repo_type)</p></td>
+<td><p>Small wrapper to pull latest branch, and return a GitRepo plugin specific object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.jobs.commit_check" title="nautobot_golden_config.jobs.commit_check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">commit_check</span></code></a>(method)</p></td>
+<td><p>Decorator to check if a &quot;dry-run&quot; attempt was made.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.jobs.LOGGER" title="nautobot_golden_config.jobs.LOGGER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LOGGER</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.jobs.name" title="nautobot_golden_config.jobs.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.jobs.jobs" title="nautobot_golden_config.jobs.jobs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">jobs</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.LOGGER">
+<span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.jobs.</span></span><span class="sig-name descname"><span class="pre">LOGGER</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.LOGGER" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.name">
+<span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.jobs.</span></span><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Golden</span> <span class="pre">Configuration</span></em><a class="headerlink" href="#nautobot_golden_config.jobs.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.get_refreshed_repos">
+<span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.jobs.</span></span><span class="sig-name descname"><span class="pre">get_refreshed_repos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">job_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repo_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.jobs.get_refreshed_repos" title="Permalink to this definition"></a></dt>
+<dd><p>Small wrapper to pull latest branch, and return a GitRepo plugin specific object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.commit_check">
+<span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.jobs.</span></span><span class="sig-name descname"><span class="pre">commit_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.jobs.commit_check" title="Permalink to this definition"></a></dt>
+<dd><p>Decorator to check if a “dry-run” attempt was made.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.FormEntry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.jobs.</span></span><span class="sig-name descname"><span class="pre">FormEntry</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.FormEntry" title="Permalink to this definition"></a></dt>
+<dd><p>Class definition to use as Mixin for form definitions.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.FormEntry.tenant_group">
+<span class="sig-name descname"><span class="pre">tenant_group</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.FormEntry.tenant_group" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.FormEntry.tenant">
+<span class="sig-name descname"><span class="pre">tenant</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.FormEntry.tenant" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.FormEntry.region">
+<span class="sig-name descname"><span class="pre">region</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.FormEntry.region" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.FormEntry.site">
+<span class="sig-name descname"><span class="pre">site</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.FormEntry.site" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.FormEntry.rack_group">
+<span class="sig-name descname"><span class="pre">rack_group</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.FormEntry.rack_group" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.FormEntry.rack">
+<span class="sig-name descname"><span class="pre">rack</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.FormEntry.rack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.FormEntry.role">
+<span class="sig-name descname"><span class="pre">role</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.FormEntry.role" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.FormEntry.manufacturer">
+<span class="sig-name descname"><span class="pre">manufacturer</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.FormEntry.manufacturer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.FormEntry.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.FormEntry.platform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.FormEntry.device_type">
+<span class="sig-name descname"><span class="pre">device_type</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.FormEntry.device_type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.FormEntry.device">
+<span class="sig-name descname"><span class="pre">device</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.FormEntry.device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.FormEntry.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.FormEntry.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.FormEntry.debug">
+<span class="sig-name descname"><span class="pre">debug</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.FormEntry.debug" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.jobs.</span></span><span class="sig-name descname"><span class="pre">ComplianceJob</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.jobs.Job</span></code>, <a class="reference internal" href="#nautobot_golden_config.jobs.FormEntry" title="nautobot_golden_config.jobs.FormEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FormEntry</span></code></a></p>
+<p>Job to to run the compliance engine.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Meta object boilerplate for compliance.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.Meta.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Perform</span> <span class="pre">Configuration</span> <span class="pre">Compliance</span></em><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.Meta.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.Meta.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Run</span> <span class="pre">configuration</span> <span class="pre">compliance</span> <span class="pre">on</span> <span class="pre">your</span> <span class="pre">network</span> <span class="pre">infrastructure.</span></em><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.Meta.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.tenant_group">
+<span class="sig-name descname"><span class="pre">tenant_group</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.tenant_group" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.tenant">
+<span class="sig-name descname"><span class="pre">tenant</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.tenant" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.region">
+<span class="sig-name descname"><span class="pre">region</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.region" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.site">
+<span class="sig-name descname"><span class="pre">site</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.site" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.rack_group">
+<span class="sig-name descname"><span class="pre">rack_group</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.rack_group" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.rack">
+<span class="sig-name descname"><span class="pre">rack</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.rack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.role">
+<span class="sig-name descname"><span class="pre">role</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.role" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.manufacturer">
+<span class="sig-name descname"><span class="pre">manufacturer</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.manufacturer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.platform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.device_type">
+<span class="sig-name descname"><span class="pre">device_type</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.device_type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.device">
+<span class="sig-name descname"><span class="pre">device</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.debug">
+<span class="sig-name descname"><span class="pre">debug</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.debug" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.ComplianceJob.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.jobs.ComplianceJob.run" title="Permalink to this definition"></a></dt>
+<dd><p>Run config compliance report script.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.jobs.</span></span><span class="sig-name descname"><span class="pre">IntendedJob</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.jobs.Job</span></code>, <a class="reference internal" href="#nautobot_golden_config.jobs.FormEntry" title="nautobot_golden_config.jobs.FormEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FormEntry</span></code></a></p>
+<p>Job to to run generation of intended configurations.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Meta object boilerplate for intended.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.Meta.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Generate</span> <span class="pre">Intended</span> <span class="pre">Configurations</span></em><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.Meta.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.Meta.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Generate</span> <span class="pre">the</span> <span class="pre">configuration</span> <span class="pre">for</span> <span class="pre">your</span> <span class="pre">intended</span> <span class="pre">state.</span></em><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.Meta.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.tenant_group">
+<span class="sig-name descname"><span class="pre">tenant_group</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.tenant_group" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.tenant">
+<span class="sig-name descname"><span class="pre">tenant</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.tenant" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.region">
+<span class="sig-name descname"><span class="pre">region</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.region" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.site">
+<span class="sig-name descname"><span class="pre">site</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.site" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.rack_group">
+<span class="sig-name descname"><span class="pre">rack_group</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.rack_group" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.rack">
+<span class="sig-name descname"><span class="pre">rack</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.rack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.role">
+<span class="sig-name descname"><span class="pre">role</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.role" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.manufacturer">
+<span class="sig-name descname"><span class="pre">manufacturer</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.manufacturer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.platform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.device_type">
+<span class="sig-name descname"><span class="pre">device_type</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.device_type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.device">
+<span class="sig-name descname"><span class="pre">device</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.debug">
+<span class="sig-name descname"><span class="pre">debug</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.debug" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.IntendedJob.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.jobs.IntendedJob.run" title="Permalink to this definition"></a></dt>
+<dd><p>Run config generation script.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.jobs.</span></span><span class="sig-name descname"><span class="pre">BackupJob</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.jobs.Job</span></code>, <a class="reference internal" href="#nautobot_golden_config.jobs.FormEntry" title="nautobot_golden_config.jobs.FormEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FormEntry</span></code></a></p>
+<p>Job to to run the backup job.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Meta object boilerplate for backup configurations.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.Meta.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Backup</span> <span class="pre">Configurations</span></em><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.Meta.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.Meta.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Backup</span> <span class="pre">the</span> <span class="pre">configurations</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">network</span> <span class="pre">devices.</span></em><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.Meta.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.tenant_group">
+<span class="sig-name descname"><span class="pre">tenant_group</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.tenant_group" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.tenant">
+<span class="sig-name descname"><span class="pre">tenant</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.tenant" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.region">
+<span class="sig-name descname"><span class="pre">region</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.region" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.site">
+<span class="sig-name descname"><span class="pre">site</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.site" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.rack_group">
+<span class="sig-name descname"><span class="pre">rack_group</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.rack_group" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.rack">
+<span class="sig-name descname"><span class="pre">rack</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.rack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.role">
+<span class="sig-name descname"><span class="pre">role</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.role" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.manufacturer">
+<span class="sig-name descname"><span class="pre">manufacturer</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.manufacturer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.platform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.device_type">
+<span class="sig-name descname"><span class="pre">device_type</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.device_type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.device">
+<span class="sig-name descname"><span class="pre">device</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.debug">
+<span class="sig-name descname"><span class="pre">debug</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.debug" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.BackupJob.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.jobs.BackupJob.run" title="Permalink to this definition"></a></dt>
+<dd><p>Run config backup process.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllGoldenConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.jobs.</span></span><span class="sig-name descname"><span class="pre">AllGoldenConfig</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllGoldenConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.jobs.Job</span></code></p>
+<p>Job to to run all three jobs against a single device.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllGoldenConfig.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllGoldenConfig.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Meta object boilerplate for all jobs to run against a device.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllGoldenConfig.Meta.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Execute</span> <span class="pre">All</span> <span class="pre">Golden</span> <span class="pre">Configuration</span> <span class="pre">Jobs</span> <span class="pre">-</span> <span class="pre">Single</span> <span class="pre">Device</span></em><a class="headerlink" href="#nautobot_golden_config.jobs.AllGoldenConfig.Meta.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllGoldenConfig.Meta.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Process</span> <span class="pre">to</span> <span class="pre">run</span> <span class="pre">all</span> <span class="pre">Golden</span> <span class="pre">Configuration</span> <span class="pre">jobs</span> <span class="pre">configured.</span></em><a class="headerlink" href="#nautobot_golden_config.jobs.AllGoldenConfig.Meta.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllGoldenConfig.device">
+<span class="sig-name descname"><span class="pre">device</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllGoldenConfig.device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllGoldenConfig.debug">
+<span class="sig-name descname"><span class="pre">debug</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllGoldenConfig.debug" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllGoldenConfig.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.jobs.AllGoldenConfig.run" title="Permalink to this definition"></a></dt>
+<dd><p>Run all jobs.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.jobs.</span></span><span class="sig-name descname"><span class="pre">AllDevicesGoldenConfig</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.extras.jobs.Job</span></code></p>
+<p>Job to to run all three jobs against multiple devices.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Meta object boilerplate for all jobs to run against multiple devices.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.Meta.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Execute</span> <span class="pre">All</span> <span class="pre">Golden</span> <span class="pre">Configuration</span> <span class="pre">Jobs</span> <span class="pre">-</span> <span class="pre">Multiple</span> <span class="pre">Device</span></em><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.Meta.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.Meta.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Process</span> <span class="pre">to</span> <span class="pre">run</span> <span class="pre">all</span> <span class="pre">Golden</span> <span class="pre">Configuration</span> <span class="pre">jobs</span> <span class="pre">configured</span> <span class="pre">against</span> <span class="pre">multiple</span> <span class="pre">devices.</span></em><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.Meta.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.tenant_group">
+<span class="sig-name descname"><span class="pre">tenant_group</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.tenant_group" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.tenant">
+<span class="sig-name descname"><span class="pre">tenant</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.tenant" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.region">
+<span class="sig-name descname"><span class="pre">region</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.region" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.site">
+<span class="sig-name descname"><span class="pre">site</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.site" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.rack_group">
+<span class="sig-name descname"><span class="pre">rack_group</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.rack_group" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.rack">
+<span class="sig-name descname"><span class="pre">rack</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.rack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.role">
+<span class="sig-name descname"><span class="pre">role</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.role" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.manufacturer">
+<span class="sig-name descname"><span class="pre">manufacturer</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.manufacturer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.platform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.device_type">
+<span class="sig-name descname"><span class="pre">device_type</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.device_type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.device">
+<span class="sig-name descname"><span class="pre">device</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.device" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.tag">
+<span class="sig-name descname"><span class="pre">tag</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.debug">
+<span class="sig-name descname"><span class="pre">debug</span></span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.debug" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.AllDevicesGoldenConfig.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.jobs.AllDevicesGoldenConfig.run" title="Permalink to this definition"></a></dt>
+<dd><p>Run all jobs.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="nautobot_golden_config.jobs.jobs">
+<span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.jobs.</span></span><span class="sig-name descname"><span class="pre">jobs</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nautobot_golden_config.jobs.jobs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../forms/index.html" class="btn btn-neutral float-left" title="nautobot_golden_config.forms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../models/index.html" class="btn btn-neutral float-right" title="nautobot_golden_config.models" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, NTC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

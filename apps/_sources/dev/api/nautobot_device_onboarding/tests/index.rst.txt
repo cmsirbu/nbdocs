@@ -1,0 +1,24 @@
+:py:mod:`nautobot_device_onboarding.tests`
+==========================================
+
+.. py:module:: nautobot_device_onboarding.tests
+
+.. autoapi-nested-parse::
+
+   Unit tests for nautobot_device_onboarding plugin.
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   test_api/index.rst
+   test_models/index.rst
+   test_nautobot_keeper/index.rst
+   test_netdev_keeper/index.rst
+   test_views/index.rst
+
+

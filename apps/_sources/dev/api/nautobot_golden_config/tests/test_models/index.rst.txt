@@ -1,0 +1,179 @@
+:py:mod:`nautobot_golden_config.tests.test_models`
+==================================================
+
+.. py:module:: nautobot_golden_config.tests.test_models
+
+.. autoapi-nested-parse::
+
+   Unit tests for nautobot_golden_config models.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tests.test_models.ConfigComplianceModelTestCase
+   nautobot_golden_config.tests.test_models.GoldenConfigTestCase
+   nautobot_golden_config.tests.test_models.ComplianceRuleTestCase
+   nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase
+   nautobot_golden_config.tests.test_models.GoldenConfigSettingGitModelTestCase
+   nautobot_golden_config.tests.test_models.ConfigRemoveModelTestCase
+   nautobot_golden_config.tests.test_models.ConfigReplaceModelTestCase
+
+
+
+
+.. py:class:: ConfigComplianceModelTestCase(methodName='runTest')
+
+   Bases: :py:obj:`django.test.TestCase`
+
+   Test CRUD operations for ConfigCompliance Model.
+
+   .. py:method:: setUp(self)
+
+      Set up base objects.
+
+
+   .. py:method:: test_create_config_compliance_success_json(self)
+
+      Successful.
+
+
+   .. py:method:: test_create_config_compliance_unique_failure(self)
+
+      Raises error when attempting to create duplicate.
+
+
+   .. py:method:: test_create_config_compliance_success_compliant(self)
+
+      Successful.
+
+
+
+.. py:class:: GoldenConfigTestCase(methodName='runTest')
+
+   Bases: :py:obj:`django.test.TestCase`
+
+   Test GoldenConfig Model.
+
+
+.. py:class:: ComplianceRuleTestCase(methodName='runTest')
+
+   Bases: :py:obj:`django.test.TestCase`
+
+   Test ComplianceRule Model.
+
+
+.. py:class:: GoldenConfigSettingModelTestCase(methodName='runTest')
+
+   Bases: :py:obj:`django.test.TestCase`
+
+   Test GoldenConfigSetting Model.
+
+   .. py:method:: setUp(self)
+
+      Get the golden config settings with the only allowed id.
+
+
+   .. py:method:: test_absolute_url_success(self)
+
+      Verify that get_absolute_url() returns the expected URL.
+
+
+   .. py:method:: test_bad_scope(self)
+
+      Verify that a bad value in the scope returns the expected error.
+
+
+   .. py:method:: test_good_graphql_query_invalid_starts_with(self)
+
+      Valid graphql query, however invalid in the usage with golden config plugin.
+
+
+   .. py:method:: test_good_graphql_query_validate_starts_with(self)
+
+      Ensure clean() method returns None when valid query is sent through.
+
+
+   .. py:method:: test_good_scope(self)
+
+      Verify that the scope passes validation as expected.
+
+
+
+.. py:class:: GoldenConfigSettingGitModelTestCase(methodName='runTest')
+
+   Bases: :py:obj:`django.test.TestCase`
+
+   Test GoldenConfigSetting Model.
+
+   .. py:method:: setUp(self) -> None
+
+      Setup test data.
+
+
+   .. py:method:: test_model_success(self)
+
+      Create a new instance of the GoldenConfigSettings model.
+
+
+   .. py:method:: test_removing_git_repos(self)
+
+      Ensure we can remove the Git Repository obejcts from GoldenConfigSetting.
+
+
+   .. py:method:: test_clean_up(self)
+
+      Delete all objects created of GoldenConfigSetting type.
+
+
+
+.. py:class:: ConfigRemoveModelTestCase(methodName='runTest')
+
+   Bases: :py:obj:`django.test.TestCase`
+
+   Test ConfigRemove Model.
+
+   .. py:method:: setUp(self)
+
+      Setup Object.
+
+
+   .. py:method:: test_add_line_removal_entry(self)
+
+      Test Add Object.
+
+
+   .. py:method:: test_edit_line_removal_entry(self)
+
+      Test Edit Object.
+
+
+
+.. py:class:: ConfigReplaceModelTestCase(methodName='runTest')
+
+   Bases: :py:obj:`django.test.TestCase`
+
+   Test ConfigReplace Model.
+
+   .. py:method:: setUp(self)
+
+      Setup Object.
+
+
+   .. py:method:: test_add_line_replace_entry(self)
+
+      Test Add Object.
+
+
+   .. py:method:: test_edit_line_replace_entry(self)
+
+      Test Edit Object.
+
+
+

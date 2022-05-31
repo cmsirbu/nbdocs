@@ -1,0 +1,29 @@
+:py:mod:`nautobot_golden_config.api.urls`
+=========================================
+
+.. py:module:: nautobot_golden_config.api.urls
+
+.. autoapi-nested-parse::
+
+   API for Custom Jobs .
+
+
+
+Module Contents
+---------------
+
+.. py:data:: router
+   
+
+   
+
+.. py:data:: APIRootView
+   
+
+   
+
+.. py:data:: urlpatterns
+   
+
+   
+

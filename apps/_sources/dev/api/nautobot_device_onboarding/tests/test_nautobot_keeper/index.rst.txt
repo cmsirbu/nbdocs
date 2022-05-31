@@ -1,0 +1,150 @@
+:py:mod:`nautobot_device_onboarding.tests.test_nautobot_keeper`
+===============================================================
+
+.. py:module:: nautobot_device_onboarding.tests.test_nautobot_keeper
+
+.. autoapi-nested-parse::
+
+   Unit tests for nautobot_device_onboarding.onboard module and its classes.
+
+   (c) 2020-2021 Network To Code
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.tests.test_nautobot_keeper.NautobotKeeperTestCase
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.tests.test_nautobot_keeper.PLUGIN_SETTINGS
+
+
+.. py:data:: PLUGIN_SETTINGS
+   
+
+   
+
+.. py:class:: NautobotKeeperTestCase(methodName='runTest')
+
+   Bases: :py:obj:`django.test.TestCase`
+
+   Test the NautobotKeeper Class.
+
+   .. py:method:: setUp(self)
+
+      Create a superuser and token for API calls.
+
+
+   .. py:method:: test_ensure_device_manufacturer_strict_missing(self)
+
+      Verify ensure_device_manufacturer function when Manufacturer object is not present.
+
+
+   .. py:method:: test_ensure_device_manufacturer_loose_missing(self)
+
+      Verify ensure_device_manufacturer function when Manufacturer object is not present.
+
+
+   .. py:method:: test_ensure_device_type_strict_missing(self)
+
+      Verify ensure_device_type function when DeviceType object is not present.
+
+
+   .. py:method:: test_ensure_device_type_loose_missing(self)
+
+      Verify ensure_device_type function when DeviceType object is not present.
+
+
+   .. py:method:: test_ensure_device_type_strict_present(self)
+
+      Verify ensure_device_type function when DeviceType object is already present.
+
+
+   .. py:method:: test_ensure_device_type_loose_present(self)
+
+      Verify ensure_device_type function when DeviceType object is already present.
+
+
+   .. py:method:: test_ensure_device_role_not_exist(self)
+
+      Verify ensure_device_role function when DeviceRole does not already exist.
+
+
+   .. py:method:: test_ensure_device_role_exist(self)
+
+      Verify ensure_device_role function when DeviceRole exist but is not assigned to the OT.
+
+
+   .. py:method:: test_ensure_device_role_assigned(self)
+
+      Verify ensure_device_role function when DeviceRole exist and is already assigned.
+
+
+   .. py:method:: test_ensure_device_instance_not_exist(self)
+
+      Verify ensure_device_instance function.
+
+
+   .. py:method:: test_ensure_device_instance_exist(self)
+
+      Verify ensure_device_instance function.
+
+
+   .. py:method:: test_ensure_interface_not_exist(self)
+
+      Verify ensure_interface function when the interface do not exist.
+
+
+   .. py:method:: test_ensure_interface_exist(self)
+
+      Verify ensure_interface function when the interface already exist.
+
+
+   .. py:method:: test_ensure_primary_ip_not_exist(self)
+
+      Verify ensure_primary_ip function when the IP address do not already exist.
+
+
+   .. py:method:: test_ensure_device_platform_missing(self)
+
+      Verify ensure_device_platform function when Platform object is not present.
+
+
+   .. py:method:: test_ensure_platform_present(self)
+
+      Verify ensure_device_platform function when Platform object is present.
+
+
+   .. py:method:: test_platform_map(self)
+
+      Verify platform mapping of netmiko to slug functionality.
+
+
+   .. py:method:: test_ensure_custom_fields(self)
+
+      Verify objects inherit default custom fields.
+
+
+

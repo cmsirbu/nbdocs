@@ -1,0 +1,62 @@
+:py:mod:`nautobot_device_onboarding.onboarding_extensions.ios`
+==============================================================
+
+.. py:module:: nautobot_device_onboarding.onboarding_extensions.ios
+
+.. autoapi-nested-parse::
+
+   Onboarding Extension for IOS.
+
+   (c) 2020-2021 Network To Code
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_device_onboarding.onboarding_extensions.ios.OnboardingDriverExtensions
+
+
+
+
+.. py:class:: OnboardingDriverExtensions(napalm_device)
+
+   Onboarding Driver's Extensions.
+
+   .. py:method:: onboarding_class(self)
+      :property:
+
+      Return onboarding class for IOS driver.
+
+      Currently supported is Standalone Onboarding Process.
+
+      Result of this method is used by the OnboardingManager to
+      initiate the instance of the onboarding class.
+
+
+   .. py:method:: ext_result(self)
+      :property:
+
+      This method is used to store any object as a return value.
+
+      Result of this method is passed to the onboarding class as
+      driver_addon_result argument.
+
+      :return: Any()
+
+
+

@@ -1,0 +1,522 @@
+:py:mod:`nautobot_golden_config.forms`
+======================================
+
+.. py:module:: nautobot_golden_config.forms
+
+.. autoapi-nested-parse::
+
+   Forms for Device Configuration Backup.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.forms.ConfigComplianceFilterForm
+   nautobot_golden_config.forms.ComplianceRuleForm
+   nautobot_golden_config.forms.ComplianceRuleFilterForm
+   nautobot_golden_config.forms.ComplianceRuleBulkEditForm
+   nautobot_golden_config.forms.ComplianceRuleCSVForm
+   nautobot_golden_config.forms.ComplianceFeatureForm
+   nautobot_golden_config.forms.ComplianceFeatureFilterForm
+   nautobot_golden_config.forms.ComplianceFeatureBulkEditForm
+   nautobot_golden_config.forms.ComplianceFeatureCSVForm
+   nautobot_golden_config.forms.ConfigRemoveForm
+   nautobot_golden_config.forms.ConfigRemoveFeatureFilterForm
+   nautobot_golden_config.forms.ConfigRemoveBulkEditForm
+   nautobot_golden_config.forms.ConfigRemoveCSVForm
+   nautobot_golden_config.forms.ConfigReplaceForm
+   nautobot_golden_config.forms.ConfigReplaceFeatureFilterForm
+   nautobot_golden_config.forms.ConfigReplaceCSVForm
+   nautobot_golden_config.forms.ConfigReplaceBulkEditForm
+   nautobot_golden_config.forms.GoldenConfigSettingFeatureForm
+
+
+
+
+.. py:class:: ConfigComplianceFilterForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`nautobot.extras.forms.CustomFieldFilterForm`
+
+   Filter Form for ConfigCompliance instances.
+
+   .. py:attribute:: model
+      
+
+      
+
+   .. py:attribute:: field_order
+      :annotation: = ['q', 'tenant_group', 'tenant', 'region', 'site', 'rack_group_id', 'rack_id', 'role',...
+
+      
+
+   .. py:attribute:: q
+      
+
+      
+
+   .. py:attribute:: tenant_group
+      
+
+      
+
+   .. py:attribute:: tenant
+      
+
+      
+
+   .. py:attribute:: region
+      
+
+      
+
+   .. py:attribute:: site
+      
+
+      
+
+   .. py:attribute:: rack_group_id
+      
+
+      
+
+   .. py:attribute:: rack_id
+      
+
+      
+
+   .. py:attribute:: role
+      
+
+      
+
+   .. py:attribute:: manufacturer
+      
+
+      
+
+   .. py:attribute:: device_type_id
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: device_id
+      
+
+      
+
+
+.. py:class:: ComplianceRuleForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`nautobot.extras.forms.CustomFieldModelForm`, :py:obj:`nautobot.extras.forms.RelationshipModelForm`
+
+   Filter Form for ComplianceRule instances.
+
+   .. py:class:: Meta
+
+      Boilerplate form Meta data for compliance rule.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['platform', 'feature', 'description', 'config_ordered', 'match_config', 'config_type']
+
+         
+
+
+   .. py:attribute:: platform
+      
+
+      
+
+
+.. py:class:: ComplianceRuleFilterForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`nautobot.extras.forms.CustomFieldFilterForm`
+
+   Form for ComplianceRule instances.
+
+   .. py:attribute:: model
+      
+
+      
+
+   .. py:attribute:: q
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: feature
+      
+
+      
+
+
+.. py:class:: ComplianceRuleBulkEditForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`nautobot.extras.forms.AddRemoveTagsForm`, :py:obj:`nautobot.extras.forms.CustomFieldBulkEditForm`
+
+   BulkEdit form for ComplianceRule instances.
+
+   .. py:class:: Meta
+
+      Boilerplate form Meta data for ComplianceRule.
+
+      .. py:attribute:: nullable_fields
+         :annotation: = []
+
+         
+
+
+   .. py:attribute:: pk
+      
+
+      
+
+
+.. py:class:: ComplianceRuleCSVForm(*args, headers=None, **kwargs)
+
+   Bases: :py:obj:`nautobot.extras.forms.CustomFieldModelCSVForm`
+
+   CSV Form for ComplianceRule instances.
+
+   .. py:class:: Meta
+
+      Boilerplate form Meta data for ComplianceRule.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         
+
+         
+
+
+
+.. py:class:: ComplianceFeatureForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`nautobot.extras.forms.CustomFieldModelForm`, :py:obj:`nautobot.extras.forms.RelationshipModelForm`
+
+   Filter Form for ComplianceFeature instances.
+
+   .. py:class:: Meta
+
+      Boilerplate form Meta data for compliance feature.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['name', 'slug', 'description']
+
+         
+
+
+   .. py:attribute:: slug
+      
+
+      
+
+
+.. py:class:: ComplianceFeatureFilterForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`nautobot.extras.forms.CustomFieldFilterForm`
+
+   Form for ComplianceFeature instances.
+
+   .. py:attribute:: model
+      
+
+      
+
+   .. py:attribute:: q
+      
+
+      
+
+   .. py:attribute:: name
+      
+
+      
+
+
+.. py:class:: ComplianceFeatureBulkEditForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`nautobot.extras.forms.AddRemoveTagsForm`, :py:obj:`nautobot.extras.forms.CustomFieldBulkEditForm`
+
+   BulkEdit form for ComplianceFeature instances.
+
+   .. py:class:: Meta
+
+      Boilerplate form Meta data for ComplianceFeature.
+
+      .. py:attribute:: nullable_fields
+         :annotation: = []
+
+         
+
+
+   .. py:attribute:: pk
+      
+
+      
+
+
+.. py:class:: ComplianceFeatureCSVForm(*args, headers=None, **kwargs)
+
+   Bases: :py:obj:`nautobot.extras.forms.CustomFieldModelCSVForm`
+
+   CSV Form for ComplianceFeature instances.
+
+   .. py:class:: Meta
+
+      Boilerplate form Meta data for ComplianceFeature.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         
+
+         
+
+
+
+.. py:class:: ConfigRemoveForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`nautobot.extras.forms.CustomFieldModelForm`, :py:obj:`nautobot.extras.forms.RelationshipModelForm`
+
+   Filter Form for Line Removal instances.
+
+   .. py:class:: Meta
+
+      Boilerplate form Meta data for removal feature.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['platform', 'name', 'description', 'regex']
+
+         
+
+
+   .. py:attribute:: platform
+      
+
+      
+
+
+.. py:class:: ConfigRemoveFeatureFilterForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`nautobot.extras.forms.CustomFieldFilterForm`
+
+   Filter Form for Line Removal.
+
+   .. py:attribute:: model
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: name
+      
+
+      
+
+
+.. py:class:: ConfigRemoveBulkEditForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`nautobot.extras.forms.AddRemoveTagsForm`, :py:obj:`nautobot.extras.forms.CustomFieldBulkEditForm`
+
+   BulkEdit form for ConfigRemove instances.
+
+   .. py:class:: Meta
+
+      Boilerplate form Meta data for ConfigRemove.
+
+      .. py:attribute:: nullable_fields
+         :annotation: = []
+
+         
+
+
+   .. py:attribute:: pk
+      
+
+      
+
+
+.. py:class:: ConfigRemoveCSVForm(*args, headers=None, **kwargs)
+
+   Bases: :py:obj:`nautobot.extras.forms.CustomFieldModelCSVForm`
+
+   CSV Form for ConfigRemove instances.
+
+   .. py:class:: Meta
+
+      Boilerplate form Meta data for ConfigRemove.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         
+
+         
+
+
+
+.. py:class:: ConfigReplaceForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`nautobot.extras.forms.CustomFieldModelForm`, :py:obj:`nautobot.extras.forms.RelationshipModelForm`
+
+   Filter Form for Line Removal instances.
+
+   .. py:class:: Meta
+
+      Boilerplate form Meta data for removal feature.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['platform', 'name', 'description', 'regex', 'replace']
+
+         
+
+
+   .. py:attribute:: platform
+      
+
+      
+
+
+.. py:class:: ConfigReplaceFeatureFilterForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`nautobot.extras.forms.CustomFieldFilterForm`
+
+   Filter Form for Line Replacement.
+
+   .. py:attribute:: model
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: name
+      
+
+      
+
+
+.. py:class:: ConfigReplaceCSVForm(*args, headers=None, **kwargs)
+
+   Bases: :py:obj:`nautobot.extras.forms.CustomFieldModelCSVForm`
+
+   CSV Form for ConfigReplace instances.
+
+   .. py:class:: Meta
+
+      Boilerplate form Meta data for ConfigReplace.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         
+
+         
+
+
+
+.. py:class:: ConfigReplaceBulkEditForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`nautobot.extras.forms.AddRemoveTagsForm`, :py:obj:`nautobot.extras.forms.CustomFieldBulkEditForm`
+
+   BulkEdit form for ConfigReplace instances.
+
+   .. py:class:: Meta
+
+      Boilerplate form Meta data for ConfigReplace.
+
+      .. py:attribute:: nullable_fields
+         :annotation: = []
+
+         
+
+
+   .. py:attribute:: pk
+      
+
+      
+
+
+.. py:class:: GoldenConfigSettingFeatureForm(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.utilities.forms.BootstrapMixin`, :py:obj:`nautobot.extras.forms.CustomFieldModelForm`, :py:obj:`nautobot.extras.forms.RelationshipModelForm`
+
+   Filter Form for GoldenConfigSettingFeatureForm instances.
+
+   .. py:class:: Meta
+
+      Filter Form Meta Data for GoldenConfigSettingFeatureForm instances.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['name', 'slug', 'weight', 'description', 'backup_repository', 'backup_path_template',...
+
+         
+
+
+   .. py:attribute:: slug
+      
+
+      
+
+

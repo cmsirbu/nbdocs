@@ -1,0 +1,43 @@
+:py:mod:`config_backup`
+=======================
+
+.. py:module:: config_backup
+
+.. autoapi-nested-parse::
+
+   Nornir job for backing up actual config.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   config_backup.run_backup
+   config_backup.config_backup
+
+
+
+.. py:function:: run_backup(task: nornir.core.task.Task, logger, device_to_settings_map, remove_regex_dict, replace_regex_dict) -> nornir.core.task.Result
+
+   Backup configurations to disk.
+
+   Args:
+       task (Task): Nornir task individual object
+       remove_regex_dict (dict): {'cisco_ios': ['^Building\\s+configuration.*\\n', '^Current\\s+configuration.*\\n', '^!\\s+Last\\s+configuration.*'], 'arista_eos': ['.s*']}
+       replace_regex_dict (dict): {'cisco_ios': [{'regex_replacement': '<redacted_config>', 'regex_search': 'username\\s+\\S+\\spassword\\s+5\\s+(\\S+)\\s+role\\s+\\S+'}]}
+
+   Returns:
+       result (Result): Result from Nornir task
+
+
+.. py:function:: config_backup(job_result, data)
+
+   Nornir play to backup configurations.
+
+

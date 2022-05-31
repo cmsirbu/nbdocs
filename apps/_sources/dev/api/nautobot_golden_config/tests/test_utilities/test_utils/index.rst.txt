@@ -1,0 +1,51 @@
+:py:mod:`nautobot_golden_config.tests.test_utilities.test_utils`
+================================================================
+
+.. py:module:: nautobot_golden_config.tests.test_utilities.test_utils
+
+.. autoapi-nested-parse::
+
+   Test Utils Functions.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tests.test_utilities.test_utils.GetPlatformTest
+
+
+
+
+.. py:class:: GetPlatformTest(methodName='runTest')
+
+   Bases: :py:obj:`unittest.TestCase`
+
+   Test Get Platform and User Defined Option.
+
+   .. py:method:: test_get_platform_no_settings_definition(self)
+
+      Test defaults when settings platform_slug_map not used.
+
+
+   .. py:method:: test_get_platform_with_key_none(self)
+
+      Test user defined platform mappings and defaults key defined and set to None.
+
+
+   .. py:method:: test_get_platform_user_defined(self)
+
+      Test user defined platform mappings.
+
+
+   .. py:method:: test_get_platform_defined_but_not_relevant(self)
+
+      Test user defined platform mappings not relevant.
+
+
+

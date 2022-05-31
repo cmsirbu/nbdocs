@@ -1,0 +1,77 @@
+:py:mod:`nautobot_golden_config.utilities.helper`
+=================================================
+
+.. py:module:: nautobot_golden_config.utilities.helper
+
+.. autoapi-nested-parse::
+
+   Helper functions.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.utilities.helper.get_job_filter
+   nautobot_golden_config.utilities.helper.null_to_empty
+   nautobot_golden_config.utilities.helper.verify_settings
+   nautobot_golden_config.utilities.helper.render_jinja_template
+   nautobot_golden_config.utilities.helper.get_device_to_settings_map
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.utilities.helper.FIELDS
+
+
+.. py:data:: FIELDS
+   
+
+   
+
+.. py:function:: get_job_filter(data=None)
+
+   Helper function to return a the filterable list of OS's based on platform.slug and a specific custom value.
+
+
+.. py:function:: null_to_empty(val)
+
+   Convert to empty string if the value is currently null.
+
+
+.. py:function:: verify_settings(logger, global_settings, attrs)
+
+   Helper function to verify required attributes are set before a Nornir play start.
+
+
+.. py:function:: render_jinja_template(obj, logger, template)
+
+   Helper function to render Jinja templates.
+
+   Args:
+       obj (Device): The Device object from Nautobot.
+       logger (NornirLogger): Logger to log error messages to.
+       template (str): A Jinja2 template to be rendered.
+
+   Returns:
+       str: The ``template`` rendered.
+
+   Raises:
+       NornirNautobotException: When there is an error rendering the ``template``.
+
+
+.. py:function:: get_device_to_settings_map(queryset)
+
+   Helper function to map settings to devices.
+
+

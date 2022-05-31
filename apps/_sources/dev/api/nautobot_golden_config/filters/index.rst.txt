@@ -1,0 +1,354 @@
+:py:mod:`nautobot_golden_config.filters`
+========================================
+
+.. py:module:: nautobot_golden_config.filters
+
+.. autoapi-nested-parse::
+
+   Filters for UI and API Views.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.filters.GenericPlatformFilterSet
+   nautobot_golden_config.filters.GoldenConfigFilterSet
+   nautobot_golden_config.filters.ConfigComplianceFilterSet
+   nautobot_golden_config.filters.ComplianceFeatureFilterSet
+   nautobot_golden_config.filters.ComplianceRuleFilterSet
+   nautobot_golden_config.filters.ConfigRemoveFilterSet
+   nautobot_golden_config.filters.ConfigReplaceFilterSet
+
+
+
+
+.. py:class:: GenericPlatformFilterSet(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.extras.filters.CustomFieldModelFilterSet`
+
+   Generic method to reuse common FilterSet.
+
+   .. py:attribute:: platform_id
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+
+.. py:class:: GoldenConfigFilterSet(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.extras.filters.CustomFieldModelFilterSet`
+
+   Filter capabilities for GoldenConfig instances.
+
+   .. py:class:: Meta
+
+      Meta class attributes for GoldenConfigFilter.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: distinct
+         :annotation: = True
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['id']
+
+         
+
+
+   .. py:attribute:: q
+      
+
+      
+
+   .. py:attribute:: tenant_group_id
+      
+
+      
+
+   .. py:attribute:: tenant_group
+      
+
+      
+
+   .. py:attribute:: tenant_id
+      
+
+      
+
+   .. py:attribute:: tenant
+      
+
+      
+
+   .. py:attribute:: region_id
+      
+
+      
+
+   .. py:attribute:: region
+      
+
+      
+
+   .. py:attribute:: site_id
+      
+
+      
+
+   .. py:attribute:: site
+      
+
+      
+
+   .. py:attribute:: rack_group_id
+      
+
+      
+
+   .. py:attribute:: rack_group
+      
+
+      
+
+   .. py:attribute:: rack_id
+      
+
+      
+
+   .. py:attribute:: rack
+      
+
+      
+
+   .. py:attribute:: role_id
+      
+
+      
+
+   .. py:attribute:: role
+      
+
+      
+
+   .. py:attribute:: manufacturer_id
+      
+
+      
+
+   .. py:attribute:: manufacturer
+      
+
+      
+
+   .. py:attribute:: platform_id
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: device_status_id
+      
+
+      
+
+   .. py:attribute:: device_status
+      
+
+      
+
+   .. py:attribute:: device_type_id
+      
+
+      
+
+   .. py:attribute:: device_type
+      
+
+      
+
+   .. py:attribute:: device_id
+      
+
+      
+
+   .. py:attribute:: device
+      
+
+      
+
+   .. py:method:: search(self, queryset, name, value)
+
+      Perform the filtered search.
+
+
+
+.. py:class:: ConfigComplianceFilterSet(*args, **kwargs)
+
+   Bases: :py:obj:`GoldenConfigFilterSet`
+
+   Filter capabilities for ConfigCompliance instances.
+
+   .. py:class:: Meta
+
+      Meta class attributes for ConfigComplianceFilter.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['id']
+
+         
+
+
+
+.. py:class:: ComplianceFeatureFilterSet(*args, **kwargs)
+
+   Bases: :py:obj:`nautobot.extras.filters.CustomFieldModelFilterSet`
+
+   Inherits Base Class CustomFieldModelFilterSet.
+
+   .. py:class:: Meta
+
+      Boilerplate filter Meta data for compliance feature.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['id', 'name']
+
+         
+
+
+   .. py:attribute:: q
+      
+
+      
+
+   .. py:method:: search(self, queryset, name, value)
+
+      Perform the filtered search.
+
+
+
+.. py:class:: ComplianceRuleFilterSet(*args, **kwargs)
+
+   Bases: :py:obj:`GenericPlatformFilterSet`
+
+   Inherits Base Class CustomFieldModelFilterSet.
+
+   .. py:class:: Meta
+
+      Boilerplate filter Meta data for compliance rule.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['feature', 'id']
+
+         
+
+
+   .. py:attribute:: q
+      
+
+      
+
+   .. py:method:: search(self, queryset, name, value)
+
+      Perform the filtered search.
+
+
+
+.. py:class:: ConfigRemoveFilterSet(*args, **kwargs)
+
+   Bases: :py:obj:`GenericPlatformFilterSet`
+
+   Inherits Base Class CustomFieldModelFilterSet.
+
+   .. py:class:: Meta
+
+      Boilerplate filter Meta data for Config Remove.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['id', 'name']
+
+         
+
+
+   .. py:attribute:: q
+      
+
+      
+
+   .. py:method:: search(self, queryset, name, value)
+
+      Perform the filtered search.
+
+
+
+.. py:class:: ConfigReplaceFilterSet(*args, **kwargs)
+
+   Bases: :py:obj:`GenericPlatformFilterSet`
+
+   Inherits Base Class CustomFieldModelFilterSet.
+
+   .. py:class:: Meta
+
+      Boilerplate filter Meta data for Config Replace.
+
+      .. py:attribute:: model
+         
+
+         
+
+      .. py:attribute:: fields
+         :annotation: = ['id', 'name']
+
+         
+
+
+   .. py:attribute:: q
+      
+
+      
+
+   .. py:method:: search(self, queryset, name, value)
+
+      Perform the filtered search.
+
+
+

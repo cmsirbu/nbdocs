@@ -1,0 +1,61 @@
+:py:mod:`nautobot_golden_config.tests.test_utilities.test_git`
+==============================================================
+
+.. py:module:: nautobot_golden_config.tests.test_utilities.test_git
+
+.. autoapi-nested-parse::
+
+   Unit tests for nautobot_golden_config utilities git.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tests.test_utilities.test_git.GitRepoTest
+
+
+
+
+.. py:class:: GitRepoTest(methodName='runTest')
+
+   Bases: :py:obj:`unittest.TestCase`
+
+   Test Git Utility.
+
+   .. py:method:: setUp(self)
+
+      Setup a reusable mock object to pass into GitRepo.
+
+
+   .. py:method:: test_gitrepo_path_noexist(self, mock_repo)
+
+      Test Repo is not called when path isn't valid, ensure clone is called.
+
+
+   .. py:method:: test_gitrepo_path_exist(self, mock_repo, mock_os)
+
+      Test Repo is not called when path is valid, ensure Repo is called.
+
+
+   .. py:method:: test_path_exist_token_and_username(self, mock_repo, mock_os)
+
+      Test Repo is not called when path is valid, ensure Repo is called.
+
+
+   .. py:method:: test_username_with_symbols(self, mock_repo, mock_os)
+
+      Test Repo is not called when path is valid, ensure Repo is called.
+
+
+   .. py:method:: test_git_with_username(self, mock_repo, mock_os)
+
+      Test username with special character works.
+
+
+

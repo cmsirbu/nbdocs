@@ -1,0 +1,20 @@
+:py:mod:`nautobot_golden_config.tests.test_nornir_plays`
+========================================================
+
+.. py:module:: nautobot_golden_config.tests.test_nornir_plays
+
+.. autoapi-nested-parse::
+
+   Unit tests for nautobot_golden_config nornir_plays.
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   test_config_compliance/index.rst
+
+

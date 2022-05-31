@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nautobot_golden_config.tests.test_models &mdash; Nautobot App Docs  documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="nautobot_golden_config.utilities" href="../../utilities/index.html" />
+    <link rel="prev" title="nautobot_golden_config.tests.test_graphql" href="../test_graphql/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html">
+            <img src="../../../../../_static/nautobot_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../nautobot-apps.html">Nautobot App Ecosystem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Device Onboarding</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../nautobot-plugin-device-onboarding/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../nautobot-plugin-device-onboarding/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../nautobot-plugin-device-onboarding/dev/index.html">Developer Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Golden Configuration</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../nautobot-plugin-golden-config/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../nautobot-plugin-golden-config/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../nautobot-plugin-golden-config/dev/index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../nautobot-plugin-golden-config/dev/dev_extending.html">Extending the App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../nautobot-plugin-golden-config/dev/dev_contributing.html">Contributing to the App</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../../nautobot-plugin-golden-config/dev/index.html#api-reference">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">Nautobot Golden Configuration</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Nautobot App Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../../../nautobot-plugin-golden-config/dev/index.html">Nautobot Golden Configuration</a> &raquo;</li>
+          <li><a href="../../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config</span></code></a> &raquo;</li>
+          <li><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config.tests</span></code></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config.tests.test_models</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/dev/api/nautobot_golden_config/tests/test_models/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-nautobot_golden_config.tests.test_models">
+<span id="nautobot-golden-config-tests-test-models"></span><h1><a class="reference internal" href="#module-nautobot_golden_config.tests.test_models" title="nautobot_golden_config.tests.test_models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config.tests.test_models</span></code></a><a class="headerlink" href="#module-nautobot_golden_config.tests.test_models" title="Permalink to this headline"></a></h1>
+<p>Unit tests for nautobot_golden_config models.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.tests.test_models.ConfigComplianceModelTestCase" title="nautobot_golden_config.tests.test_models.ConfigComplianceModelTestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigComplianceModelTestCase</span></code></a></p></td>
+<td><p>Test CRUD operations for ConfigCompliance Model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.tests.test_models.GoldenConfigTestCase" title="nautobot_golden_config.tests.test_models.GoldenConfigTestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigTestCase</span></code></a></p></td>
+<td><p>Test GoldenConfig Model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.tests.test_models.ComplianceRuleTestCase" title="nautobot_golden_config.tests.test_models.ComplianceRuleTestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceRuleTestCase</span></code></a></p></td>
+<td><p>Test ComplianceRule Model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase" title="nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigSettingModelTestCase</span></code></a></p></td>
+<td><p>Test GoldenConfigSetting Model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.tests.test_models.GoldenConfigSettingGitModelTestCase" title="nautobot_golden_config.tests.test_models.GoldenConfigSettingGitModelTestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigSettingGitModelTestCase</span></code></a></p></td>
+<td><p>Test GoldenConfigSetting Model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.tests.test_models.ConfigRemoveModelTestCase" title="nautobot_golden_config.tests.test_models.ConfigRemoveModelTestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigRemoveModelTestCase</span></code></a></p></td>
+<td><p>Test ConfigRemove Model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.tests.test_models.ConfigReplaceModelTestCase" title="nautobot_golden_config.tests.test_models.ConfigReplaceModelTestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigReplaceModelTestCase</span></code></a></p></td>
+<td><p>Test ConfigReplace Model.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.ConfigComplianceModelTestCase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">ConfigComplianceModelTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.ConfigComplianceModelTestCase" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">django.test.TestCase</span></code></p>
+<p>Test CRUD operations for ConfigCompliance Model.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.ConfigComplianceModelTestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.ConfigComplianceModelTestCase.setUp" title="Permalink to this definition"></a></dt>
+<dd><p>Set up base objects.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.ConfigComplianceModelTestCase.test_create_config_compliance_success_json">
+<span class="sig-name descname"><span class="pre">test_create_config_compliance_success_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.ConfigComplianceModelTestCase.test_create_config_compliance_success_json" title="Permalink to this definition"></a></dt>
+<dd><p>Successful.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.ConfigComplianceModelTestCase.test_create_config_compliance_unique_failure">
+<span class="sig-name descname"><span class="pre">test_create_config_compliance_unique_failure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.ConfigComplianceModelTestCase.test_create_config_compliance_unique_failure" title="Permalink to this definition"></a></dt>
+<dd><p>Raises error when attempting to create duplicate.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.ConfigComplianceModelTestCase.test_create_config_compliance_success_compliant">
+<span class="sig-name descname"><span class="pre">test_create_config_compliance_success_compliant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.ConfigComplianceModelTestCase.test_create_config_compliance_success_compliant" title="Permalink to this definition"></a></dt>
+<dd><p>Successful.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.GoldenConfigTestCase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.GoldenConfigTestCase" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">django.test.TestCase</span></code></p>
+<p>Test GoldenConfig Model.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.ComplianceRuleTestCase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">ComplianceRuleTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.ComplianceRuleTestCase" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">django.test.TestCase</span></code></p>
+<p>Test ComplianceRule Model.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigSettingModelTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">django.test.TestCase</span></code></p>
+<p>Test GoldenConfigSetting Model.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase.setUp" title="Permalink to this definition"></a></dt>
+<dd><p>Get the golden config settings with the only allowed id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase.test_absolute_url_success">
+<span class="sig-name descname"><span class="pre">test_absolute_url_success</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase.test_absolute_url_success" title="Permalink to this definition"></a></dt>
+<dd><p>Verify that get_absolute_url() returns the expected URL.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase.test_bad_scope">
+<span class="sig-name descname"><span class="pre">test_bad_scope</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase.test_bad_scope" title="Permalink to this definition"></a></dt>
+<dd><p>Verify that a bad value in the scope returns the expected error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase.test_good_graphql_query_invalid_starts_with">
+<span class="sig-name descname"><span class="pre">test_good_graphql_query_invalid_starts_with</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase.test_good_graphql_query_invalid_starts_with" title="Permalink to this definition"></a></dt>
+<dd><p>Valid graphql query, however invalid in the usage with golden config plugin.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase.test_good_graphql_query_validate_starts_with">
+<span class="sig-name descname"><span class="pre">test_good_graphql_query_validate_starts_with</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase.test_good_graphql_query_validate_starts_with" title="Permalink to this definition"></a></dt>
+<dd><p>Ensure clean() method returns None when valid query is sent through.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase.test_good_scope">
+<span class="sig-name descname"><span class="pre">test_good_scope</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.GoldenConfigSettingModelTestCase.test_good_scope" title="Permalink to this definition"></a></dt>
+<dd><p>Verify that the scope passes validation as expected.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.GoldenConfigSettingGitModelTestCase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigSettingGitModelTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.GoldenConfigSettingGitModelTestCase" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">django.test.TestCase</span></code></p>
+<p>Test GoldenConfigSetting Model.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.GoldenConfigSettingGitModelTestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.GoldenConfigSettingGitModelTestCase.setUp" title="Permalink to this definition"></a></dt>
+<dd><p>Setup test data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.GoldenConfigSettingGitModelTestCase.test_model_success">
+<span class="sig-name descname"><span class="pre">test_model_success</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.GoldenConfigSettingGitModelTestCase.test_model_success" title="Permalink to this definition"></a></dt>
+<dd><p>Create a new instance of the GoldenConfigSettings model.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.GoldenConfigSettingGitModelTestCase.test_removing_git_repos">
+<span class="sig-name descname"><span class="pre">test_removing_git_repos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.GoldenConfigSettingGitModelTestCase.test_removing_git_repos" title="Permalink to this definition"></a></dt>
+<dd><p>Ensure we can remove the Git Repository obejcts from GoldenConfigSetting.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.GoldenConfigSettingGitModelTestCase.test_clean_up">
+<span class="sig-name descname"><span class="pre">test_clean_up</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.GoldenConfigSettingGitModelTestCase.test_clean_up" title="Permalink to this definition"></a></dt>
+<dd><p>Delete all objects created of GoldenConfigSetting type.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.ConfigRemoveModelTestCase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">ConfigRemoveModelTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.ConfigRemoveModelTestCase" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">django.test.TestCase</span></code></p>
+<p>Test ConfigRemove Model.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.ConfigRemoveModelTestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.ConfigRemoveModelTestCase.setUp" title="Permalink to this definition"></a></dt>
+<dd><p>Setup Object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.ConfigRemoveModelTestCase.test_add_line_removal_entry">
+<span class="sig-name descname"><span class="pre">test_add_line_removal_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.ConfigRemoveModelTestCase.test_add_line_removal_entry" title="Permalink to this definition"></a></dt>
+<dd><p>Test Add Object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.ConfigRemoveModelTestCase.test_edit_line_removal_entry">
+<span class="sig-name descname"><span class="pre">test_edit_line_removal_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.ConfigRemoveModelTestCase.test_edit_line_removal_entry" title="Permalink to this definition"></a></dt>
+<dd><p>Test Edit Object.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.ConfigReplaceModelTestCase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">ConfigReplaceModelTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.ConfigReplaceModelTestCase" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">django.test.TestCase</span></code></p>
+<p>Test ConfigReplace Model.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.ConfigReplaceModelTestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.ConfigReplaceModelTestCase.setUp" title="Permalink to this definition"></a></dt>
+<dd><p>Setup Object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.ConfigReplaceModelTestCase.test_add_line_replace_entry">
+<span class="sig-name descname"><span class="pre">test_add_line_replace_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.ConfigReplaceModelTestCase.test_add_line_replace_entry" title="Permalink to this definition"></a></dt>
+<dd><p>Test Add Object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.tests.test_models.ConfigReplaceModelTestCase.test_edit_line_replace_entry">
+<span class="sig-name descname"><span class="pre">test_edit_line_replace_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.tests.test_models.ConfigReplaceModelTestCase.test_edit_line_replace_entry" title="Permalink to this definition"></a></dt>
+<dd><p>Test Edit Object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../test_graphql/index.html" class="btn btn-neutral float-left" title="nautobot_golden_config.tests.test_graphql" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../utilities/index.html" class="btn btn-neutral float-right" title="nautobot_golden_config.utilities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, NTC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

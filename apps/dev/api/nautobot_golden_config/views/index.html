@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nautobot_golden_config.views &mdash; Nautobot App Docs  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="prev" title="nautobot_golden_config.urls" href="../urls/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html">
+            <img src="../../../../_static/nautobot_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-apps.html">Nautobot App Ecosystem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Device Onboarding</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/dev/index.html">Developer Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Golden Configuration</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/dev_extending.html">Extending the App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/dev_contributing.html">Contributing to the App</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/index.html#api-reference">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Nautobot Golden Configuration</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Nautobot App Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../../nautobot-plugin-golden-config/dev/index.html">Nautobot Golden Configuration</a> &raquo;</li>
+          <li><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config</span></code></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config.views</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/dev/api/nautobot_golden_config/views/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-nautobot_golden_config.views">
+<span id="nautobot-golden-config-views"></span><h1><a class="reference internal" href="#module-nautobot_golden_config.views" title="nautobot_golden_config.views"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_golden_config.views</span></code></a><a class="headerlink" href="#module-nautobot_golden_config.views" title="Permalink to this headline"></a></h1>
+<p>Django views for Nautobot Golden Configuration.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.GoldenConfigListView" title="nautobot_golden_config.views.GoldenConfigListView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigListView</span></code></a></p></td>
+<td><p>View for displaying the configuration management status for backup, intended, diff, and SoT Agg.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.GoldenConfigBulkDeleteView" title="nautobot_golden_config.views.GoldenConfigBulkDeleteView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigBulkDeleteView</span></code></a></p></td>
+<td><p>Standard view for bulk deletion of data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigComplianceListView" title="nautobot_golden_config.views.ConfigComplianceListView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigComplianceListView</span></code></a></p></td>
+<td><p>Django View for visualizing the compliance report.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigComplianceView" title="nautobot_golden_config.views.ConfigComplianceView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigComplianceView</span></code></a></p></td>
+<td><p>View for a device's specific configuration compliance feature.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigComplianceBulkDeleteView" title="nautobot_golden_config.views.ConfigComplianceBulkDeleteView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigComplianceBulkDeleteView</span></code></a></p></td>
+<td><p>View for deleting one or more OnboardingTasks.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigComplianceDeleteView" title="nautobot_golden_config.views.ConfigComplianceDeleteView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigComplianceDeleteView</span></code></a></p></td>
+<td><p>View for deleting compliance rules.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigComplianceDeviceView" title="nautobot_golden_config.views.ConfigComplianceDeviceView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigComplianceDeviceView</span></code></a></p></td>
+<td><p>View for individual device detailed information.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceDeviceFilteredReport" title="nautobot_golden_config.views.ComplianceDeviceFilteredReport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceDeviceFilteredReport</span></code></a></p></td>
+<td><p>View for the single device detailed information.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigComplianceDetails" title="nautobot_golden_config.views.ConfigComplianceDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigComplianceDetails</span></code></a></p></td>
+<td><p>View for the single configuration or diff of a single.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigComplianceOverviewOverviewHelper" title="nautobot_golden_config.views.ConfigComplianceOverviewOverviewHelper"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigComplianceOverviewOverviewHelper</span></code></a></p></td>
+<td><p>Customized overview view reports aggregation and filterset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigComplianceOverview" title="nautobot_golden_config.views.ConfigComplianceOverview"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigComplianceOverview</span></code></a></p></td>
+<td><p>View for executive report on configuration compliance.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceFeatureListView" title="nautobot_golden_config.views.ComplianceFeatureListView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceFeatureListView</span></code></a></p></td>
+<td><p>View for managing the config compliance rule definition.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceFeatureView" title="nautobot_golden_config.views.ComplianceFeatureView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceFeatureView</span></code></a></p></td>
+<td><p>View for single ComplianceFeature instance.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceFeatureBulkImportView" title="nautobot_golden_config.views.ComplianceFeatureBulkImportView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceFeatureBulkImportView</span></code></a></p></td>
+<td><p>View for bulk import of ComplianceFeature.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceFeatureEditView" title="nautobot_golden_config.views.ComplianceFeatureEditView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceFeatureEditView</span></code></a></p></td>
+<td><p>View for managing compliance rules.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceFeatureDeleteView" title="nautobot_golden_config.views.ComplianceFeatureDeleteView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceFeatureDeleteView</span></code></a></p></td>
+<td><p>View for deleting compliance rules.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceFeatureBulkDeleteView" title="nautobot_golden_config.views.ComplianceFeatureBulkDeleteView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceFeatureBulkDeleteView</span></code></a></p></td>
+<td><p>View for bulk deleting compliance rules.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceFeatureBulkEditView" title="nautobot_golden_config.views.ComplianceFeatureBulkEditView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceFeatureBulkEditView</span></code></a></p></td>
+<td><p>View for bulk deleting ComplianceFeature instance.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceRuleListView" title="nautobot_golden_config.views.ComplianceRuleListView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceRuleListView</span></code></a></p></td>
+<td><p>View for managing the config compliance rule definition.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceRuleView" title="nautobot_golden_config.views.ComplianceRuleView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceRuleView</span></code></a></p></td>
+<td><p>View for single ComplianceRule instance.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceRuleBulkImportView" title="nautobot_golden_config.views.ComplianceRuleBulkImportView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceRuleBulkImportView</span></code></a></p></td>
+<td><p>View for bulk import of ComplianceRule.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceRuleEditView" title="nautobot_golden_config.views.ComplianceRuleEditView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceRuleEditView</span></code></a></p></td>
+<td><p>View for managing compliance rules.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceRuleDeleteView" title="nautobot_golden_config.views.ComplianceRuleDeleteView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceRuleDeleteView</span></code></a></p></td>
+<td><p>View for deleting compliance rules.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceRuleBulkDeleteView" title="nautobot_golden_config.views.ComplianceRuleBulkDeleteView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceRuleBulkDeleteView</span></code></a></p></td>
+<td><p>View for bulk deleting compliance rules.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ComplianceRuleBulkEditView" title="nautobot_golden_config.views.ComplianceRuleBulkEditView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComplianceRuleBulkEditView</span></code></a></p></td>
+<td><p>View for bulk deleting ComplianceRule instance.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.GoldenConfigSettingView" title="nautobot_golden_config.views.GoldenConfigSettingView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigSettingView</span></code></a></p></td>
+<td><p>View for single GoldenConfigSetting instance.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.GoldenConfigSettingCreateView" title="nautobot_golden_config.views.GoldenConfigSettingCreateView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigSettingCreateView</span></code></a></p></td>
+<td><p>Create view.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.GoldenConfigSettingDeleteView" title="nautobot_golden_config.views.GoldenConfigSettingDeleteView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigSettingDeleteView</span></code></a></p></td>
+<td><p>Delete view.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.GoldenConfigSettingBulkDeleteView" title="nautobot_golden_config.views.GoldenConfigSettingBulkDeleteView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigSettingBulkDeleteView</span></code></a></p></td>
+<td><p>Delete view.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.GoldenConfigSettingEditView" title="nautobot_golden_config.views.GoldenConfigSettingEditView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigSettingEditView</span></code></a></p></td>
+<td><p>Edit view.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.GoldenConfigSettingListView" title="nautobot_golden_config.views.GoldenConfigSettingListView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoldenConfigSettingListView</span></code></a></p></td>
+<td><p>List view.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigRemoveListView" title="nautobot_golden_config.views.ConfigRemoveListView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigRemoveListView</span></code></a></p></td>
+<td><p>View to display the current Line Removals.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigRemoveView" title="nautobot_golden_config.views.ConfigRemoveView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigRemoveView</span></code></a></p></td>
+<td><p>View for single ConfigRemove instance.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigRemoveBulkImportView" title="nautobot_golden_config.views.ConfigRemoveBulkImportView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigRemoveBulkImportView</span></code></a></p></td>
+<td><p>View for bulk import of ConfigRemove.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigRemoveBulkEditView" title="nautobot_golden_config.views.ConfigRemoveBulkEditView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigRemoveBulkEditView</span></code></a></p></td>
+<td><p>View for bulk deleting ConfigRemove instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigRemoveEditView" title="nautobot_golden_config.views.ConfigRemoveEditView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigRemoveEditView</span></code></a></p></td>
+<td><p>View for editing the current Line Removals.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigRemoveDeleteView" title="nautobot_golden_config.views.ConfigRemoveDeleteView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigRemoveDeleteView</span></code></a></p></td>
+<td><p>View for deleting a ConfigRemove instance.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigRemoveBulkDeleteView" title="nautobot_golden_config.views.ConfigRemoveBulkDeleteView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigRemoveBulkDeleteView</span></code></a></p></td>
+<td><p>View for bulk deleting Line Removals.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigReplaceListView" title="nautobot_golden_config.views.ConfigReplaceListView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigReplaceListView</span></code></a></p></td>
+<td><p>View for displaying the current Line Replacements.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigReplaceView" title="nautobot_golden_config.views.ConfigReplaceView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigReplaceView</span></code></a></p></td>
+<td><p>View for single ConfigReplace instance.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigReplaceEditView" title="nautobot_golden_config.views.ConfigReplaceEditView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigReplaceEditView</span></code></a></p></td>
+<td><p>View for editing the current Line Replacements.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigReplaceBulkDeleteView" title="nautobot_golden_config.views.ConfigReplaceBulkDeleteView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigReplaceBulkDeleteView</span></code></a></p></td>
+<td><p>View for bulk deleting Line Replacements.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigReplaceBulkImportView" title="nautobot_golden_config.views.ConfigReplaceBulkImportView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigReplaceBulkImportView</span></code></a></p></td>
+<td><p>View for bulk import of ConfigReplace.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigReplaceDeleteView" title="nautobot_golden_config.views.ConfigReplaceDeleteView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigReplaceDeleteView</span></code></a></p></td>
+<td><p>View for deleting a ConfigReplace instance.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.ConfigReplaceBulkEditView" title="nautobot_golden_config.views.ConfigReplaceBulkEditView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigReplaceBulkEditView</span></code></a></p></td>
+<td><p>View for bulk deleting ConfigReplace instances.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.LOGGER" title="nautobot_golden_config.views.LOGGER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LOGGER</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_golden_config.views.GREEN" title="nautobot_golden_config.views.GREEN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GREEN</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_golden_config.views.RED" title="nautobot_golden_config.views.RED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RED</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.LOGGER">
+<span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">LOGGER</span></span><a class="headerlink" href="#nautobot_golden_config.views.LOGGER" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GREEN">
+<span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">GREEN</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">#D5E8D4</span></em><a class="headerlink" href="#nautobot_golden_config.views.GREEN" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.RED">
+<span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">RED</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">#F8CECC</span></em><a class="headerlink" href="#nautobot_golden_config.views.RED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigListView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigListView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigListView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectListView</span></code></p>
+<p>View for displaying the configuration management status for backup, intended, diff, and SoT Agg.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigListView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigListView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigListView.filterset">
+<span class="sig-name descname"><span class="pre">filterset</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigListView.filterset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigListView.filterset_form">
+<span class="sig-name descname"><span class="pre">filterset_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigListView.filterset_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigListView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigListView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigListView.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">nautobot_golden_config/goldenconfig_list.html</span></em><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigListView.template_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigListView.extra_context">
+<span class="sig-name descname"><span class="pre">extra_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigListView.extra_context" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplace code to modify data before returning.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigListView.alter_queryset">
+<span class="sig-name descname"><span class="pre">alter_queryset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigListView.alter_queryset" title="Permalink to this definition"></a></dt>
+<dd><p>Build actual runtime queryset as the build time queryset provides no information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigListView.queryset_to_csv">
+<span class="sig-name descname"><span class="pre">queryset_to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigListView.queryset_to_csv" title="Permalink to this definition"></a></dt>
+<dd><p>Override nautobot default to account for using Device model for GoldenConfig data.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigBulkDeleteView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigBulkDeleteView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigBulkDeleteView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkDeleteView</span></code></p>
+<p>Standard view for bulk deletion of data.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigBulkDeleteView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigBulkDeleteView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigBulkDeleteView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigBulkDeleteView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigBulkDeleteView.filterset">
+<span class="sig-name descname"><span class="pre">filterset</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigBulkDeleteView.filterset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigBulkDeleteView.post">
+<span class="sig-name descname"><span class="pre">post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigBulkDeleteView.post" title="Permalink to this definition"></a></dt>
+<dd><p>Delete instances based on post request data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigBulkDeleteView.get_form">
+<span class="sig-name descname"><span class="pre">get_form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigBulkDeleteView.get_form" title="Permalink to this definition"></a></dt>
+<dd><p>Override standard form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceListView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigComplianceListView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceListView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectListView</span></code></p>
+<p>Django View for visualizing the compliance report.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceListView.filterset">
+<span class="sig-name descname"><span class="pre">filterset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceListView.filterset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceListView.filterset_form">
+<span class="sig-name descname"><span class="pre">filterset_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceListView.filterset_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceListView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceListView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceListView.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">nautobot_golden_config/compliance_report.html</span></em><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceListView.template_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceListView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceListView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceListView.alter_queryset">
+<span class="sig-name descname"><span class="pre">alter_queryset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceListView.alter_queryset" title="Permalink to this definition"></a></dt>
+<dd><p>Build actual runtime queryset as the build time queryset provides no information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceListView.extra_context">
+<span class="sig-name descname"><span class="pre">extra_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceListView.extra_context" title="Permalink to this definition"></a></dt>
+<dd><p>Boilerplate code to modify before returning data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceListView.queryset_to_csv">
+<span class="sig-name descname"><span class="pre">queryset_to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceListView.queryset_to_csv" title="Permalink to this definition"></a></dt>
+<dd><p>Export queryset of objects as comma-separated value (CSV).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigComplianceView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectView</span></code></p>
+<p>View for a device’s specific configuration compliance feature.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceView.get_extra_context">
+<span class="sig-name descname"><span class="pre">get_extra_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceView.get_extra_context" title="Permalink to this definition"></a></dt>
+<dd><p>Add extra data to detail view for Nautobot.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceBulkDeleteView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigComplianceBulkDeleteView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceBulkDeleteView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkDeleteView</span></code></p>
+<p>View for deleting one or more OnboardingTasks.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceBulkDeleteView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceBulkDeleteView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceBulkDeleteView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceBulkDeleteView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceBulkDeleteView.filterset">
+<span class="sig-name descname"><span class="pre">filterset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceBulkDeleteView.filterset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceBulkDeleteView.post">
+<span class="sig-name descname"><span class="pre">post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceBulkDeleteView.post" title="Permalink to this definition"></a></dt>
+<dd><p>Delete instances based on post request data.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceDeleteView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigComplianceDeleteView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceDeleteView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectDeleteView</span></code></p>
+<p>View for deleting compliance rules.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceDeleteView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceDeleteView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceDeviceView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigComplianceDeviceView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceDeviceView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.views.ContentTypePermissionRequiredMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.View</span></code></p>
+<p>View for individual device detailed information.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceDeviceView.get_required_permission">
+<span class="sig-name descname"><span class="pre">get_required_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceDeviceView.get_required_permission" title="Permalink to this definition"></a></dt>
+<dd><p>Manually set permission when not tied to a model for device report.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceDeviceView.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceDeviceView.get" title="Permalink to this definition"></a></dt>
+<dd><p>Read request into a view of a single device.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceDeviceFilteredReport">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceDeviceFilteredReport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceDeviceFilteredReport" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.views.ContentTypePermissionRequiredMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.View</span></code></p>
+<p>View for the single device detailed information.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceDeviceFilteredReport.get_required_permission">
+<span class="sig-name descname"><span class="pre">get_required_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceDeviceFilteredReport.get_required_permission" title="Permalink to this definition"></a></dt>
+<dd><p>Manually set permission when not tied to a model for filtered report.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceDeviceFilteredReport.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compliance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceDeviceFilteredReport.get" title="Permalink to this definition"></a></dt>
+<dd><p>Read request into a view of a single device.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceDetails">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigComplianceDetails</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceDetails" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.views.ContentTypePermissionRequiredMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.View</span></code></p>
+<p>View for the single configuration or diff of a single.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceDetails.get_required_permission">
+<span class="sig-name descname"><span class="pre">get_required_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceDetails.get_required_permission" title="Permalink to this definition"></a></dt>
+<dd><p>Manually set permission when not tied to a model for config details.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceDetails.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceDetails.get" title="Permalink to this definition"></a></dt>
+<dd><p>Read request into a view of a single device.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverviewOverviewHelper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigComplianceOverviewOverviewHelper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverviewOverviewHelper" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.utilities.views.ContentTypePermissionRequiredMixin</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.View</span></code></p>
+<p>Customized overview view reports aggregation and filterset.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverviewOverviewHelper.get_required_permission">
+<span class="sig-name descname"><span class="pre">get_required_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverviewOverviewHelper.get_required_permission" title="Permalink to this definition"></a></dt>
+<dd><p>Manually set permission when not tied to a model for global report.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverviewOverviewHelper.plot_visual">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">plot_visual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverviewOverviewHelper.plot_visual" title="Permalink to this definition"></a></dt>
+<dd><p>Plot aggregation visual.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverviewOverviewHelper.plot_barchart_visual">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">plot_barchart_visual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverviewOverviewHelper.plot_barchart_visual" title="Permalink to this definition"></a></dt>
+<dd><p>Construct report visual from queryset.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverviewOverviewHelper.calculate_aggr_percentage">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calculate_aggr_percentage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverviewOverviewHelper.calculate_aggr_percentage" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate percentage of compliance given aggregation fields.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>aggr: same aggr dict given as parameter with two new keys</dt><dd><ul class="simple">
+<li><p>comp_percents</p></li>
+<li><p>non_compliants</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverview">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigComplianceOverview</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverview" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectListView</span></code></p>
+<p>View for executive report on configuration compliance.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverview.filterset">
+<span class="sig-name descname"><span class="pre">filterset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverview.filterset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverview.filterset_form">
+<span class="sig-name descname"><span class="pre">filterset_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverview.filterset_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverview.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverview.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverview.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">nautobot_golden_config/compliance_overview_report.html</span></em><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverview.template_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverview.kind">
+<span class="sig-name descname"><span class="pre">kind</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Features</span></em><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverview.kind" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverview.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverview.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverview.extra_content">
+<span class="sig-name descname"><span class="pre">extra_content</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverview.extra_content" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverview.setup">
+<span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverview.setup" title="Permalink to this definition"></a></dt>
+<dd><p>Using request object to perform filtering based on query params.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverview.get_global_aggr">
+<span class="sig-name descname"><span class="pre">get_global_aggr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverview.get_global_aggr" title="Permalink to this definition"></a></dt>
+<dd><p>Get device and feature global reports.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>device_aggr: device global report dict
+feature_aggr: feature global report dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverview.extra_context">
+<span class="sig-name descname"><span class="pre">extra_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverview.extra_context" title="Permalink to this definition"></a></dt>
+<dd><p>Extra content method on.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigComplianceOverview.queryset_to_csv">
+<span class="sig-name descname"><span class="pre">queryset_to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigComplianceOverview.queryset_to_csv" title="Permalink to this definition"></a></dt>
+<dd><p>Export queryset of objects as comma-separated value (CSV).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureListView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceFeatureListView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureListView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectListView</span></code></p>
+<p>View for managing the config compliance rule definition.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureListView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureListView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureListView.filterset">
+<span class="sig-name descname"><span class="pre">filterset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureListView.filterset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureListView.filterset_form">
+<span class="sig-name descname"><span class="pre">filterset_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureListView.filterset_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureListView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureListView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureListView.action_buttons">
+<span class="sig-name descname"><span class="pre">action_buttons</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['add',</span> <span class="pre">'export']</span></em><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureListView.action_buttons" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceFeatureView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectView</span></code></p>
+<p>View for single ComplianceFeature instance.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureView.get_extra_context">
+<span class="sig-name descname"><span class="pre">get_extra_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureView.get_extra_context" title="Permalink to this definition"></a></dt>
+<dd><p>Add extra data to detail view for Nautobot.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureBulkImportView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceFeatureBulkImportView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureBulkImportView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkImportView</span></code></p>
+<p>View for bulk import of ComplianceFeature.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureBulkImportView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureBulkImportView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureBulkImportView.model_form">
+<span class="sig-name descname"><span class="pre">model_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureBulkImportView.model_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureBulkImportView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureBulkImportView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureEditView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceFeatureEditView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureEditView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectEditView</span></code></p>
+<p>View for managing compliance rules.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureEditView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureEditView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureEditView.model_form">
+<span class="sig-name descname"><span class="pre">model_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureEditView.model_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureDeleteView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceFeatureDeleteView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureDeleteView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectDeleteView</span></code></p>
+<p>View for deleting compliance rules.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureDeleteView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureDeleteView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureBulkDeleteView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceFeatureBulkDeleteView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureBulkDeleteView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkDeleteView</span></code></p>
+<p>View for bulk deleting compliance rules.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureBulkDeleteView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureBulkDeleteView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureBulkDeleteView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureBulkDeleteView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureBulkEditView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceFeatureBulkEditView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureBulkEditView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkEditView</span></code></p>
+<p>View for bulk deleting ComplianceFeature instance.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureBulkEditView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureBulkEditView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureBulkEditView.filterset">
+<span class="sig-name descname"><span class="pre">filterset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureBulkEditView.filterset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureBulkEditView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureBulkEditView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceFeatureBulkEditView.form">
+<span class="sig-name descname"><span class="pre">form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceFeatureBulkEditView.form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleListView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceRuleListView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleListView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectListView</span></code></p>
+<p>View for managing the config compliance rule definition.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleListView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleListView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleListView.filterset">
+<span class="sig-name descname"><span class="pre">filterset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleListView.filterset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleListView.filterset_form">
+<span class="sig-name descname"><span class="pre">filterset_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleListView.filterset_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleListView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleListView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleListView.action_buttons">
+<span class="sig-name descname"><span class="pre">action_buttons</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['add',</span> <span class="pre">'export']</span></em><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleListView.action_buttons" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceRuleView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectView</span></code></p>
+<p>View for single ComplianceRule instance.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleView.get_extra_context">
+<span class="sig-name descname"><span class="pre">get_extra_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleView.get_extra_context" title="Permalink to this definition"></a></dt>
+<dd><p>Add extra data to detail view for Nautobot.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleBulkImportView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceRuleBulkImportView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleBulkImportView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkImportView</span></code></p>
+<p>View for bulk import of ComplianceRule.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleBulkImportView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleBulkImportView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleBulkImportView.model_form">
+<span class="sig-name descname"><span class="pre">model_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleBulkImportView.model_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleBulkImportView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleBulkImportView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleEditView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceRuleEditView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleEditView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectEditView</span></code></p>
+<p>View for managing compliance rules.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleEditView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleEditView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleEditView.model_form">
+<span class="sig-name descname"><span class="pre">model_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleEditView.model_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleDeleteView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceRuleDeleteView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleDeleteView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectDeleteView</span></code></p>
+<p>View for deleting compliance rules.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleDeleteView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleDeleteView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleBulkDeleteView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceRuleBulkDeleteView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleBulkDeleteView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkDeleteView</span></code></p>
+<p>View for bulk deleting compliance rules.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleBulkDeleteView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleBulkDeleteView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleBulkDeleteView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleBulkDeleteView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleBulkEditView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ComplianceRuleBulkEditView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleBulkEditView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkEditView</span></code></p>
+<p>View for bulk deleting ComplianceRule instance.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleBulkEditView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleBulkEditView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleBulkEditView.filterset">
+<span class="sig-name descname"><span class="pre">filterset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleBulkEditView.filterset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleBulkEditView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleBulkEditView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ComplianceRuleBulkEditView.form">
+<span class="sig-name descname"><span class="pre">form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ComplianceRuleBulkEditView.form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigSettingView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectView</span></code></p>
+<p>View for single GoldenConfigSetting instance.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingCreateView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigSettingCreateView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingCreateView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectEditView</span></code></p>
+<p>Create view.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingCreateView.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingCreateView.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingCreateView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingCreateView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingCreateView.model_form">
+<span class="sig-name descname"><span class="pre">model_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingCreateView.model_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingCreateView.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">nautobot_golden_config/goldenconfigsetting_edit.html</span></em><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingCreateView.template_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingDeleteView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigSettingDeleteView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingDeleteView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectDeleteView</span></code></p>
+<p>Delete view.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingDeleteView.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingDeleteView.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingDeleteView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingDeleteView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingBulkDeleteView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigSettingBulkDeleteView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingBulkDeleteView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkDeleteView</span></code></p>
+<p>Delete view.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingBulkDeleteView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingBulkDeleteView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingBulkDeleteView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingBulkDeleteView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingEditView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigSettingEditView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingEditView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectEditView</span></code></p>
+<p>Edit view.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingEditView.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingEditView.model" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingEditView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingEditView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingEditView.model_form">
+<span class="sig-name descname"><span class="pre">model_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingEditView.model_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingEditView.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">nautobot_golden_config/goldenconfigsetting_edit.html</span></em><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingEditView.template_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingListView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">GoldenConfigSettingListView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingListView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectListView</span></code></p>
+<p>List view.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingListView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingListView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingListView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingListView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.GoldenConfigSettingListView.action_buttons">
+<span class="sig-name descname"><span class="pre">action_buttons</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['add',</span> <span class="pre">'export']</span></em><a class="headerlink" href="#nautobot_golden_config.views.GoldenConfigSettingListView.action_buttons" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveListView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigRemoveListView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveListView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectListView</span></code></p>
+<p>View to display the current Line Removals.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveListView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveListView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveListView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveListView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveListView.filterset">
+<span class="sig-name descname"><span class="pre">filterset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveListView.filterset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveListView.filterset_form">
+<span class="sig-name descname"><span class="pre">filterset_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveListView.filterset_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigRemoveView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectView</span></code></p>
+<p>View for single ConfigRemove instance.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveView.get_extra_context">
+<span class="sig-name descname"><span class="pre">get_extra_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveView.get_extra_context" title="Permalink to this definition"></a></dt>
+<dd><p>Add extra data to detail view for Nautobot.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveBulkImportView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigRemoveBulkImportView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveBulkImportView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkImportView</span></code></p>
+<p>View for bulk import of ConfigRemove.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveBulkImportView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveBulkImportView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveBulkImportView.model_form">
+<span class="sig-name descname"><span class="pre">model_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveBulkImportView.model_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveBulkImportView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveBulkImportView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveBulkEditView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigRemoveBulkEditView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveBulkEditView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkEditView</span></code></p>
+<p>View for bulk deleting ConfigRemove instances.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveBulkEditView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveBulkEditView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveBulkEditView.filterset">
+<span class="sig-name descname"><span class="pre">filterset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveBulkEditView.filterset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveBulkEditView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveBulkEditView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveBulkEditView.form">
+<span class="sig-name descname"><span class="pre">form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveBulkEditView.form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveEditView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigRemoveEditView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveEditView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectEditView</span></code></p>
+<p>View for editing the current Line Removals.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveEditView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveEditView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveEditView.model_form">
+<span class="sig-name descname"><span class="pre">model_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveEditView.model_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveDeleteView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigRemoveDeleteView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveDeleteView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectDeleteView</span></code></p>
+<p>View for deleting a ConfigRemove instance.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveDeleteView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveDeleteView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveBulkDeleteView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigRemoveBulkDeleteView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveBulkDeleteView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkDeleteView</span></code></p>
+<p>View for bulk deleting Line Removals.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveBulkDeleteView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveBulkDeleteView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigRemoveBulkDeleteView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigRemoveBulkDeleteView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceListView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigReplaceListView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceListView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectListView</span></code></p>
+<p>View for displaying the current Line Replacements.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceListView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceListView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceListView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceListView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceListView.filterset">
+<span class="sig-name descname"><span class="pre">filterset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceListView.filterset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceListView.filterset_form">
+<span class="sig-name descname"><span class="pre">filterset_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceListView.filterset_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigReplaceView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectView</span></code></p>
+<p>View for single ConfigReplace instance.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceView.get_extra_context">
+<span class="sig-name descname"><span class="pre">get_extra_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceView.get_extra_context" title="Permalink to this definition"></a></dt>
+<dd><p>Add extra data to detail view for Nautobot.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceEditView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigReplaceEditView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceEditView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectEditView</span></code></p>
+<p>View for editing the current Line Replacements.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceEditView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceEditView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceEditView.model_form">
+<span class="sig-name descname"><span class="pre">model_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceEditView.model_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceBulkDeleteView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigReplaceBulkDeleteView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceBulkDeleteView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkDeleteView</span></code></p>
+<p>View for bulk deleting Line Replacements.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceBulkDeleteView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceBulkDeleteView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceBulkDeleteView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceBulkDeleteView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceBulkImportView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigReplaceBulkImportView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceBulkImportView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkImportView</span></code></p>
+<p>View for bulk import of ConfigReplace.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceBulkImportView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceBulkImportView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceBulkImportView.model_form">
+<span class="sig-name descname"><span class="pre">model_form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceBulkImportView.model_form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceBulkImportView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceBulkImportView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceDeleteView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigReplaceDeleteView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceDeleteView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.ObjectDeleteView</span></code></p>
+<p>View for deleting a ConfigReplace instance.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceDeleteView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceDeleteView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceBulkEditView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_golden_config.views.</span></span><span class="sig-name descname"><span class="pre">ConfigReplaceBulkEditView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceBulkEditView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">nautobot.core.views.generic.BulkEditView</span></code></p>
+<p>View for bulk deleting ConfigReplace instances.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceBulkEditView.queryset">
+<span class="sig-name descname"><span class="pre">queryset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceBulkEditView.queryset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceBulkEditView.filterset">
+<span class="sig-name descname"><span class="pre">filterset</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceBulkEditView.filterset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceBulkEditView.table">
+<span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceBulkEditView.table" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nautobot_golden_config.views.ConfigReplaceBulkEditView.form">
+<span class="sig-name descname"><span class="pre">form</span></span><a class="headerlink" href="#nautobot_golden_config.views.ConfigReplaceBulkEditView.form" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../urls/index.html" class="btn btn-neutral float-left" title="nautobot_golden_config.urls" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, NTC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

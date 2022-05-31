@@ -1,0 +1,126 @@
+:py:mod:`nautobot_golden_config.tests.test_utilities.test_helpers`
+==================================================================
+
+.. py:module:: nautobot_golden_config.tests.test_utilities.test_helpers
+
+.. autoapi-nested-parse::
+
+   Unit tests for nautobot_golden_config utilities helpers.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tests.test_utilities.test_helpers.HelpersTest
+
+
+
+
+.. py:class:: HelpersTest(methodName='runTest')
+
+   Bases: :py:obj:`django.test.TestCase`
+
+   Test Helper Functions.
+
+   .. py:method:: setUp(self)
+
+      Setup a reusable mock object to pass into GitRepo.
+
+
+   .. py:method:: test_null_to_empty_null(self)
+
+      Ensure None returns with empty string.
+
+
+   .. py:method:: test_null_to_empty_val(self)
+
+      Ensure if not None input is returned.
+
+
+   .. py:method:: test_render_jinja_template_success(self, mock_device)
+
+      Simple success test to return template.
+
+
+   .. py:method:: test_render_jinja_template_success_render_context(self, mock_device)
+
+      Test that device object is passed to template context.
+
+
+   .. py:method:: test_render_jinja_template_success_with_filter(self, mock_device)
+
+      Test custom template and jinja filter are accessible.
+
+
+   .. py:method:: test_render_jinja_template_exceptions_undefined(self, mock_device, mock_nornir_logger)
+
+      Use fake obj key to cause UndefinedError from Jinja2 Template.
+
+
+   .. py:method:: test_render_jinja_template_exceptions_syntaxerror(self, mock_device, mock_nornir_logger)
+
+      Use invalid templating to cause TemplateSyntaxError from Jinja2 Template.
+
+
+   .. py:method:: test_render_jinja_template_exceptions_templateerror(self, template_mock, mock_device, mock_nornir_logger)
+
+      Cause issue to cause TemplateError form Jinja2 Template.
+
+
+   .. py:method:: test_get_backup_repository_dir_success(self)
+
+      Verify that we successfully look up the path from a provided repo object.
+
+
+   .. py:method:: test_get_intended_repository_dir_success(self)
+
+      Verify that we successfully look up the path from a provided repo object.
+
+
+   .. py:method:: test_get_job_filter_no_data_success(self)
+
+      Verify we get two devices returned when providing no data.
+
+
+   .. py:method:: test_get_job_filter_site_success(self)
+
+      Verify we get a single device returned when providing specific site.
+
+
+   .. py:method:: test_get_job_filter_device_object_success(self)
+
+      Verify we get a single device returned when providing single device object.
+
+
+   .. py:method:: test_get_job_filter_device_filter_success(self)
+
+      Verify we get a single device returned when providing single device filter.
+
+
+   .. py:method:: test_get_job_filter_base_queryset_raise(self)
+
+      Verify we get raise for having a base_qs with no objects due to bad Golden Config Setting scope.
+
+
+   .. py:method:: test_get_job_filter_filtered_devices_raise(self)
+
+      Verify we get raise for having providing site that doesn't have any devices in scope.
+
+
+   .. py:method:: test_get_job_filter_device_no_platform_raise(self)
+
+      Verify we get raise for not having a platform set on a device.
+
+
+   .. py:method:: test_device_to_settings_map(self)
+
+      Verify Golden Config Settings are properly mapped to devices.
+
+
+

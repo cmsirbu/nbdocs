@@ -1,0 +1,36 @@
+:py:mod:`nautobot_golden_config.tests.test_nornir_plays.test_config_compliance`
+===============================================================================
+
+.. py:module:: nautobot_golden_config.tests.test_nornir_plays.test_config_compliance
+
+.. autoapi-nested-parse::
+
+   Unit tests for nautobot_golden_config nornir compliance.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.tests.test_nornir_plays.test_config_compliance.ConfigComplianceTest
+
+
+
+
+.. py:class:: ConfigComplianceTest(methodName='runTest')
+
+   Bases: :py:obj:`unittest.TestCase`
+
+   Test Nornir Compliance Task.
+
+   .. py:method:: test_get_rules(self, mock_compliance_rule)
+
+      Test proper return when Features are returned.
+
+
+

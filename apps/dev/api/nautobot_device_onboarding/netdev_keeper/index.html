@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nautobot_device_onboarding.netdev_keeper &mdash; Nautobot App Docs  documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="nautobot_device_onboarding.onboard" href="../onboard/index.html" />
+    <link rel="prev" title="nautobot_device_onboarding.navigation" href="../navigation/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html">
+            <img src="../../../../_static/nautobot_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-apps.html">Nautobot App Ecosystem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Device Onboarding</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/dev/index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/dev/dev_extending.html">Extending the App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/dev/dev_contributing.html">Contributing to the App</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../nautobot-plugin-device-onboarding/dev/index.html#api-reference">API Reference</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Nautobot Device Onboarding</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Golden Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nautobot-plugin-golden-config/dev/index.html">Developer Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Nautobot App Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../../../nautobot-plugin-device-onboarding/dev/index.html">Nautobot Device Onboarding</a> &raquo;</li>
+          <li><a href="../index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding</span></code></a> &raquo;</li>
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.netdev_keeper</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/dev/api/nautobot_device_onboarding/netdev_keeper/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-nautobot_device_onboarding.netdev_keeper">
+<span id="nautobot-device-onboarding-netdev-keeper"></span><h1><a class="reference internal" href="#module-nautobot_device_onboarding.netdev_keeper" title="nautobot_device_onboarding.netdev_keeper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">nautobot_device_onboarding.netdev_keeper</span></code></a><a class="headerlink" href="#module-nautobot_device_onboarding.netdev_keeper" title="Permalink to this headline"></a></h1>
+<p>NetDev Keeper.</p>
+<p>(c) 2020-2021 Network To Code
+Licensed under the Apache License, Version 2.0 (the “License”);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<blockquote>
+<div><p><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+</div></blockquote>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_device_onboarding.netdev_keeper.NetdevKeeper" title="nautobot_device_onboarding.netdev_keeper.NetdevKeeper"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NetdevKeeper</span></code></a></p></td>
+<td><p>Used to maintain information about the network device during the onboarding process.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_device_onboarding.netdev_keeper.get_mgmt_info" title="nautobot_device_onboarding.netdev_keeper.get_mgmt_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_mgmt_info</span></code></a>(hostname, ip_ifs, default_mgmt_if=PLUGIN_SETTINGS['default_management_interface'], default_mgmt_pfxlen=PLUGIN_SETTINGS['default_management_prefix_length'])</p></td>
+<td><p>Get the interface name and prefix length for the management interface.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nautobot_device_onboarding.netdev_keeper.logger" title="nautobot_device_onboarding.netdev_keeper.logger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">logger</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nautobot_device_onboarding.netdev_keeper.PLUGIN_SETTINGS" title="nautobot_device_onboarding.netdev_keeper.PLUGIN_SETTINGS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PLUGIN_SETTINGS</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.netdev_keeper.logger">
+<span class="sig-prename descclassname"><span class="pre">nautobot_device_onboarding.netdev_keeper.</span></span><span class="sig-name descname"><span class="pre">logger</span></span><a class="headerlink" href="#nautobot_device_onboarding.netdev_keeper.logger" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.netdev_keeper.PLUGIN_SETTINGS">
+<span class="sig-prename descclassname"><span class="pre">nautobot_device_onboarding.netdev_keeper.</span></span><span class="sig-name descname"><span class="pre">PLUGIN_SETTINGS</span></span><a class="headerlink" href="#nautobot_device_onboarding.netdev_keeper.PLUGIN_SETTINGS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.netdev_keeper.get_mgmt_info">
+<span class="sig-prename descclassname"><span class="pre">nautobot_device_onboarding.netdev_keeper.</span></span><span class="sig-name descname"><span class="pre">get_mgmt_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hostname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip_ifs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_mgmt_if</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PLUGIN_SETTINGS['default_management_interface']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_mgmt_pfxlen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PLUGIN_SETTINGS['default_management_prefix_length']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_device_onboarding.netdev_keeper.get_mgmt_info" title="Permalink to this definition"></a></dt>
+<dd><p>Get the interface name and prefix length for the management interface.</p>
+<p>Locate the interface assigned with the hostname value and retain
+the interface name and IP prefix-length so that we can use it
+when creating the IPAM IP-Address instance.</p>
+<p>Note that in some cases (e.g., NAT) the hostname may differ than
+the interface addresses present on the device. We need to handle this.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.netdev_keeper.NetdevKeeper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nautobot_device_onboarding.netdev_keeper.</span></span><span class="sig-name descname"><span class="pre">NetdevKeeper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hostname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">secret</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">napalm_driver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optional_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_device_onboarding.netdev_keeper.NetdevKeeper" title="Permalink to this definition"></a></dt>
+<dd><p>Used to maintain information about the network device during the onboarding process.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.netdev_keeper.NetdevKeeper.check_reachability">
+<span class="sig-name descname"><span class="pre">check_reachability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_device_onboarding.netdev_keeper.NetdevKeeper.check_reachability" title="Permalink to this definition"></a></dt>
+<dd><p>Ensure that the device at the mgmt-ipaddr provided is reachable.</p>
+<p>We do this check before attempting other “show” commands so that we know we’ve got a
+device that can be reached.</p>
+<dl class="simple">
+<dt>Raises:</dt><dd><dl class="simple">
+<dt>OnboardException(‘fail-connect’):</dt><dd><p>When device unreachable</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.netdev_keeper.NetdevKeeper.guess_netmiko_device_type">
+<span class="sig-name descname"><span class="pre">guess_netmiko_device_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_device_onboarding.netdev_keeper.NetdevKeeper.guess_netmiko_device_type" title="Permalink to this definition"></a></dt>
+<dd><p>Guess the device type of host, based on Netmiko.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.netdev_keeper.NetdevKeeper.set_napalm_driver_name">
+<span class="sig-name descname"><span class="pre">set_napalm_driver_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_device_onboarding.netdev_keeper.NetdevKeeper.set_napalm_driver_name" title="Permalink to this definition"></a></dt>
+<dd><p>Sets napalm driver name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.netdev_keeper.NetdevKeeper.check_napalm_driver_name">
+<span class="sig-name descname"><span class="pre">check_napalm_driver_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_device_onboarding.netdev_keeper.NetdevKeeper.check_napalm_driver_name" title="Permalink to this definition"></a></dt>
+<dd><p>Checks for napalm driver name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.netdev_keeper.NetdevKeeper.get_onboarding_facts">
+<span class="sig-name descname"><span class="pre">get_onboarding_facts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_device_onboarding.netdev_keeper.NetdevKeeper.get_onboarding_facts" title="Permalink to this definition"></a></dt>
+<dd><p>Gather information from the network device that is needed to onboard the device into the Nautobot system.</p>
+<dl class="simple">
+<dt>Raises:</dt><dd><dl class="simple">
+<dt>OnboardException(‘fail-login’):</dt><dd><p>When unable to login to device</p>
+</dd>
+<dt>OnboardException(‘fail-execute’):</dt><dd><p>When unable to run commands to collect device information</p>
+</dd>
+<dt>OnboardException(‘fail-general’):</dt><dd><p>Any other unexpected device comms failure.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nautobot_device_onboarding.netdev_keeper.NetdevKeeper.get_netdev_dict">
+<span class="sig-name descname"><span class="pre">get_netdev_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nautobot_device_onboarding.netdev_keeper.NetdevKeeper.get_netdev_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Construct network device dict.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../navigation/index.html" class="btn btn-neutral float-left" title="nautobot_device_onboarding.navigation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../onboard/index.html" class="btn btn-neutral float-right" title="nautobot_device_onboarding.onboard" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, NTC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

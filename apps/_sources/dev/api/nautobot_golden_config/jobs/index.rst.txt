@@ -1,0 +1,548 @@
+:py:mod:`nautobot_golden_config.jobs`
+=====================================
+
+.. py:module:: nautobot_golden_config.jobs
+
+.. autoapi-nested-parse::
+
+   Jobs to run backups, intended config, and compliance.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.jobs.FormEntry
+   nautobot_golden_config.jobs.ComplianceJob
+   nautobot_golden_config.jobs.IntendedJob
+   nautobot_golden_config.jobs.BackupJob
+   nautobot_golden_config.jobs.AllGoldenConfig
+   nautobot_golden_config.jobs.AllDevicesGoldenConfig
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.jobs.get_refreshed_repos
+   nautobot_golden_config.jobs.commit_check
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   nautobot_golden_config.jobs.LOGGER
+   nautobot_golden_config.jobs.name
+   nautobot_golden_config.jobs.jobs
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:data:: name
+   :annotation: = Golden Configuration
+
+   
+
+.. py:function:: get_refreshed_repos(job_obj, repo_type)
+
+   Small wrapper to pull latest branch, and return a GitRepo plugin specific object.
+
+
+.. py:function:: commit_check(method)
+
+   Decorator to check if a "dry-run" attempt was made.
+
+
+.. py:class:: FormEntry
+
+   Class definition to use as Mixin for form definitions.
+
+   .. py:attribute:: tenant_group
+      
+
+      
+
+   .. py:attribute:: tenant
+      
+
+      
+
+   .. py:attribute:: region
+      
+
+      
+
+   .. py:attribute:: site
+      
+
+      
+
+   .. py:attribute:: rack_group
+      
+
+      
+
+   .. py:attribute:: rack
+      
+
+      
+
+   .. py:attribute:: role
+      
+
+      
+
+   .. py:attribute:: manufacturer
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: device_type
+      
+
+      
+
+   .. py:attribute:: device
+      
+
+      
+
+   .. py:attribute:: tag
+      
+
+      
+
+   .. py:attribute:: debug
+      
+
+      
+
+
+.. py:class:: ComplianceJob
+
+   Bases: :py:obj:`nautobot.extras.jobs.Job`, :py:obj:`FormEntry`
+
+   Job to to run the compliance engine.
+
+   .. py:class:: Meta
+
+      Meta object boilerplate for compliance.
+
+      .. py:attribute:: name
+         :annotation: = Perform Configuration Compliance
+
+         
+
+      .. py:attribute:: description
+         :annotation: = Run configuration compliance on your network infrastructure.
+
+         
+
+
+   .. py:attribute:: tenant_group
+      
+
+      
+
+   .. py:attribute:: tenant
+      
+
+      
+
+   .. py:attribute:: region
+      
+
+      
+
+   .. py:attribute:: site
+      
+
+      
+
+   .. py:attribute:: rack_group
+      
+
+      
+
+   .. py:attribute:: rack
+      
+
+      
+
+   .. py:attribute:: role
+      
+
+      
+
+   .. py:attribute:: manufacturer
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: device_type
+      
+
+      
+
+   .. py:attribute:: device
+      
+
+      
+
+   .. py:attribute:: tag
+      
+
+      
+
+   .. py:attribute:: debug
+      
+
+      
+
+   .. py:method:: run(self, data, commit)
+
+      Run config compliance report script.
+
+
+
+.. py:class:: IntendedJob
+
+   Bases: :py:obj:`nautobot.extras.jobs.Job`, :py:obj:`FormEntry`
+
+   Job to to run generation of intended configurations.
+
+   .. py:class:: Meta
+
+      Meta object boilerplate for intended.
+
+      .. py:attribute:: name
+         :annotation: = Generate Intended Configurations
+
+         
+
+      .. py:attribute:: description
+         :annotation: = Generate the configuration for your intended state.
+
+         
+
+
+   .. py:attribute:: tenant_group
+      
+
+      
+
+   .. py:attribute:: tenant
+      
+
+      
+
+   .. py:attribute:: region
+      
+
+      
+
+   .. py:attribute:: site
+      
+
+      
+
+   .. py:attribute:: rack_group
+      
+
+      
+
+   .. py:attribute:: rack
+      
+
+      
+
+   .. py:attribute:: role
+      
+
+      
+
+   .. py:attribute:: manufacturer
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: device_type
+      
+
+      
+
+   .. py:attribute:: device
+      
+
+      
+
+   .. py:attribute:: tag
+      
+
+      
+
+   .. py:attribute:: debug
+      
+
+      
+
+   .. py:method:: run(self, data, commit)
+
+      Run config generation script.
+
+
+
+.. py:class:: BackupJob
+
+   Bases: :py:obj:`nautobot.extras.jobs.Job`, :py:obj:`FormEntry`
+
+   Job to to run the backup job.
+
+   .. py:class:: Meta
+
+      Meta object boilerplate for backup configurations.
+
+      .. py:attribute:: name
+         :annotation: = Backup Configurations
+
+         
+
+      .. py:attribute:: description
+         :annotation: = Backup the configurations of your network devices.
+
+         
+
+
+   .. py:attribute:: tenant_group
+      
+
+      
+
+   .. py:attribute:: tenant
+      
+
+      
+
+   .. py:attribute:: region
+      
+
+      
+
+   .. py:attribute:: site
+      
+
+      
+
+   .. py:attribute:: rack_group
+      
+
+      
+
+   .. py:attribute:: rack
+      
+
+      
+
+   .. py:attribute:: role
+      
+
+      
+
+   .. py:attribute:: manufacturer
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: device_type
+      
+
+      
+
+   .. py:attribute:: device
+      
+
+      
+
+   .. py:attribute:: tag
+      
+
+      
+
+   .. py:attribute:: debug
+      
+
+      
+
+   .. py:method:: run(self, data, commit)
+
+      Run config backup process.
+
+
+
+.. py:class:: AllGoldenConfig
+
+   Bases: :py:obj:`nautobot.extras.jobs.Job`
+
+   Job to to run all three jobs against a single device.
+
+   .. py:class:: Meta
+
+      Meta object boilerplate for all jobs to run against a device.
+
+      .. py:attribute:: name
+         :annotation: = Execute All Golden Configuration Jobs - Single Device
+
+         
+
+      .. py:attribute:: description
+         :annotation: = Process to run all Golden Configuration jobs configured.
+
+         
+
+
+   .. py:attribute:: device
+      
+
+      
+
+   .. py:attribute:: debug
+      
+
+      
+
+   .. py:method:: run(self, data, commit)
+
+      Run all jobs.
+
+
+
+.. py:class:: AllDevicesGoldenConfig
+
+   Bases: :py:obj:`nautobot.extras.jobs.Job`
+
+   Job to to run all three jobs against multiple devices.
+
+   .. py:class:: Meta
+
+      Meta object boilerplate for all jobs to run against multiple devices.
+
+      .. py:attribute:: name
+         :annotation: = Execute All Golden Configuration Jobs - Multiple Device
+
+         
+
+      .. py:attribute:: description
+         :annotation: = Process to run all Golden Configuration jobs configured against multiple devices.
+
+         
+
+
+   .. py:attribute:: tenant_group
+      
+
+      
+
+   .. py:attribute:: tenant
+      
+
+      
+
+   .. py:attribute:: region
+      
+
+      
+
+   .. py:attribute:: site
+      
+
+      
+
+   .. py:attribute:: rack_group
+      
+
+      
+
+   .. py:attribute:: rack
+      
+
+      
+
+   .. py:attribute:: role
+      
+
+      
+
+   .. py:attribute:: manufacturer
+      
+
+      
+
+   .. py:attribute:: platform
+      
+
+      
+
+   .. py:attribute:: device_type
+      
+
+      
+
+   .. py:attribute:: device
+      
+
+      
+
+   .. py:attribute:: tag
+      
+
+      
+
+   .. py:attribute:: debug
+      
+
+      
+
+   .. py:method:: run(self, data, commit)
+
+      Run all jobs.
+
+
+
+.. py:data:: jobs
+   :annotation: = []
+
+   
+

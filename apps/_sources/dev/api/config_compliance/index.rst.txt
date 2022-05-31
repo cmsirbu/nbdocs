@@ -1,0 +1,66 @@
+:py:mod:`config_compliance`
+===========================
+
+.. py:module:: config_compliance
+
+.. autoapi-nested-parse::
+
+   Nornir job for generating the compliance data.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   config_compliance.get_rules
+   config_compliance.diff_files
+   config_compliance.run_compliance
+   config_compliance.config_compliance
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   config_compliance.LOGGER
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:function:: get_rules()
+
+   A serializer of sorts to return rule mappings as a dictionary.
+
+
+.. py:function:: diff_files(backup_file, intended_file)
+
+   Utility function to provide `Unix Diff` between two files.
+
+
+.. py:function:: run_compliance(task: nornir.core.task.Task, logger, device_to_settings_map, rules) -> nornir.core.task.Result
+
+   Prepare data for compliance task.
+
+   Args:
+       task (Task): Nornir task individual object
+
+   Returns:
+       result (Result): Result from Nornir task
+
+
+.. py:function:: config_compliance(job_result, data)
+
+   Nornir play to generate configurations.
+
+
