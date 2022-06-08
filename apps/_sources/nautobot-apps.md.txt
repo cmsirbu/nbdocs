@@ -18,8 +18,8 @@ To view and search the full list of Apps, head over to the [Nautobot App Ecosyst
 
 | | App Name | Description |
 |-| --- | --- |
-| <img src="_static/img/icon-DeviceOnboarding.png" width="200px"> | [Nautobot Device Onboarding](nautobot-plugin-device-onboarding/user/index.md) | Simplify the onboarding process of a new device by allowing the user to specify a small amount of info and having the plugin populate a much larger amount of device data in Nautobot. |
-| <img src="_static/img/icon-GoldenConfiguration.png" width="200px"> | [Nautobot Golden Configuration](nautobot-plugin-golden-config/user/index.md) | Automate configuration backups, perform configuration compliance, and generate intended configurations. |
+| ![](_static/img/icon-DeviceOnboarding.png) | [Nautobot Device Onboarding](nautobot-plugin-device-onboarding/user/index.md) | Simplify the onboarding process of a new device by allowing the user to specify a small amount of info and having the plugin populate a much larger amount of device data in Nautobot. |
+| ![](_static/img/icon-GoldenConfiguration.png) | [Nautobot Golden Configuration](nautobot-plugin-golden-config/user/index.md) | Automate configuration backups, perform configuration compliance, and generate intended configurations. |
 
 
 ### With documentation elsewhere
@@ -33,5 +33,5 @@ Should be reviewed periodically to ensure projects are not abandoned, links stil
 
 | | App Name | Description |
 |-| --- | --- |
-| <img src="_static/img/icon-DeviceLifecycle.png" width="200px">    | [Nautobot Device Lifecycle Management](https://github.com/nautobot/nautobot-plugin-device-lifecycle-mgmt) | This App works by making related associations to Devices, Device Types, and Inventory Items to help provide data about the hardware end of life notices, appropriate software versions to be running on the devices, and the maintenance contracts associated with devices. |
-| <img src="_static/img/icon-SSoT.png" width="200px"> | [Nautobot Single Source of Truth (SSoT)](https://github.com/nautobot/nautobot-plugin-ssot)  | This app facilitates integration and data synchronization between various "source of truth" (SoT) systems, with Nautobot acting as a central clearinghouse for data - a Single Source of Truth|
+| ![](_static/img/icon-DeviceLifecycle.png)    | [Nautobot Device Lifecycle Management](https://github.com/nautobot/nautobot-plugin-device-lifecycle-mgmt) | This App works by making related associations to Devices, Device Types, and Inventory Items to help provide data about the hardware end of life notices, appropriate software versions to be running on the devices, and the maintenance contracts associated with devices. |
+| ![](_static/img/icon-SSoT.png) | [Nautobot Single Source of Truth (SSoT)](https://github.com/nautobot/nautobot-plugin-ssot)  | This app facilitates integration and data synchronization between various "source of truth" (SoT) systems, with Nautobot acting as a central clearinghouse for data - a Single Source of Truth|
