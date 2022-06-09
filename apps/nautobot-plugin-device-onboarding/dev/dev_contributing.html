@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="nautobot_device_onboarding" href="../../dev/api/nautobot_device_onboarding/index.html" />
-    <link rel="prev" title="Extending the App" href="dev_extending.html" /> 
+    <link rel="prev" title="Onboarding Extensions" href="dev_onboarding_extensions.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,7 +49,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Administrator Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dev_extending.html">Extending the App</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Contributing to the App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev_onboarding_extensions.html">Onboarding Extensions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Contributing to the App</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cli-helper-commands">CLI Helper Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#local-dev-environment">Local dev Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utility">Utility</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#testing">Testing</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#api-reference">API Reference</a></li>
 </ul>
 </li>
@@ -92,13 +101,55 @@
 <p class="admonition-title">Developer Note - Remove Me!</p>
 <p>Information on how to contribute fixes, functionality, or documentation changes back to the project.</p>
 </div>
+<p>Pull requests are welcome and automatically built and tested against multiple version of Python and multiple version of Nautobot through TravisCI.</p>
+<p>The project is packaged with a light development environment based on <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> to help with the local development of the project and to run the tests within TravisCI.</p>
+<p>The project is following Network to Code software development guideline and is leveraging:</p>
+<ul class="simple">
+<li><p>Black, Pylint, Bandit and pydocstyle for Python linting and formatting.</p></li>
+<li><p>Django unit test to ensure the plugin is working properly.</p></li>
+</ul>
+<section id="cli-helper-commands">
+<h2>CLI Helper Commands<a class="headerlink" href="#cli-helper-commands" title="Permalink to this headline"></a></h2>
+<p>The project is coming with a CLI helper based on <a class="reference external" href="http://www.pyinvoke.org/">invoke</a> to help setup the development environment. The commands are listed below in 3 categories <code class="docutils literal notranslate"><span class="pre">dev</span> <span class="pre">environment</span></code>, <code class="docutils literal notranslate"><span class="pre">utility</span></code> and <code class="docutils literal notranslate"><span class="pre">testing</span></code>.</p>
+<p>Each command can be executed with <code class="docutils literal notranslate"><span class="pre">invoke</span> <span class="pre">&lt;command&gt;</span></code>. All commands support the arguments <code class="docutils literal notranslate"><span class="pre">--nautobot-ver</span></code> and <code class="docutils literal notranslate"><span class="pre">--python-ver</span></code> if you want to manually define the version of Python and Nautobot to use. Each command also has its own help <code class="docutils literal notranslate"><span class="pre">invoke</span> <span class="pre">&lt;command&gt;</span> <span class="pre">--help</span></code>.</p>
+<section id="local-dev-environment">
+<h3>Local dev Environment<a class="headerlink" href="#local-dev-environment" title="Permalink to this headline"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">build</span>            <span class="n">Build</span> <span class="nb">all</span> <span class="n">docker</span> <span class="n">images</span><span class="o">.</span>
+  <span class="n">debug</span>            <span class="n">Start</span> <span class="n">Nautobot</span> <span class="ow">and</span> <span class="n">its</span> <span class="n">dependencies</span> <span class="ow">in</span> <span class="n">debug</span> <span class="n">mode</span><span class="o">.</span>
+  <span class="n">destroy</span>          <span class="n">Destroy</span> <span class="nb">all</span> <span class="n">containers</span> <span class="ow">and</span> <span class="n">volumes</span><span class="o">.</span>
+  <span class="n">start</span>            <span class="n">Start</span> <span class="n">Nautobot</span> <span class="ow">and</span> <span class="n">its</span> <span class="n">dependencies</span> <span class="ow">in</span> <span class="n">detached</span> <span class="n">mode</span><span class="o">.</span>
+  <span class="n">stop</span>             <span class="n">Stop</span> <span class="n">Nautobot</span> <span class="ow">and</span> <span class="n">its</span> <span class="n">dependencies</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="utility">
+<h3>Utility<a class="headerlink" href="#utility" title="Permalink to this headline"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">cli</span>              <span class="n">Launch</span> <span class="n">a</span> <span class="n">bash</span> <span class="n">shell</span> <span class="n">inside</span> <span class="n">the</span> <span class="n">running</span> <span class="n">Nautobot</span> <span class="n">container</span><span class="o">.</span>
+  <span class="n">create</span><span class="o">-</span><span class="n">user</span>      <span class="n">Create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">django</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="n">admin</span><span class="p">),</span> <span class="n">will</span> <span class="n">prompt</span> <span class="k">for</span> <span class="n">password</span><span class="o">.</span>
+  <span class="n">makemigrations</span>   <span class="n">Run</span> <span class="n">Make</span> <span class="n">Migration</span> <span class="ow">in</span> <span class="n">Django</span><span class="o">.</span>
+  <span class="n">nbshell</span>          <span class="n">Launch</span> <span class="n">a</span> <span class="n">nbshell</span> <span class="n">session</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="testing">
+<h3>Testing<a class="headerlink" href="#testing" title="Permalink to this headline"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">tests</span>            <span class="n">Run</span> <span class="nb">all</span> <span class="n">tests</span> <span class="k">for</span> <span class="n">this</span> <span class="n">plugin</span><span class="o">.</span>
+  <span class="n">pylint</span>           <span class="n">Run</span> <span class="n">pylint</span> <span class="n">code</span> <span class="n">analysis</span><span class="o">.</span>
+  <span class="n">pydocstyle</span>       <span class="n">Run</span> <span class="n">pydocstyle</span> <span class="n">to</span> <span class="n">validate</span> <span class="n">docstring</span> <span class="n">formatting</span> <span class="n">adheres</span> <span class="n">to</span> <span class="n">NTC</span> <span class="n">defined</span> <span class="n">standards</span><span class="o">.</span>
+  <span class="n">bandit</span>           <span class="n">Run</span> <span class="n">bandit</span> <span class="n">to</span> <span class="n">validate</span> <span class="n">basic</span> <span class="n">static</span> <span class="n">code</span> <span class="n">security</span> <span class="n">analysis</span><span class="o">.</span>
+  <span class="n">black</span>            <span class="n">Run</span> <span class="n">black</span> <span class="n">to</span> <span class="n">check</span> <span class="n">that</span> <span class="n">Python</span> <span class="n">files</span> <span class="n">adhere</span> <span class="n">to</span> <span class="n">its</span> <span class="n">style</span> <span class="n">standards</span><span class="o">.</span>
+  <span class="n">unittest</span>         <span class="n">Run</span> <span class="n">Django</span> <span class="n">unit</span> <span class="n">tests</span> <span class="k">for</span> <span class="n">the</span> <span class="n">plugin</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="dev_extending.html" class="btn btn-neutral float-left" title="Extending the App" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dev_onboarding_extensions.html" class="btn btn-neutral float-left" title="Onboarding Extensions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../../dev/api/nautobot_device_onboarding/index.html" class="btn btn-neutral float-right" title="nautobot_device_onboarding" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

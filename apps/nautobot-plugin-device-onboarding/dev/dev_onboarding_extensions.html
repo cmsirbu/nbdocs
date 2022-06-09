@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onboarding Extensions &mdash; Nautobot App Docs  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Contributing to the App" href="dev_contributing.html" />
+    <link rel="prev" title="Extending the App" href="dev_extending.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html">
+            <img src="../../_static/nautobot_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-apps.html">Nautobot App Ecosystem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Device Onboarding</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dev_extending.html">Extending the App</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Onboarding Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-are-onboarding-extensions">What are onboarding extensions?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-are-common-use-cases-for-onboarding-extensions">What are common use cases for onboarding extensions?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-enable-onboarding-extensions">How do I enable onboarding extensions?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-create-an-onboarding-extension">How do I create an onboarding extension?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-do-i-find-an-example-of-onboarding-extension">Where do I find an example of onboarding extension ?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dev_contributing.html">Contributing to the App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#api-reference">API Reference</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Nautobot Golden Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-plugin-golden-config/user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-plugin-golden-config/admin/index.html">Administrator Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nautobot-plugin-golden-config/dev/index.html">Developer Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Nautobot App Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Nautobot Device Onboarding</a> &raquo;</li>
+      <li>Onboarding Extensions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nautobot-plugin-device-onboarding/dev/dev_onboarding_extensions.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="onboarding-extensions">
+<h1>Onboarding Extensions<a class="headerlink" href="#onboarding-extensions" title="Permalink to this headline"></a></h1>
+<section id="what-are-onboarding-extensions">
+<h2>What are onboarding extensions?<a class="headerlink" href="#what-are-onboarding-extensions" title="Permalink to this headline"></a></h2>
+<p>Onboarding Extensions are Python modules that are dynamically loaded and executed as a part of device onboarding.</p>
+</section>
+<section id="what-are-common-use-cases-for-onboarding-extensions">
+<h2>What are common use cases for onboarding extensions?<a class="headerlink" href="#what-are-common-use-cases-for-onboarding-extensions" title="Permalink to this headline"></a></h2>
+<p>Onboarding extensions could be used (but not limited to) to perform the following operations:</p>
+<ul class="simple">
+<li><p>Stack onboarding</p></li>
+<li><p>HA Pairs, VSS pairs onboarding</p></li>
+<li><p>Populating device-bays and child devices, ie. Cisco UCS-Es</p></li>
+<li><p>Populating device inventories during onboarding</p></li>
+<li><p>Setting device roles during onboarding, ie. <code class="docutils literal notranslate"><span class="pre">Role</span> <span class="pre">=</span> <span class="pre">Access</span> <span class="pre">Switch</span></code></p></li>
+<li><p>Setting device tags during onboarding, ie: <code class="docutils literal notranslate"><span class="pre">onboarded_with=networktocode</span></code></p></li>
+</ul>
+</section>
+<section id="how-do-i-enable-onboarding-extensions">
+<h2>How do I enable onboarding extensions?<a class="headerlink" href="#how-do-i-enable-onboarding-extensions" title="Permalink to this headline"></a></h2>
+<p>You have to modify Nautobot configuration in <code class="docutils literal notranslate"><span class="pre">nautobot_config.py</span></code> to include your extension’s configuration. In the example below, we map a NAPALM driver name (this one could be a custom NAPALM driver too!), into a loadable python module containing your onboarding extension. Onboarding plugin will dynamically load and execute your module as specified below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="s2">&quot;onboarding_extensions_map&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;cisco_ios&quot;</span><span class="p">:</span> <span class="s2">&quot;onboarding_extensions.ios&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cisco_nxos&quot;</span><span class="p">:</span> <span class="s2">&quot;onboarding_extensions.nxos&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cisco_asa&quot;</span><span class="p">:</span> <span class="s2">&quot;onboarding_extensions.asa&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+</pre></div>
+</div>
+</section>
+<section id="how-do-i-create-an-onboarding-extension">
+<h2>How do I create an onboarding extension?<a class="headerlink" href="#how-do-i-create-an-onboarding-extension" title="Permalink to this headline"></a></h2>
+<p>You have to create two elements as a part of your extension:</p>
+<ul class="simple">
+<li><p>an <code class="docutils literal notranslate"><span class="pre">OnboardingDriverExtensions</span></code> class inside your python module</p></li>
+<li><p>an <code class="docutils literal notranslate"><span class="pre">OnboardingClass</span></code></p></li>
+</ul>
+<p>At first, plugin will initiate an instance of your <code class="docutils literal notranslate"><span class="pre">OnboardingDriverExtensions</span></code> (you have to use this name of the class). Onboarding plugin passes the NAPALM device with an opened connection to this class, allowing you to to execute any custom commands with NAPALM (ie. collect device stack information).</p>
+<p><code class="docutils literal notranslate"><span class="pre">OnboardingDriverExtensions</span></code> must contain two important class attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">onboarding_class</span></code> (mandatory)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ext_result</span></code> (optional).</p></li>
+</ul>
+<p>In <code class="docutils literal notranslate"><span class="pre">onboarding_class</span></code> attribute, you have to return a custom class that defines your onboarding methods. This is useful, as you might want to onboard devices in multiple different ways and <code class="docutils literal notranslate"><span class="pre">onboarding_class</span></code> acts as an distinguisher here.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ext_result</span></code> attribute allows to collect and store any data while the device connection is active. Your custom <code class="docutils literal notranslate"><span class="pre">OnboardingClass</span></code> will be initiated with <code class="docutils literal notranslate"><span class="pre">driver_addon_result</span></code> attribute containing the value of <code class="docutils literal notranslate"><span class="pre">ext_result</span></code>.</p>
+</section>
+<section id="where-do-i-find-an-example-of-onboarding-extension">
+<h2>Where do I find an example of onboarding extension ?<a class="headerlink" href="#where-do-i-find-an-example-of-onboarding-extension" title="Permalink to this headline"></a></h2>
+<p>Please check our example: <a class="reference external" href="https://github.com/nautobot/nautobot-plugin-device-onboarding/raw/main/examples/example_ios_set_device_role.py">example_ios_set_device_role.py</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dev_extending.html" class="btn btn-neutral float-left" title="Extending the App" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dev_contributing.html" class="btn btn-neutral float-right" title="Contributing to the App" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, NTC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

@@ -48,8 +48,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Administrator Guide</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Install and Configure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#compatibility-matrix">Compatibility Matrix</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#install-guide">Install Guide</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enabling-plugin-in-nautobot">Enabling Plugin in Nautobot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#final-configuration-steps">Final Configuration Steps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#access-requirements">Access Requirements</a></li>
 </ul>
 </li>
@@ -97,28 +102,114 @@
              
   <section id="installing-the-app-in-nautobot">
 <h1>Installing the App in Nautobot<a class="headerlink" href="#installing-the-app-in-nautobot" title="Permalink to this headline"></a></h1>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h2>
+<section id="compatibility-matrix">
+<h3>Compatibility Matrix<a class="headerlink" href="#compatibility-matrix" title="Permalink to this headline"></a></h3>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Nautobot 1.0</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Device Onboarding plugin 1.0</p></td>
+<td><p>X</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
 <section id="install-guide">
 <h2>Install Guide<a class="headerlink" href="#install-guide" title="Permalink to this headline"></a></h2>
-<div class="admonition-developer-note-remove-me admonition">
-<p class="admonition-title">Developer Note - Remove Me!</p>
-<p>Detailed instructions on installing the App.</p>
+<p>If using the installation pattern from the Nautobot Documentation, you will need sudo to the <code class="docutils literal notranslate"><span class="pre">nautobot</span></code> user before installing so that you install the package into the Nautobot virtual environment.</p>
+<div class="highlight-no-highlight notranslate"><div class="highlight"><pre><span></span>$ sudo -iu nautobot
+</pre></div>
 </div>
-<section id="prerequisites">
-<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h3>
+<p>The plugin is available as a Python package in PyPI and can be installed with <code class="docutils literal notranslate"><span class="pre">pip3</span></code>.</p>
+<div class="highlight-no-highlight notranslate"><div class="highlight"><pre><span></span>$ pip3 install nautobot-device-onboarding
+</pre></div>
+</div>
+<section id="enabling-plugin-in-nautobot">
+<h3>Enabling Plugin in Nautobot<a class="headerlink" href="#enabling-plugin-in-nautobot" title="Permalink to this headline"></a></h3>
+<p>Once installed, the plugin needs to be enabled in your <code class="docutils literal notranslate"><span class="pre">nautobot_config.py</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># In your nautobot_config.py</span>
+<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;nautobot_device_onboarding&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>To ensure the Device Onboarding plugin is automatically re-installed during future upgrades, create a file named <code class="docutils literal notranslate"><span class="pre">local_requirements.txt</span></code> (or append if it already exists) in the <a class="reference external" href="https://nautobot.readthedocs.io/en/latest/configuration/optional-settings/#nautobot_root"><code class="docutils literal notranslate"><span class="pre">NAUTOBOT_ROOT</span></code></a> directory and list the <code class="docutils literal notranslate"><span class="pre">nautobot-device-onboarding</span></code> package:</p>
+<div class="highlight-no-highlight notranslate"><div class="highlight"><pre><span></span>$ echo nautobot-device-onboarding &gt;&gt; $NAUTOBOT_ROOT/local_requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="final-configuration-steps">
+<h3>Final Configuration Steps<a class="headerlink" href="#final-configuration-steps" title="Permalink to this headline"></a></h3>
+<p>After installing the plugin and modifying <code class="docutils literal notranslate"><span class="pre">nautobot_config.py</span></code>, as the <code class="docutils literal notranslate"><span class="pre">nautobot</span></code> user, run the server migration:</p>
+<div class="highlight-no-highlight notranslate"><div class="highlight"><pre><span></span>$ nautobot-server migrate
+</pre></div>
+</div>
+<p>Finally, as root, restart Nautobot and the Nautobot worker.</p>
+<div class="highlight-no-highlight notranslate"><div class="highlight"><pre><span></span>$ sudo systemctl restart nautobot nautobot-worker
+</pre></div>
+</div>
 </section>
 <section id="access-requirements">
 <h3>Access Requirements<a class="headerlink" href="#access-requirements" title="Permalink to this headline"></a></h3>
-<div class="admonition-developer-note-remove-me admonition">
-<p class="admonition-title">Developer Note - Remove Me!</p>
-<p>What external systems (if any) it needs access to in order to work.</p>
+<section id="napalm-credentials">
+<h4>NAPALM Credentials<a class="headerlink" href="#napalm-credentials" title="Permalink to this headline"></a></h4>
+<p>The Onboarding Plugin uses NAPALM. You can configure a default NAPALM username and password in <code class="docutils literal notranslate"><span class="pre">nautobot_config.py</span></code>.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">NAPALM_USERNAME</span></code> and <code class="docutils literal notranslate"><span class="pre">NAPALM_PASSWORD</span></code> are configured in <code class="docutils literal notranslate"><span class="pre">nautobot_config.py</span></code>, the user does not have to specify the <code class="docutils literal notranslate"><span class="pre">Username</span></code> and <code class="docutils literal notranslate"><span class="pre">Password</span></code> fields in the Device Onboarding Task, unless they wish to override the values in <code class="docutils literal notranslate"><span class="pre">nautobot_config.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Credentials that Nautobot will use to authenticate to devices when connecting via NAPALM.</span>
+<span class="n">NAPALM_USERNAME</span> <span class="o">=</span> <span class="s2">&quot;&lt;napalm username&gt;&quot;</span>
+<span class="n">NAPALM_PASSWORD</span> <span class="o">=</span> <span class="s2">&quot;&lt;napalm pwd&gt;&quot;</span>
+</pre></div>
 </div>
+</section>
 </section>
 </section>
 <section id="app-configuration">
 <h2>App Configuration<a class="headerlink" href="#app-configuration" title="Permalink to this headline"></a></h2>
-<div class="admonition-developer-note-remove-me admonition">
-<p class="admonition-title">Developer Note - Remove Me!</p>
-<p>Any configuration required to get the App set up.</p>
+<p>Although plugin can run without providing any settings, the plugin behavior can be controlled with the following list of settings defined in <code class="docutils literal notranslate"><span class="pre">nautobot_config.py</span></code>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_platform_if_missing</span></code> boolean (default True), If True, a new platform object will be created if the platform discovered by netmiko do not already exist and is in the list of supported platforms (<code class="docutils literal notranslate"><span class="pre">cisco_ios</span></code>, <code class="docutils literal notranslate"><span class="pre">cisco_nxos</span></code>, <code class="docutils literal notranslate"><span class="pre">arista_eos</span></code>, <code class="docutils literal notranslate"><span class="pre">juniper_junos</span></code>, <code class="docutils literal notranslate"><span class="pre">cisco_xr</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_device_type_if_missing</span></code> boolean (default True), If True, a new device type object will be created if the model discovered by Napalm do not match an existing device type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_manufacturer_if_missing</span></code> boolean (default True), If True, a new manufacturer object will be created if the manufacturer discovered by Napalm is do not match an existing manufacturer, this option is only valid if <code class="docutils literal notranslate"><span class="pre">create_device_type_if_missing</span></code> is True as well.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_device_role_if_missing</span></code> boolean (default True), If True, a new device role object will be created if the device role provided was not provided as part of the onboarding and if the <code class="docutils literal notranslate"><span class="pre">default_device_role</span></code> do not already exist.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_management_interface_if_missing</span></code> boolean (default True), If True, add management interface and IP address to the device. If False no management interfaces will be created, nor will the IP address be added to Nautobot, while the device will still get added.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_device_status</span></code> string (default “Active”), status assigned to a new device by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_ip_status</span></code> string (default “Active”), status assigned to a new device management IP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_device_role</span></code> string (default “network”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_device_role_color</span></code> string (default FF0000), color assigned to the device role if it needs to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_management_interface</span></code> string (default “PLACEHOLDER”), name of the management interface that will be created, if one can’t be identified on the device.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_management_prefix_length</span></code> integer ( default 0), length of the prefix that will be used for the management IP address, if the IP can’t be found.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skip_device_type_on_update</span></code> boolean (default False), If True, an existing Nautobot device will not get its device type updated. If False, device type will be updated with one discovered on a device.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skip_manufacturer_on_update</span></code> boolean (default False), If True, an existing Nautobot device will not get its manufacturer updated. If False, manufacturer will be updated with one discovered on a device.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">platform_map</span></code> (dictionary), mapping of an <strong>auto-detected</strong> Netmiko platform to the <strong>Nautobot slug</strong> name of your Platform. The dictionary should be in the format:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="o">&lt;</span><span class="n">Netmiko</span> <span class="n">Platform</span><span class="o">&gt;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">Nautobot</span> <span class="n">Slug</span><span class="o">&gt;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onboarding_extensions_map</span></code> (dictionary), mapping of a NAPALM driver name to the loadable Python module used as an onboarding extension. The dictionary should be in the format:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="o">&lt;</span><span class="n">Napalm</span> <span class="n">Driver</span> <span class="n">Name</span><span class="o">&gt;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">Loadable</span> <span class="n">Python</span> <span class="n">Module</span><span class="o">&gt;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">object_match_strategy</span></code> (string), defines the method for searching models. There are currently two strategies, strict and loose. Strict has to be a direct match, normally using a slug. Loose allows a range of search criteria to match a single object. If multiple objects are returned an error is raised.</p></li>
+</ul>
+<p>Modify <code class="docutils literal notranslate"><span class="pre">nautobot_config.py</span></code> with settings of your choice. Example settings are shown below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example settings In your nautobot_config.py</span>
+<span class="n">PLUGINS_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;nautobot_device_onboarding&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;default_ip_status&quot;</span><span class="p">:</span> <span class="s2">&quot;Active&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;default_device_role&quot;</span><span class="p">:</span> <span class="s2">&quot;leaf&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;skip_device_type_on_update&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 </section>
 </section>

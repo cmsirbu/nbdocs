@@ -20,7 +20,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Why use this App?" href="app_use_cases.html" />
+    <link rel="next" title="Using the App" href="app_use_cases.html" />
     <link rel="prev" title="Nautobot Device Onboarding" href="index.html" /> 
 </head>
 
@@ -48,6 +48,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">User Guide</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">App Overview</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#description-overview">Description/Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#audience-user-personas-who-should-use-this-app">Audience (User Personas) - Who should use this App?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#authors-and-maintainers">Authors and Maintainers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#features-used-employed">Features Used/Employed</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#extras">Extras</a></li>
@@ -55,7 +56,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="app_use_cases.html">Why use this App?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_use_cases.html">Using the App</a></li>
 <li class="toctree-l2"><a class="reference internal" href="app_getting_started.html">Getting Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="app_faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="app_external_interactions.html">External Interactions</a></li>
@@ -98,8 +99,40 @@
              
   <section id="app-overview">
 <h1>App Overview<a class="headerlink" href="#app-overview" title="Permalink to this headline"></a></h1>
+<p>A plugin for <a class="reference external" href="https://github.com/nautobot/nautobot">Nautobot</a> to easily onboard new devices.</p>
 <section id="description-overview">
 <h2>Description/Overview<a class="headerlink" href="#description-overview" title="Permalink to this headline"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">nautobot-device-onboarding</span></code> is using <a class="reference external" href="https://github.com/ktbyers/netmiko">Netmiko</a> and <a class="reference external" href="https://napalm.readthedocs.io/en/latest/">NAPALM</a> to simplify the onboarding process of a new device into Nautobot down to, in many cases, an IP Address and a site. In some cases, the user may also have to specify a specific Device Platform and Device Port. Regardless, the Onboarding Plugin greatly simplifies the onboarding process by allowing the user to specify a small amount of info and having the plugin populate a much larger amount of device data in Nautobot.</p>
+<p>In most cases, the user would specify:</p>
+<ul class="simple">
+<li><p>Device Name</p></li>
+<li><p>Site</p></li>
+<li><p>Platform **</p></li>
+<li><p>Transport Port **</p></li>
+</ul>
+<blockquote>
+<div><p>** Necessary for onboarding NXOS API, Arista EOS, or any other platform not using SSH as a transport</p>
+</div></blockquote>
+<p>And the Onboarding Plugin would populate the following:</p>
+<ul class="simple">
+<li><p>Device Type (Model) - Creates if it does not exist</p></li>
+<li><p>Device Role - defaults to <code class="docutils literal notranslate"><span class="pre">network</span></code></p></li>
+<li><p>Platform - Creates Cisco IOS, Cisco NXOS (ssh), and Junos Platforms if they do not exist</p></li>
+<li><p>Manufacturer - Creates Cisco/Juniper/Arista if it does not exist</p></li>
+<li><p>Management Interface</p></li>
+<li><p>Management Interface IP</p></li>
+<li><p>Serial Number (when available)</p></li>
+</ul>
+<p>The goal of this plugin is not to import everything about a device into Nautobot. Rather, the goal is to quickly build an inventory of basic device data in Nautobot that provides basic info on how to access the devices.
+For example, getting the Management IP and Platform data into Nautobot allows a follow-on tool that uses the basic info to access each device, retrieve data, and then populate Nautobot with that data.</p>
+<p>One example of a solution that can retrieve that additional device data and import it into Nautobot is the <a class="reference external" href="https://github.com/networktocode/network-importer">Network Importer</a>. Other options would include an Ansible playbook or a Python script.</p>
+</section>
+<section id="audience-user-personas-who-should-use-this-app">
+<h2>Audience (User Personas) - Who should use this App?<a class="headerlink" href="#audience-user-personas-who-should-use-this-app" title="Permalink to this headline"></a></h2>
+<div class="admonition-developer-note-remove-me admonition">
+<p class="admonition-title">Developer Note - Remove Me!</p>
+<p>Who is this meant for/ who is the common user of this app</p>
+</div>
 </section>
 <section id="authors-and-maintainers">
 <h2>Authors and Maintainers<a class="headerlink" href="#authors-and-maintainers" title="Permalink to this headline"></a></h2>
@@ -126,7 +159,7 @@ Jobs - are jobs, if so, which ones, installed by this app?</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="Nautobot Device Onboarding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="app_use_cases.html" class="btn btn-neutral float-right" title="Why use this App?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="app_use_cases.html" class="btn btn-neutral float-right" title="Using the App" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

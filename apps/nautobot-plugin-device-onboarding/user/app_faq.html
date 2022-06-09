@@ -47,9 +47,23 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">User Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="app_overview.html">App Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="app_use_cases.html">Why use this App?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_use_cases.html">Using the App</a></li>
 <li class="toctree-l2"><a class="reference internal" href="app_getting_started.html">Getting Started</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Frequently Asked Questions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Frequently Asked Questions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-are-the-use-cases-for-onboarding-extensions">What are the use cases for Onboarding Extensions?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-onboard-a-device-using-https-api">How do I onboard a device using HTTPS-API?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#is-it-possible-to-disable-the-automatic-creation-of-device-type-device-role-or-platform">Is it possible to disable the automatic creation of Device Type, Device Role or Platform?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-i-update-the-default-credentials-used-to-connect-to-a-device">How can I update the default credentials used to connect to a device?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-i-update-the-optional-arguments-for-napalm">How can I update the optional arguments for NAPALM?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#does-this-plugin-support-the-discovery-and-the-creation-of-all-interfaces-and-ip-addresses">Does this plugin support the discovery and the creation of all interfaces and IP Addresses?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#does-this-plugin-support-the-discovery-of-device-based-on-fqdn">Does this plugin support the discovery of device based on fqdn?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#does-this-plugin-support-the-discovery-of-stack-or-virtual-chassis-devices">Does this plugin support the discovery of Stack or Virtual Chassis devices?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#is-this-plugin-able-to-automatically-discover-the-type-of-my-device">Is this plugin able to automatically discover the type of my device?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-many-devices-can-i-import-at-the-same-time">How many devices can I import at the same time?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#do-i-need-to-setup-a-dedicated-rq-or-celery-worker-node">Do I need to setup a dedicated RQ or Celery Worker node?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-don-t-i-see-a-webhook-generated-when-a-new-device-is-onboarded-successfully">Why don’t I see a webhook generated when a new device is onboarded successfully?</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="app_external_interactions.html">External Interactions</a></li>
 </ul>
 </li>
@@ -90,6 +104,70 @@
              
   <section id="frequently-asked-questions">
 <h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline"></a></h1>
+<section id="what-are-the-use-cases-for-onboarding-extensions">
+<h2>What are the use cases for Onboarding Extensions?<a class="headerlink" href="#what-are-the-use-cases-for-onboarding-extensions" title="Permalink to this headline"></a></h2>
+<p>See dedicated FAQ for device <a class="reference internal" href="../dev/dev_onboarding_extensions.html"><span class="doc std std-doc">onboarding extensions</span></a>.</p>
+</section>
+<section id="how-do-i-onboard-a-device-using-https-api">
+<h2>How do I onboard a device using HTTPS-API?<a class="headerlink" href="#how-do-i-onboard-a-device-using-https-api" title="Permalink to this headline"></a></h2>
+<p>You need to disable automatic platform detection, specify the device platform type (platform has to be configured with napalm driver) and port. By default, onboarding plugin uses SSH port (22) to discover platform type and loads appropriate NAPALM driver automatically. In case a HTTPS-API is to be used, you have to disable this behaviour and manually choose the platform type with a declared NAPALM driver.</p>
+</section>
+<section id="is-it-possible-to-disable-the-automatic-creation-of-device-type-device-role-or-platform">
+<h2>Is it possible to disable the automatic creation of Device Type, Device Role or Platform?<a class="headerlink" href="#is-it-possible-to-disable-the-automatic-creation-of-device-type-device-role-or-platform" title="Permalink to this headline"></a></h2>
+<p><strong>Yes</strong>! Using the plugin settings, it’s possible to control individually the creation of <code class="docutils literal notranslate"><span class="pre">device_role</span></code>, <code class="docutils literal notranslate"><span class="pre">device_type</span></code>, <code class="docutils literal notranslate"><span class="pre">manufacturer</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">platform</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># configuration.py</span>
+<span class="c1"># If need you can override the default settings</span>
+<span class="c1"># PLUGINS_CONFIG = {</span>
+<span class="c1">#   &quot;nautobot_device_onboarding&quot;: {</span>
+<span class="c1">#         &quot;create_platform_if_missing&quot;: True,</span>
+<span class="c1">#         &quot;create_manufacturer_if_missing&quot;: True,</span>
+<span class="c1">#         &quot;create_device_type_if_missing&quot;: True,</span>
+<span class="c1">#         &quot;create_device_role_if_missing&quot;: True,</span>
+<span class="c1">#         &quot;default_device_role&quot;: &quot;network&quot;,</span>
+<span class="c1">#   }</span>
+<span class="c1"># }</span>
+</pre></div>
+</div>
+</section>
+<section id="how-can-i-update-the-default-credentials-used-to-connect-to-a-device">
+<h2>How can I update the default credentials used to connect to a device?<a class="headerlink" href="#how-can-i-update-the-default-credentials-used-to-connect-to-a-device" title="Permalink to this headline"></a></h2>
+<p>By default, the plugin uses the credentials defined in the main <code class="docutils literal notranslate"><span class="pre">nautobot_config.py</span></code> for NAPALM (<code class="docutils literal notranslate"><span class="pre">NAPALM_USERNAME</span></code>/<code class="docutils literal notranslate"><span class="pre">NAPALM_PASSWORD</span></code>). You can update the default credentials in <code class="docutils literal notranslate"><span class="pre">nautobot_config.py</span> </code> or you can provide specific one for each onboarding task.</p>
+</section>
+<section id="how-can-i-update-the-optional-arguments-for-napalm">
+<h2>How can I update the optional arguments for NAPALM?<a class="headerlink" href="#how-can-i-update-the-optional-arguments-for-napalm" title="Permalink to this headline"></a></h2>
+<p>Optional arguments are often used to define a <code class="docutils literal notranslate"><span class="pre">secret</span></code> for Cisco devices and other connection parameters. By default, plugin will use a provided secret for each onboarding task. If such one is not provided, for tasks with a declared platform plugin will read optional arguments from Nautobot if they are defined at a platform level. Last resort of optional arguments is <code class="docutils literal notranslate"><span class="pre">settings.NAPALM_ARGS</span></code>.</p>
+</section>
+<section id="does-this-plugin-support-the-discovery-and-the-creation-of-all-interfaces-and-ip-addresses">
+<h2>Does this plugin support the discovery and the creation of all interfaces and IP Addresses?<a class="headerlink" href="#does-this-plugin-support-the-discovery-and-the-creation-of-all-interfaces-and-ip-addresses" title="Permalink to this headline"></a></h2>
+<p><strong>No</strong>. The plugin will only discover and create the management interface and the management IP address. Importing all interfaces and IP addresses is a much larger problem that requires more preparation. This is out of scope of this project.</p>
+<blockquote>
+<div><p>We recommend Network Importer tool from Network to Code for a post-onboarding network state synchronization. See <a class="reference external" href="https://github.com/networktocode/network-importer">its GitHub repository</a> for more details.</p>
+</div></blockquote>
+</section>
+<section id="does-this-plugin-support-the-discovery-of-device-based-on-fqdn">
+<h2>Does this plugin support the discovery of device based on fqdn?<a class="headerlink" href="#does-this-plugin-support-the-discovery-of-device-based-on-fqdn" title="Permalink to this headline"></a></h2>
+<p><strong>Yes</strong>, plugin will resolve FQDN into an IP address and will use the IP address for its connections.</p>
+</section>
+<section id="does-this-plugin-support-the-discovery-of-stack-or-virtual-chassis-devices">
+<h2>Does this plugin support the discovery of Stack or Virtual Chassis devices?<a class="headerlink" href="#does-this-plugin-support-the-discovery-of-stack-or-virtual-chassis-devices" title="Permalink to this headline"></a></h2>
+<p><strong>Yes</strong>! Multi member devices (Stack, Virtual Chassis, FW Pair) can be imported but by default they will be imported as a single device. As multi member devices modelling is very individual in each case, it is required to create a customized onboarding extensions to control the behaviour of creating multiple devices.</p>
+</section>
+<section id="is-this-plugin-able-to-automatically-discover-the-type-of-my-device">
+<h2>Is this plugin able to automatically discover the type of my device?<a class="headerlink" href="#is-this-plugin-able-to-automatically-discover-the-type-of-my-device" title="Permalink to this headline"></a></h2>
+<p><strong>Yes</strong>! The plugin is leveraging <a class="reference external" href="https://github.com/ktbyers/netmiko">Netmiko</a> &amp; <a class="reference external" href="https://napalm.readthedocs.io/en/latest/">Napalm</a> to attempt to automatically discover the OS and the model of each device.</p>
+</section>
+<section id="how-many-devices-can-i-import-at-the-same-time">
+<h2>How many devices can I import at the same time?<a class="headerlink" href="#how-many-devices-can-i-import-at-the-same-time" title="Permalink to this headline"></a></h2>
+<p><strong>Many</strong>, there are no strict limitations regarding the number of devices that can be imported. The speed at which devices will be imported will depend of the number of active Nautobot workers.</p>
+</section>
+<section id="do-i-need-to-setup-a-dedicated-rq-or-celery-worker-node">
+<h2>Do I need to setup a dedicated RQ or Celery Worker node?<a class="headerlink" href="#do-i-need-to-setup-a-dedicated-rq-or-celery-worker-node" title="Permalink to this headline"></a></h2>
+<p><strong>No</strong>. The plugin is leveraging the existing RQ or Celery Worker infrastructure already in place in Nautobot, the only requirement is to ensure the plugin itself is installed in the Worker node.</p>
+</section>
+<section id="why-don-t-i-see-a-webhook-generated-when-a-new-device-is-onboarded-successfully">
+<h2>Why don’t I see a webhook generated when a new device is onboarded successfully?<a class="headerlink" href="#why-don-t-i-see-a-webhook-generated-when-a-new-device-is-onboarded-successfully" title="Permalink to this headline"></a></h2>
+<p>It’s expected that any changes done asynchronously in Nautobot currently (within a worker) will not generate a webhook.</p>
+</section>
 </section>
 
 
